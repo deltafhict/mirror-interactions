@@ -26,7 +26,7 @@ namespace MirrorVoice
 
             // Create a simple grammar that recognizes "red", "green", or "blue".
             Choices colors = new Choices();
-            colors.Add(new string[] { "tim" });
+            colors.Add(new string[] { "mirror" });
 
             // Create a GrammarBuilder object and append the Choices object.
             GrammarBuilder gb = new GrammarBuilder();
@@ -52,6 +52,11 @@ namespace MirrorVoice
             {
                 recognizer.SetInputToDefaultAudioDevice();
                 RecognitionResult result = recognizer.Recognize();
+                if (result == null)
+                {
+                    MessageBox.Show("Could hear what u said!");
+                    return;
+                }
                 parseRecognizedText(result.Text.ToLower());
             }
             catch (InvalidOperationException exception)
