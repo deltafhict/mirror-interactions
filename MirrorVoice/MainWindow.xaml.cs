@@ -4,7 +4,7 @@
 // </copyright>
 //------------------------------------------------------------------------------
 
-namespace Microsoft.Samples.Kinect.SpeechBasics
+namespace MirrorInteractions
 {
     using System;
     using System.Collections.Generic;    
@@ -18,6 +18,13 @@ namespace Microsoft.Samples.Kinect.SpeechBasics
     using Microsoft.Kinect;    
     using Microsoft.Speech.AudioFormat;
     using Microsoft.Speech.Recognition;
+    using Microsoft.Kinect.Face;
+    using Newtonsoft.Json;
+    using Sacknet.KinectFacialRecognition;
+    using Sacknet.KinectFacialRecognition.KinectFaceModel;
+    using Sacknet.KinectFacialRecognition.ManagedEigenObject;
+    using System.Drawing;
+    using System.Windows.Media.Imaging;
 
     /// <summary>
     /// Interaction logic for MainWindow
@@ -40,9 +47,40 @@ namespace Microsoft.Samples.Kinect.SpeechBasics
         /// </summary>
         private SpeechRecognitionEngine speechEngine = null;
 
+        /// <summary>
+        /// Facial recognition engine using face detection from Kinect.
+        /// </summary>
+        private KinectFacialRecognitionEngine facialRecognitionEngine;
+
+        private IRecognitionProcessor activeProcessor;
+
         public MainWindow()
         {
+            // Only one sensor is supported
+            this.kinectSensor = KinectSensor.GetDefault();
+
+            if (this.kinectSensor != null)
+            {
+                // open the sensor
+                this.kinectSensor.Open();
+
+                // grab the audio stream
+                IReadOnlyList<AudioBeam> audioBeamList = this.kinectSensor.AudioSource.AudioBeams;
+                System.IO.Stream audioStream = audioBeamList[0].OpenInputStream();
+
+                // create the convert stream
+                this.convertStream = new KinectAudioStream(audioStream);
+            }
+            else
+            {
+                // on failure, set the status text
+                //this.statusBarText.Text = Properties.Resources.NoKinectReady;
+                return;
+            }
+
             InitializeComponent();
+
+            LoadFacialRecognitionEngine();
         }
 
         /// <summary>
@@ -80,30 +118,29 @@ namespace Microsoft.Samples.Kinect.SpeechBasics
             return null;
         }
 
-        private void WindowLoaded(object sender, RoutedEventArgs e)
+        private void LoadFacialRecognitionEngine()
         {
-            // Only one sensor is supported
-            this.kinectSensor = KinectSensor.GetDefault();
+            this.activeProcessor = new EigenObjectRecognitionProcessor();
 
-            if (this.kinectSensor != null)
+            this.LoadAllTargetFaces();
+            //this.UpdateTargetFaces();
+
+            if (this.facialRecognitionEngine == null)
             {
-                // open the sensor
-                this.kinectSensor.Open();
-
-                // grab the audio stream
-                IReadOnlyList<AudioBeam> audioBeamList = this.kinectSensor.AudioSource.AudioBeams;
-                System.IO.Stream audioStream = audioBeamList[0].OpenInputStream();
-
-                // create the convert stream
-                this.convertStream = new KinectAudioStream(audioStream);
-            }
-            else
-            {
-                // on failure, set the status text
-                //this.statusBarText.Text = Properties.Resources.NoKinectReady;
-                return;
+                this.facialRecognitionEngine = new KinectFacialRecognitionEngine(this.kinectSensor, this.activeProcessor);
+                this.facialRecognitionEngine.RecognitionComplete += this.Engine_RecognitionComplete;
             }
 
+            this.facialRecognitionEngine.Processors = new List<IRecognitionProcessor> { this.activeProcessor };
+        }
+
+        private void Engine_RecognitionComplete(object sender, Sacknet.KinectFacialRecognition.RecognitionResult e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void LoadVoiceDetectionEngine()
+        {
             RecognizerInfo ri = TryGetKinectRecognizer();
 
             if (null != ri)
@@ -133,10 +170,10 @@ namespace Microsoft.Samples.Kinect.SpeechBasics
                     this.convertStream, new SpeechAudioFormatInfo(EncodingFormat.Pcm, 16000, 16, 1, 32000, 2, null));
                 this.speechEngine.RecognizeAsync(RecognizeMode.Multiple);
             }
-            else
-            {
-                //this.statusBarText.Text = Properties.Resources.NoSpeechRecognizer;
-            }
+        }
+
+        private void WindowLoaded(object sender, RoutedEventArgs e)
+        {
         }
 
         private void WindowClosing(object sender, CancelEventArgs e)
@@ -148,6 +185,7 @@ namespace Microsoft.Samples.Kinect.SpeechBasics
 
                 if (null != this.speechEngine)
                 {
+                    this.facialRecognitionEngine.RecognitionComplete -= this.Engine_RecognitionComplete;
                     this.speechEngine.SpeechRecognized -= this.SpeechRecognized;
                     this.speechEngine.SpeechRecognitionRejected -= this.SpeechRejected;
                     this.speechEngine.RecognizeAsyncStop();
@@ -189,6 +227,48 @@ namespace Microsoft.Samples.Kinect.SpeechBasics
         private void SpeechRejected(object sender, SpeechRecognitionRejectedEventArgs e)
         {
             MessageBox.Show("SpeechRejected");
+        }
+
+        /// <summary>
+        /// Loads all BSTFs from the current directory
+        /// </summary>
+        private void LoadAllTargetFaces()
+        {
+            //this.viewModel.TargetFaces.Clear();
+            var result = new List<BitmapSourceTargetFace>();
+            var suffix = ".pca";
+
+            foreach (var file in Directory.GetFiles(".", "TF_*" + suffix))
+            {
+                var bstf = JsonConvert.DeserializeObject<BitmapSourceTargetFace>(File.ReadAllText(file));
+                bstf.Image = (Bitmap)Bitmap.FromFile(file.Replace(suffix, ".png"));
+                //this.viewModel.TargetFaces.Add(bstf);
+            }
+        }
+
+        [DllImport("gdi32")]
+        private static extern int DeleteObject(IntPtr o);
+
+        /// <summary>
+        /// Loads a bitmap into a bitmap source
+        /// </summary>
+        public static BitmapSource LoadBitmap(Bitmap source)
+        {
+            IntPtr ip = source.GetHbitmap();
+            BitmapSource bs = null;
+            try
+            {
+                bs = System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(ip,
+                   IntPtr.Zero, Int32Rect.Empty,
+                   System.Windows.Media.Imaging.BitmapSizeOptions.FromEmptyOptions());
+                bs.Freeze();
+            }
+            finally
+            {
+                DeleteObject(ip);
+            }
+
+            return bs;
         }
     }
 }

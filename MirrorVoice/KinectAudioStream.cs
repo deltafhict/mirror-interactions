@@ -4,7 +4,7 @@
 // </copyright>
 //------------------------------------------------------------------------------
 
-namespace Microsoft.Samples.Kinect.SpeechBasics
+namespace MirrorInteractions
 {
     using System;
     using System.IO;
