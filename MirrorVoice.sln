@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MirrorVoice", "MirrorVoice.csproj", "{9BE50D83-C55B-4836-AEE5-A076C8C27173}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MirrorVoice", "MirrorVoice\MirrorVoice.csproj", "{9BE50D83-C55B-4836-AEE5-A076C8C27173}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
