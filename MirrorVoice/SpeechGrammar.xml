@@ -5,7 +5,6 @@
       <item>Opus, <ruleref uri="#Commands"/> agenda</item>
     </item>
   </rule>
-
   <rule id="Commands">
     <item>
       <one-of>
@@ -14,36 +13,4 @@
       </one-of>
     </item>
   </rule>
-  <!--<rule id="rootRule">
-    <one-of>
-      <item>
-        <tag>FORWARD</tag>
-        <one-of>
-          <item> open agenda </item>
-          <item> close agenda </item>
-          <item> make appointment </item>
-        </one-of>
-      </item>
-      <item>
-        <tag>BACKWARD</tag>
-        <one-of>
-          <item> today </item>
-          <item> backwards </item>
-          <item> back </item>
-        </one-of>
-      </item>
-      <item>
-        <tag>LEFT</tag>
-        <one-of>
-          <item> turn left </item>
-        </one-of>
-      </item>
-      <item>
-        <tag>RIGHT</tag>
-        <one-of>
-          <item> turn right </item>
-        </one-of>
-      </item>
-    </one-of>
-  </rule>-->
 </grammar>

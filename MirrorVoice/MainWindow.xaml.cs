@@ -7,31 +7,32 @@
 namespace MirrorInteractions
 {
     using System;
-    using System.Collections.Generic;    
+    using System.Collections.Generic;
     using System.ComponentModel;
     using System.IO;
+    using System.Linq;
     using System.Runtime.InteropServices;
     using System.Text;    
-    using System.Windows;    
-    using System.Windows.Documents;
-    using System.Windows.Media;
+    using System.Windows;
     using Microsoft.Kinect;    
     using Microsoft.Speech.AudioFormat;
     using Microsoft.Speech.Recognition;
-    using Microsoft.Kinect.Face;
-    using Newtonsoft.Json;
     using Sacknet.KinectFacialRecognition;
-    using Sacknet.KinectFacialRecognition.KinectFaceModel;
     using Sacknet.KinectFacialRecognition.ManagedEigenObject;
     using System.Drawing;
     using System.Windows.Media.Imaging;
+    using WebSocketSharp;
+    using Newtonsoft.Json;
+    using System.Web.Script.Serialization;
 
     /// <summary>
     /// Interaction logic for MainWindow
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+        private enum Types { voice, speech, faceRecognition}
+
+        private readonly String serverAdress = "ws://127.0.0.1:1337";
         /// <summary>
         /// Active Kinect sensor.
         /// </summary>
@@ -53,6 +54,8 @@ namespace MirrorInteractions
         private KinectFacialRecognitionEngine facialRecognitionEngine;
 
         private IRecognitionProcessor activeProcessor;
+
+        List<BitmapSourceTargetFace> faces = new List<BitmapSourceTargetFace>();
 
         public MainWindow()
         {
@@ -81,6 +84,7 @@ namespace MirrorInteractions
             InitializeComponent();
 
             LoadFacialRecognitionEngine();
+            LoadVoiceDetectionEngine();
         }
 
         /// <summary>
@@ -123,7 +127,7 @@ namespace MirrorInteractions
             this.activeProcessor = new EigenObjectRecognitionProcessor();
 
             this.LoadAllTargetFaces();
-            //this.UpdateTargetFaces();
+            this.UpdateTargetFaces();
 
             if (this.facialRecognitionEngine == null)
             {
@@ -136,7 +140,33 @@ namespace MirrorInteractions
 
         private void Engine_RecognitionComplete(object sender, Sacknet.KinectFacialRecognition.RecognitionResult e)
         {
-            throw new NotImplementedException();
+            TrackedFace face = null;
+
+            if (e.Faces != null)
+            {
+                face = e.Faces.FirstOrDefault();
+            }
+
+            using (var processedBitmap = (Bitmap)e.ColorSpaceBitmap.Clone())
+            {
+                if (face != null)
+                {
+                    using (var g = Graphics.FromImage(processedBitmap))
+                    {
+                        var rect = face.TrackingResult.FaceRect;
+
+                        if (!string.IsNullOrEmpty(face.Key))
+                        {
+                            var score = Math.Round(face.ProcessorResults.First().Score, 2);
+
+                            // Write the key on the image...
+                            MessageBox.Show(face.Key + " " + score);
+                        }
+                    }
+                }
+                // Without an explicit call to GC.Collect here, memory runs out of control :(
+                GC.Collect();
+            }
         }
 
         private void LoadVoiceDetectionEngine()
@@ -172,10 +202,6 @@ namespace MirrorInteractions
             }
         }
 
-        private void WindowLoaded(object sender, RoutedEventArgs e)
-        {
-        }
-
         private void WindowClosing(object sender, CancelEventArgs e)
         {
                 if (null != this.convertStream)
@@ -203,17 +229,33 @@ namespace MirrorInteractions
         /// </summary>
         /// <param name="sender">object sending the event.</param>
         /// <param name="e">event arguments.</param>
-        private void SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+        private void SpeechRecognized(object sender1, SpeechRecognizedEventArgs e1)
         {
             // Speech utterance confidence below which we treat speech as if it hadn't been heard
             const double ConfidenceThreshold = 0.3;
 
-            if (e.Result.Confidence >= ConfidenceThreshold)
+            if (e1.Result.Confidence >= ConfidenceThreshold)
             {
-                switch (e.Result.Semantics.Value.ToString())
+                switch (e1.Result.Semantics.Value.ToString())
                 {
                     case "AGENDA":
-                        MessageBox.Show("Agenda called");
+                        String action = "";
+                        String resultText = e1.Result.Text.ToLower();
+                        if (resultText.Contains("open"))
+                        {
+                            action = "open";
+                        }
+                        else if (resultText.Contains("close"))
+                        {
+                            action = "close";
+                        }
+                        WSMessage messageToSend = new WSMessage
+                        {
+                            action = action,
+                            app = e1.Result.Semantics.Value.ToString(),
+                            type = Types.voice.ToString()
+                        };
+                        SendToServer(messageToSend);
                         break;
                 }
             }
@@ -226,7 +268,7 @@ namespace MirrorInteractions
         /// <param name="e">event arguments.</param>
         private void SpeechRejected(object sender, SpeechRecognitionRejectedEventArgs e)
         {
-            MessageBox.Show("SpeechRejected");
+            Console.WriteLine("Speech rejected");
         }
 
         /// <summary>
@@ -242,8 +284,14 @@ namespace MirrorInteractions
             {
                 var bstf = JsonConvert.DeserializeObject<BitmapSourceTargetFace>(File.ReadAllText(file));
                 bstf.Image = (Bitmap)Bitmap.FromFile(file.Replace(suffix, ".png"));
-                //this.viewModel.TargetFaces.Add(bstf);
+                faces.Add(bstf);
             }
+        }
+
+        private void UpdateTargetFaces()
+        {
+            if (this.faces.Count > 1)
+                this.activeProcessor.SetTargetFaces(faces);
         }
 
         [DllImport("gdi32")]
@@ -269,6 +317,16 @@ namespace MirrorInteractions
             }
 
             return bs;
+        }
+
+        private void SendToServer(WSMessage wsMessage)
+        {
+            String json = new JavaScriptSerializer().Serialize(wsMessage);
+            using (var ws = new WebSocket(serverAdress))
+            {
+                ws.Connect();
+                ws.Send(json);
+            }
         }
     }
 }
