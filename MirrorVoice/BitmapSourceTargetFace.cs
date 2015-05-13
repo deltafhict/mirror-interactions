@@ -12,7 +12,6 @@ using System.Windows.Media.Imaging;
 
 namespace MirrorInteractions
 {
-
     /// <summary>
     /// Target face with a BitmapSource accessor for the face
     /// </summary>
