@@ -12,9 +12,9 @@ namespace MirrorInteractions
     using System.IO;
     using System.Linq;
     using System.Runtime.InteropServices;
-    using System.Text;    
+    using System.Text;
     using System.Windows;
-    using Microsoft.Kinect;    
+    using Microsoft.Kinect;
     using Microsoft.Speech.AudioFormat;
     using Microsoft.Speech.Recognition;
     using Sacknet.KinectFacialRecognition;
@@ -30,7 +30,7 @@ namespace MirrorInteractions
     /// </summary>
     public partial class MainWindow : Window
     {
-        private enum Types { voice, speech, faceRecognition}
+        private enum Types { voice, speech, faceRecognition }
 
         private readonly String serverAdress = "ws://127.0.0.1:1337";
         /// <summary>
@@ -204,24 +204,24 @@ namespace MirrorInteractions
 
         private void WindowClosing(object sender, CancelEventArgs e)
         {
-                if (null != this.convertStream)
-                {
-                    this.convertStream.SpeechActive = false;
-                }
+            if (null != this.convertStream)
+            {
+                this.convertStream.SpeechActive = false;
+            }
 
-                if (null != this.speechEngine)
-                {
-                    this.facialRecognitionEngine.RecognitionComplete -= this.Engine_RecognitionComplete;
-                    this.speechEngine.SpeechRecognized -= this.SpeechRecognized;
-                    this.speechEngine.SpeechRecognitionRejected -= this.SpeechRejected;
-                    this.speechEngine.RecognizeAsyncStop();
-                }
+            if (null != this.speechEngine)
+            {
+                this.facialRecognitionEngine.RecognitionComplete -= this.Engine_RecognitionComplete;
+                this.speechEngine.SpeechRecognized -= this.SpeechRecognized;
+                this.speechEngine.SpeechRecognitionRejected -= this.SpeechRejected;
+                this.speechEngine.RecognizeAsyncStop();
+            }
 
-                if (null != this.kinectSensor)
-                {
-                    this.kinectSensor.Close();
-                    this.kinectSensor = null;
-                }
+            if (null != this.kinectSensor)
+            {
+                this.kinectSensor.Close();
+                this.kinectSensor = null;
+            }
         }
 
         /// <summary>
