@@ -20,6 +20,7 @@ namespace MirrorInteractions
     using System.Linq;
     using System.Runtime.InteropServices;
     using System.Text;
+    using System.Timers;
     using System.Web.Script.Serialization;
     using System.Windows;
     using System.Windows.Media.Imaging;
@@ -55,7 +56,11 @@ namespace MirrorInteractions
 
         private IRecognitionProcessor activeProcessor;
 
-        List<BitmapSourceTargetFace> faces = new List<BitmapSourceTargetFace>();
+        private List<BitmapSourceTargetFace> faces = new List<BitmapSourceTargetFace>();
+
+        private Timer faceRecognitionExpireTimer;
+
+        private String recognizedPerson = "unknown";
 
         public MainWindow()
         {
@@ -82,7 +87,6 @@ namespace MirrorInteractions
             }
 
             InitializeComponent();
-
             LoadFacialRecognitionEngine();
             LoadVoiceDetectionEngine();
         }
@@ -158,15 +162,28 @@ namespace MirrorInteractions
                         if (!string.IsNullOrEmpty(face.Key))
                         {
                             var score = Math.Round(face.ProcessorResults.First().Score, 2);
+                            if (score > 1000)
+                            {
 
-                            // Write the key on the image...
-                            MessageBox.Show(face.Key + " " + score);
+                                Console.WriteLine("face recognized " + face.Key);
+                                faceRecognitionExpireTimer = new Timer(300000);
+                                faceRecognitionExpireTimer.Elapsed += new ElapsedEventHandler(onFaceRecognizedExpired);
+                                faceRecognitionExpireTimer.AutoReset = false;
+                                faceRecognitionExpireTimer.Enabled = true;
+                                recognizedPerson = face.Key;
+                            }
                         }
                     }
                 }
                 // Without an explicit call to GC.Collect here, memory runs out of control :(
                 GC.Collect();
             }
+        }
+
+        private void onFaceRecognizedExpired(object sender, ElapsedEventArgs e)
+        {
+            faceRecognitionExpireTimer.Stop();
+            recognizedPerson = "unknown";
         }
 
         private void LoadVoiceDetectionEngine()
@@ -194,7 +211,7 @@ namespace MirrorInteractions
 
                 // For long recognition sessions (a few hours or more), it may be beneficial to turn off adaptation of the acoustic model. 
                 // This will prevent recognition accuracy from degrading over time.
-                ////speechEngine.UpdateRecognizerSetting("AdaptationOn", 0);
+                //speechEngine.UpdateRecognizerSetting("AdaptationOn", 0);
 
                 this.speechEngine.SetInputToAudioStream(
                     this.convertStream, new SpeechAudioFormatInfo(EncodingFormat.Pcm, 16000, 16, 1, 32000, 2, null));
@@ -253,7 +270,8 @@ namespace MirrorInteractions
                         {
                             action = action,
                             app = e1.Result.Semantics.Value.ToString(),
-                            type = Types.voice.ToString()
+                            type = Types.voice.ToString(),
+                            person = recognizedPerson
                         };
                         SendToServer(messageToSend);
                         break;

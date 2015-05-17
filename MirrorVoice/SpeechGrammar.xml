@@ -2,7 +2,7 @@
   <rule id="rootRule">
     <item>
       <tag>AGENDA</tag>
-      <item>Opus, <ruleref uri="#Commands"/> agenda</item>
+      <item><ruleref uri="#Commands"/> agenda</item>
     </item>
   </rule>
   <rule id="Commands">
