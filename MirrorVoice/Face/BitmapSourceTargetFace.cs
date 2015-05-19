@@ -1,4 +1,5 @@
 ﻿using Microsoft.Kinect.Face;
+using MirrorInteractions.Face;
 using Newtonsoft.Json;
 using Sacknet.KinectFacialRecognition.KinectFaceModel;
 using Sacknet.KinectFacialRecognition.ManagedEigenObject;
@@ -6,8 +7,10 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Media.Imaging;
 
 namespace MirrorInteractions
@@ -28,7 +31,7 @@ namespace MirrorInteractions
             get
             {
                 if (this.bitmapSource == null)
-                    this.bitmapSource = MainWindow.LoadBitmap(this.Image);
+                    this.bitmapSource = LoadBitmap(this.Image);
 
                 return this.bitmapSource;
             }
@@ -62,5 +65,32 @@ namespace MirrorInteractions
         /// </summary>
         [JsonProperty]
         public IReadOnlyDictionary<FaceShapeDeformations, float> Deformations { get; set; }
+
+
+
+        /// <summary>
+        /// Loads a bitmap into a bitmap source
+        /// </summary>
+        public static BitmapSource LoadBitmap(Bitmap source)
+        {
+            IntPtr ip = source.GetHbitmap();
+            BitmapSource bs = null;
+            try
+            {
+                bs = System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(ip,
+                   IntPtr.Zero, Int32Rect.Empty,
+                   System.Windows.Media.Imaging.BitmapSizeOptions.FromEmptyOptions());
+                bs.Freeze();
+            }
+            finally
+            {
+                DeleteObject(ip);
+            }
+
+            return bs;
+        }
+
+        [DllImport("gdi32")]
+        private static extern int DeleteObject(IntPtr o);
     }
 }

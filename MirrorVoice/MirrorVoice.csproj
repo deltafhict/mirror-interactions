@@ -128,19 +128,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="WSMessage.cs" />
+    <Compile Include="Face\FaceRecognition.cs" />
+    <Compile Include="Face\FaceRecognizedHandler.cs" />
+    <Compile Include="Models\RecognizedPerson.cs" />
+    <Compile Include="Models\WSMessage.cs" />
+    <Compile Include="Network\NetworkCommunicator.cs" />
+    <Compile Include="Speech\SpeechRecognition.cs" />
+    <Compile Include="Speech\SpeechRecognizedHandler.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Page>
-    <Compile Include="ActionCommand.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BitmapSourceTargetFace.cs" />
-    <Compile Include="KinectAudioStream.cs" />
+    <Compile Include="Face\BitmapSourceTargetFace.cs" />
+    <Compile Include="Speech\KinectAudioStream.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DesignTime>True</DesignTime>
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -390,6 +395,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

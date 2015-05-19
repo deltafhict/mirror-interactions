@@ -12,7 +12,7 @@ namespace MirrorInteractions
     /// <summary>
     /// Wrapper Stream Class to Support 32->16bit conversion and support Speech call to Seek
     /// </summary>
-    internal class KinectAudioStream : Stream
+    public class KinectAudioStream : Stream
     {
         /// <summary>
         /// Holds the kinect audio stream, in 32-bit IEEE float format
