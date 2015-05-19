@@ -269,7 +269,7 @@ namespace MirrorInteractions
                         WSMessage messageToSend = new WSMessage
                         {
                             action = action,
-                            app = e1.Result.Semantics.Value.ToString(),
+                            app = e1.Result.Semantics.Value.ToString().ToLower(),
                             type = Types.voice.ToString(),
                             person = recognizedPerson
                         };
