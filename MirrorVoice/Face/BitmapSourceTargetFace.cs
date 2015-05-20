@@ -1,4 +1,6 @@
-﻿using Microsoft.Kinect.Face;
+﻿// BitmapSourceTargetFace.cs
+// compile with: /doc:BitmapSourceTargetFace.xml
+using Microsoft.Kinect.Face;
 using MirrorInteractions.Face;
 using Newtonsoft.Json;
 using Sacknet.KinectFacialRecognition.KinectFaceModel;
@@ -16,81 +18,42 @@ using System.Windows.Media.Imaging;
 namespace MirrorInteractions
 {
     /// <summary>
-    /// Target face with a BitmapSource accessor for the face
-    /// </summary>
+    /// Target face with a BitmapSource accessor for the face. </summary>
     [JsonObject(MemberSerialization.OptIn)]
     class BitmapSourceTargetFace : IEigenObjectTargetFace, IFaceModelTargetFace
     {
-        private BitmapSource bitmapSource;
-
         /// <summary>
-        /// Gets the BitmapSource version of the face
-        /// </summary>
-        public BitmapSource BitmapSource
-        {
-            get
-            {
-                if (this.bitmapSource == null)
-                    this.bitmapSource = LoadBitmap(this.Image);
-
-                return this.bitmapSource;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the key returned when this face is found
-        /// </summary>
+        /// Gets or sets the key returned when this face is found. </summary>
+        /// <value>
+        /// String containing a Key.</value>
         [JsonProperty]
         public string Key { get; set; }
 
         /// <summary>
-        /// Gets or sets the grayscale, 100x100 target image
-        /// </summary>
+        /// Gets or sets the grayscale, 100x100 target image. </summary>
+        /// <value>
+        /// Bitmap containing a Image.</value>
         public Bitmap Image { get; set; }
 
         /// <summary>
-        /// Gets or sets the detected hair color of the face
-        /// </summary>
+        /// Gets or sets the detected hair color of the face. </summary>
+        /// <value>
+        /// Color containing a HairColor. </value>
         [JsonProperty]
         public Color HairColor { get; set; }
 
         /// <summary>
-        /// Gets or sets the detected skin color of the face
-        /// </summary>
+        /// Gets or sets the detected skin color of the face. </summary>
+        /// <value>
+        /// Color containing a SkinColor. </value>
         [JsonProperty]
         public Color SkinColor { get; set; }
 
         /// <summary>
-        /// Gets or sets the detected deformations of the face
-        /// </summary>
+        /// Gets or sets the detected deformations of the face. </summary>
+        /// <value>
+        /// IReadOnlyDictionary<FaceShapeDeformations, float> containing Deformations. </value>
         [JsonProperty]
         public IReadOnlyDictionary<FaceShapeDeformations, float> Deformations { get; set; }
-
-
-
-        /// <summary>
-        /// Loads a bitmap into a bitmap source
-        /// </summary>
-        public static BitmapSource LoadBitmap(Bitmap source)
-        {
-            IntPtr ip = source.GetHbitmap();
-            BitmapSource bs = null;
-            try
-            {
-                bs = System.Windows.Interop.Imaging.CreateBitmapSourceFromHBitmap(ip,
-                   IntPtr.Zero, Int32Rect.Empty,
-                   System.Windows.Media.Imaging.BitmapSizeOptions.FromEmptyOptions());
-                bs.Freeze();
-            }
-            finally
-            {
-                DeleteObject(ip);
-            }
-
-            return bs;
-        }
-
-        [DllImport("gdi32")]
-        private static extern int DeleteObject(IntPtr o);
     }
 }

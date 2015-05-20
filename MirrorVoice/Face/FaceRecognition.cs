@@ -18,31 +18,34 @@ namespace MirrorInteractions.Face
     public class FaceRecognition
     {
         /// <summary>
-        /// Facial recognition engine using face detection from Kinect.
-        /// </summary>
+        /// Store for the facialRecognitionEngine property. </summary>
         private KinectFacialRecognitionEngine facialRecognitionEngine;
 
-        private List<BitmapSourceTargetFace> faces = new List<BitmapSourceTargetFace>();
-
+        /// <summary>
+        /// Store for the activeProcessor property</summary>
         private IRecognitionProcessor activeProcessor;
 
+        /// <summary>
+        /// Store for the faceRecognizedEvent property</summary>
         EventHandler<RecognitionResult> faceRecognizedEvent;
 
+        /// <summary>
+        /// Store for the kinectSensor property</summary>
         KinectSensor kinectSensor;
 
+        /// <summary>
+        /// The class constructor. </summary>
+        /// <param name="kinectSensor">The kinect sensor initialized in MainWindow.cs. </param>
         public FaceRecognition(KinectSensor kinectSensor)
         {
+            this.kinectSensor = kinectSensor;
+            this.activeProcessor = EigenObjectRecognitionProcessor.Instance;
             FaceRecognizedHandler faceRecognizedHandler = new FaceRecognizedHandler();
             this.faceRecognizedEvent = faceRecognizedHandler.FaceRecognition;
-            this.kinectSensor = kinectSensor;
         }
 
         public void OpenFacialRecognitionEngine()
         {
-            this.activeProcessor = new EigenObjectRecognitionProcessor();
-
-            this.LoadAllTargetFaces();
-            this.UpdateTargetFaces();
 
             if (this.facialRecognitionEngine == null)
             {
@@ -56,30 +59,6 @@ namespace MirrorInteractions.Face
         public void CloseFacialRecognitionEngine()
         {
             this.facialRecognitionEngine.RecognitionComplete -= this.faceRecognizedEvent;
-
-        }
-
-        /// <summary>
-        /// Loads all BSTFs from the current directory
-        /// </summary>
-        private void LoadAllTargetFaces()
-        {
-            //this.viewModel.TargetFaces.Clear();
-            var result = new List<BitmapSourceTargetFace>();
-            var suffix = ".pca";
-
-            foreach (var file in Directory.GetFiles(".", "TF_*" + suffix))
-            {
-                var bstf = JsonConvert.DeserializeObject<BitmapSourceTargetFace>(File.ReadAllText(file));
-                bstf.Image = (Bitmap)Bitmap.FromFile(file.Replace(suffix, ".png"));
-                faces.Add(bstf);
-            }
-        }
-
-        private void UpdateTargetFaces()
-        {
-            if (this.faces.Count > 1)
-                this.activeProcessor.SetTargetFaces(faces);
         }
     }
 }

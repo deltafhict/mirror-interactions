@@ -8,6 +8,6 @@ namespace MirrorInteractions.Models
 {
     public static class RecognizedPerson
     {
-        public static String recognizedPerson { get; set; }
+        public static string recognizedPerson { get; set; }
     }
 }

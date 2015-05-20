@@ -1,4 +1,5 @@
 ﻿using Microsoft.Speech.Recognition;
+using MirrorInteractions.Face;
 using MirrorInteractions.Models;
 using MirrorInteractions.Network;
 using System;
@@ -46,6 +47,11 @@ namespace MirrorInteractions.Speech
                             person = RecognizedPerson.recognizedPerson
                         };
                         NetworkCommunicator.SendToServer(messageToSend);
+                        break;
+
+                    case "INITIALIZE FACE":
+                        String personName = "Daan";
+                        FaceRecognizedHandler.SetLearnNewFaces(personName);
                         break;
                 }
             }

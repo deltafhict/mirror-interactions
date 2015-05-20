@@ -128,9 +128,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Face\FaceLearner.cs" />
+    <Compile Include="Face\FaceLoader.cs" />
     <Compile Include="Face\FaceRecognition.cs" />
     <Compile Include="Face\FaceRecognizedHandler.cs" />
-    <Compile Include="Models\RecognizedPerson.cs" />
+    <Compile Include="Models\GlobalVariables.cs" />
     <Compile Include="Models\WSMessage.cs" />
     <Compile Include="Network\NetworkCommunicator.cs" />
     <Compile Include="Speech\SpeechRecognition.cs" />

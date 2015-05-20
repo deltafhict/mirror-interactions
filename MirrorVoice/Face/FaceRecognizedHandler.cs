@@ -1,5 +1,7 @@
 ﻿using MirrorInteractions.Models;
 using Sacknet.KinectFacialRecognition;
+using Sacknet.KinectFacialRecognition.KinectFaceModel;
+using Sacknet.KinectFacialRecognition.ManagedEigenObject;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -14,10 +16,23 @@ namespace MirrorInteractions.Face
     {
 
         private Timer faceRecognitionExpireTimer;
+        private TrackedFace face = null;
+        private int newLearnedFacesCount = 0;
+        private static bool learnNewFaces = false;
+        private static string personName = null;
+        private FaceLearner faceLearner;
+        private FaceLoader faceLoader;
+
+        public FaceRecognizedHandler()
+        {
+            this.faceLearner = new FaceLearner();
+            this.faceLoader = new FaceLoader();
+            faceLoader.LoadAllTargetFaces();
+        }
 
         public void FaceRecognition(object sender, Sacknet.KinectFacialRecognition.RecognitionResult e)
         {
-            TrackedFace face = null;
+            Console.WriteLine("face detected");
 
             if (e.Faces != null)
             {
@@ -37,7 +52,6 @@ namespace MirrorInteractions.Face
                             var score = Math.Round(face.ProcessorResults.First().Score, 2);
                             if (score > 1000)
                             {
-
                                 Console.WriteLine("face recognized " + face.Key);
                                 faceRecognitionExpireTimer = new Timer(60000);
                                 faceRecognitionExpireTimer.Elapsed += new ElapsedEventHandler(OnFaceRecognizedExpired);
@@ -47,10 +61,26 @@ namespace MirrorInteractions.Face
                             }
                         }
                     }
+
+                    if (learnNewFaces && newLearnedFacesCount != 20)
+                    {
+                        faceLearner.LearnNewFaces(e, personName);
+                    }
+                    else if (newLearnedFacesCount == 20)
+                    {
+                        faceLoader.LoadAllTargetFaces();
+                        learnNewFaces = false;
+                        newLearnedFacesCount = 0;
+                    }
                 }
                 // Without an explicit call to GC.Collect here, memory runs out of control :(
                 GC.Collect();
             }
+        }
+
+        public static void SetLearnNewFaces(String personName)
+        {
+            learnNewFaces = true;
         }
 
         private void OnFaceRecognizedExpired(object sender, ElapsedEventArgs e)

@@ -15,12 +15,26 @@ namespace Sacknet.KinectFacialRecognition.ManagedEigenObject
     {
         private object processingMutex = new object();
 
+        private static EigenObjectRecognitionProcessor instance;
+
         /// <summary>
         /// Initializes a new instance of the EigenObjectRecognitionProcessor class without any trained faces
         /// </summary>
-        public EigenObjectRecognitionProcessor()
+        private EigenObjectRecognitionProcessor()
         {
             this.Threshold = 1750;
+        }
+
+        public static EigenObjectRecognitionProcessor Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new EigenObjectRecognitionProcessor();
+                }
+                return instance;
+            }
         }
 
         /// <summary>
