@@ -17,7 +17,7 @@ namespace MirrorInteractions
 
     public class Appointment
     {
-        public String titel { get; set; }
+        public String title { get; set; }
         public String desc { get; set; }
         public String datetime { get; set; }
     }
