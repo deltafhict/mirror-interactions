@@ -39,7 +39,7 @@ namespace MirrorInteractions.Speech
             // grab the audio stream from the kinect
             IReadOnlyList<AudioBeam> audioBeamList = kinectSensor.AudioSource.AudioBeams;
             System.IO.Stream audioStream = audioBeamList[0].OpenInputStream();
-
+            
             this.kinectAudioStream = new KinectAudioStream(audioStream);
             this.speechRecognizedEvent = speechRecognizedHandler.SpeechRecognized;
             this.speechRejectedEvent = speechRecognizedHandler.SpeechRejected;

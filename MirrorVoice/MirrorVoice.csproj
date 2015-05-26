@@ -106,6 +106,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Speech" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -132,7 +133,7 @@
     <Compile Include="Face\FaceLoader.cs" />
     <Compile Include="Face\FaceRecognition.cs" />
     <Compile Include="Face\FaceRecognizedHandler.cs" />
-    <Compile Include="Models\GlobalVariables.cs" />
+    <Compile Include="Models\RecognizedPerson.cs" />
     <Compile Include="Models\WSMessage.cs" />
     <Compile Include="Network\NetworkCommunicator.cs" />
     <Compile Include="Speech\SpeechRecognition.cs" />
