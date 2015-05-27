@@ -134,14 +134,14 @@ namespace MirrorInteractions.Gestures
 
                         if (gestureComplete)
                         {
-                            if (result.Progress <= 0.3f)
+                            if (result.Progress <= 0.2f)
                             {
                                 gestureComplete = false;
                             }
                             return;
                         }
 
-                        if (result.Progress >= 0.9f)
+                        if (result.Progress >= 0.6f)
                         {
                             Debug.WriteLine("Drag to Left complete");
                             gestureComplete = true;
@@ -157,14 +157,14 @@ namespace MirrorInteractions.Gestures
 
                         if (gestureComplete)
                         {
-                            if (result.Progress <= 0.3f)
+                            if (result.Progress <= 0.2f)
                             {
                                 gestureComplete = false;
                             }
                             return;
                         }
 
-                        if (result.Progress >= 0.9f)
+                        if (result.Progress >= 0.6f)
                         {
                             Debug.WriteLine("Drag to Right complete");
                             gestureComplete = true;

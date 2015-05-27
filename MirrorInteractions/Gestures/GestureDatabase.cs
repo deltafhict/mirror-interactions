@@ -47,8 +47,8 @@ namespace MirrorInteractions.Gestures
               @"Gestures/MirrorGestures.gbd");
 
             // Initialize Drag Gestures
-            dragToLeftGesture = db.AvailableGestures.Where(g => g.Name == "DragToLeftProgress").Single();
-            dragToRightGesture = db.AvailableGestures.Where(g => g.Name == "DragToRightProgress").Single();
+            dragToLeftGesture = db.AvailableGestures.Where(g => g.Name == "SwipeToLeftProgress").Single();
+            dragToRightGesture = db.AvailableGestures.Where(g => g.Name == "SwipeToRightProgress").Single();
         }
     }
 }
