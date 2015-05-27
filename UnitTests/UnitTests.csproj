@@ -58,6 +58,10 @@
       <Project>{9be50d83-c55b-4836-aee5-a076c8c27173}</Project>
       <Name>MirrorInteractions</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Sacknet.KinectFacialRecognition\Sacknet.KinectFacialRecognition.csproj">
+      <Project>{d10c23ec-ab96-4103-9d53-0c2089a3bcfb}</Project>
+      <Name>Sacknet.KinectFacialRecognition</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

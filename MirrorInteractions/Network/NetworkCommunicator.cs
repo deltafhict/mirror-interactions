@@ -15,11 +15,16 @@ namespace MirrorInteractions.Network {
         /// </summary>
         /// <param name="wsMessage">The message to send.</param>
         public static void SendToServer(WSMessage wsMessage) {
-            String json = new JavaScriptSerializer().Serialize(wsMessage);
+            String json = ConvertToJson(wsMessage);
+
             using (var ws = new WebSocket(serverAdress)) {
                 ws.Connect();
                 ws.Send(json);
             }
+        }
+
+        public static String ConvertToJson(WSMessage message) {
+            return new JavaScriptSerializer().Serialize(message);
         }
     }
 }
