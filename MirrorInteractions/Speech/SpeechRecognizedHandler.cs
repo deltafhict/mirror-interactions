@@ -1,15 +1,27 @@
-﻿using Microsoft.Speech.Recognition;
-using MirrorInteractions;
+﻿// ***********************************************************************
+// Assembly         : MirrorInteractions
+// Author           : delta
+// Created          : 05-27-2015
+//
+// Last Modified By : delta
+// Last Modified On : 05-27-2015
+// ***********************************************************************
+// <copyright file="SpeechRecognizedHandler.cs" company="">
+//     Copyright (c) . All rights reserved.
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using Microsoft.Speech.Recognition;
 using MirrorInteractions.Face;
 using MirrorInteractions.Models;
 using MirrorInteractions.Network;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows;
 
 namespace MirrorInteractions.Speech {
+    /// <summary>
+    /// Class SpeechRecognizedHandler.
+    /// </summary>
     class SpeechRecognizedHandler {
         /// <summary>
         /// Handler for recognized speech events.
@@ -40,6 +52,13 @@ namespace MirrorInteractions.Speech {
                     case "initialize face":
                         String personName = "Daan";
                         FaceRecognizedHandler.SetLearnNewFaces(personName);
+                        break;
+
+                    case "joke":
+                    case "opus":
+                    case "weather":
+                    case "mail":
+                        MessageBox.Show(resultText);
                         break;
                 }
             }

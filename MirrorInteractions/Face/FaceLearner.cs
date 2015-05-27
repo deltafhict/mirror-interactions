@@ -1,4 +1,16 @@
-﻿using MirrorInteractions.Models;
+﻿// ***********************************************************************
+// Assembly         : MirrorInteractions
+// Author           : delta
+// Created          : 05-27-2015
+//
+// Last Modified By : delta
+// Last Modified On : 05-27-2015
+// ***********************************************************************
+// <copyright file="FaceLearner.cs" company="">
+//     Copyright (c) . All rights reserved.
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
 using Newtonsoft.Json;
 using Sacknet.KinectFacialRecognition;
 using Sacknet.KinectFacialRecognition.KinectFaceModel;
@@ -6,19 +18,25 @@ using Sacknet.KinectFacialRecognition.ManagedEigenObject;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MirrorInteractions.Face
 {
+    /// <summary>
+    /// Class FaceLearner.
+    /// </summary>
     public class FaceLearner
     {
         /// <summary>
-        /// Store for the faces property. </summary>
+        /// Store for the faces property.
+        /// </summary>
         private List<BitmapSourceTargetFace> faces = new List<BitmapSourceTargetFace>();
 
+        /// <summary>
+        /// Learns new faces from the recognized.
+        /// </summary>
+        /// <param name="recognitionResult">The recognition result.</param>
+        /// <param name="personName">Name of the person.</param>
         public void LearnNewFaces(RecognitionResult recognitionResult, string personName)
         {
             TrackedFace face = null;
@@ -58,6 +76,7 @@ namespace MirrorInteractions.Face
         /// <summary>
         /// Saves the target face to disk
         /// </summary>
+        /// <param name="bstf">The BSTF.</param>
         private void SerializeBitmapSourceTargetFace(BitmapSourceTargetFace bstf)
         {
             var filenamePrefix = "TF_" + DateTime.Now.Ticks.ToString();

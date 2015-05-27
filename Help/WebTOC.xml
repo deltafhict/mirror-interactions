@@ -1,0 +1,633 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="52f2f308-adb2-4fb0-b046-dad74b234b89" Title="MirrorInteractions Namespace" Url="html/2072577594.htm">
+    <HelpTOCNode Id="a6ae99aa-c1a1-489b-9847-c8a7d359127a" Title="App Class" Url="html/1277228994.htm">
+      <HelpTOCNode Title="App Methods" Url="html/2049528931.htm" />
+      <HelpTOCNode Title="App Properties" Url="html/1563031624.htm" />
+      <HelpTOCNode Title="App Events" Url="html/1061324687.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="365dc800-be21-45df-9b8c-de4b0b517b12" Title="MainWindow Class" Url="html/1573125004.htm">
+      <HelpTOCNode Title="MainWindow Members" Url="html/1508702850.htm" />
+      <HelpTOCNode Title="MainWindow Constructor " Url="html/562778343.htm" />
+      <HelpTOCNode Id="5004556d-56a3-498c-9c13-b53f76d08411" Title="MainWindow Fields" Url="html/804686004.htm">
+        <HelpTOCNode Title="faceRecognition Field" Url="html/560236821.htm" />
+        <HelpTOCNode Title="gestureRecognition Field" Url="html/246650397.htm" />
+        <HelpTOCNode Title="kinectSensor Field" Url="html/783483408.htm" />
+        <HelpTOCNode Title="speechRecognition Field" Url="html/1130774390.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="1d019436-9330-4132-b192-58dcf42388f0" Title="MainWindow Methods" Url="html/225650700.htm">
+        <HelpTOCNode Title="WindowClosing Method " Url="html/1523639607.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="MainWindow Properties" Url="html/1294035195.htm" />
+      <HelpTOCNode Title="MainWindow Events" Url="html/800411378.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="3e09b47f-873c-49b2-9a1f-32228dc8b49b" Title="MirrorInteractions.Face Namespace" Url="html/908403045.htm">
+    <HelpTOCNode Id="3f3e41b9-0350-4f46-97d3-d665781d0f45" Title="BitmapSourceTargetFace Class" Url="html/1718217751.htm">
+      <HelpTOCNode Title="BitmapSourceTargetFace Members" Url="html/462940630.htm" />
+      <HelpTOCNode Title="BitmapSourceTargetFace Methods" Url="html/1205113301.htm" />
+      <HelpTOCNode Id="5de8fdbf-4751-4dd3-8b52-91201a67a145" Title="BitmapSourceTargetFace Properties" Url="html/1814149549.htm">
+        <HelpTOCNode Title="Deformations Property " Url="html/1015261077.htm" />
+        <HelpTOCNode Title="HairColor Property " Url="html/986290654.htm" />
+        <HelpTOCNode Title="Image Property " Url="html/336972082.htm" />
+        <HelpTOCNode Title="Key Property " Url="html/1217316988.htm" />
+        <HelpTOCNode Title="SkinColor Property " Url="html/17027796.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="06164795-0ff5-488b-96d3-756652ea5e44" Title="FaceLearner Class" Url="html/1406052625.htm">
+      <HelpTOCNode Title="FaceLearner Members" Url="html/1493537304.htm" />
+      <HelpTOCNode Id="441bf8a5-671d-4ac8-9ac9-6f19f87a3198" Title="FaceLearner Fields" Url="html/382024182.htm">
+        <HelpTOCNode Title="faces Field" Url="html/862875465.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="d74fa5cd-4717-4cdb-a4dd-22d9f53fe6ff" Title="FaceLearner Methods" Url="html/1845775186.htm">
+        <HelpTOCNode Title="LearnNewFaces Method " Url="html/1317840347.htm" />
+        <HelpTOCNode Title="SerializeBitmapSourceTargetFace Method " Url="html/1020240129.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d2570241-7b5a-4480-a78b-f741cffd7963" Title="FaceLoader Class" Url="html/756309363.htm">
+      <HelpTOCNode Title="FaceLoader Members" Url="html/1022357105.htm" />
+      <HelpTOCNode Title="FaceLoader Constructor " Url="html/1520415925.htm" />
+      <HelpTOCNode Id="c4b9799f-1caf-444c-ac02-8248e2360def" Title="FaceLoader Fields" Url="html/2014776917.htm">
+        <HelpTOCNode Title="activeProcessor Field" Url="html/1967098304.htm" />
+        <HelpTOCNode Title="faces Field" Url="html/719842819.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="637e422e-9f0d-42b9-b7c0-ee6a12de5f58" Title="FaceLoader Methods" Url="html/1430899870.htm">
+        <HelpTOCNode Title="LoadAllTargetFaces Method " Url="html/2114650676.htm" />
+        <HelpTOCNode Title="UpdateTargetFaces Method " Url="html/91125550.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="c3e08666-b6d2-44e4-8df7-6d6a61f2a57e" Title="FaceRecognition Class" Url="html/1614946985.htm">
+      <HelpTOCNode Title="FaceRecognition Members" Url="html/63677600.htm" />
+      <HelpTOCNode Title="FaceRecognition Constructor " Url="html/1500701421.htm" />
+      <HelpTOCNode Id="f1a3bb88-ab39-4a42-859e-81b9be3a6a65" Title="FaceRecognition Fields" Url="html/378726481.htm">
+        <HelpTOCNode Title="activeProcessor Field" Url="html/84138917.htm" />
+        <HelpTOCNode Title="faceRecognizedEvent Field" Url="html/543816195.htm" />
+        <HelpTOCNode Title="facialRecognitionEngine Field" Url="html/874870285.htm" />
+        <HelpTOCNode Title="kinectSensor Field" Url="html/1253279720.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="1a2ec914-3194-43f7-b34e-ce27402647ed" Title="FaceRecognition Methods" Url="html/1988496873.htm">
+        <HelpTOCNode Title="CloseFacialRecognitionEngine Method " Url="html/1421381546.htm" />
+        <HelpTOCNode Title="OpenFacialRecognitionEngine Method " Url="html/1318982606.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="23b4d45b-c41f-491b-8012-b8a9791924aa" Title="FaceRecognizedHandler Class" Url="html/338414439.htm">
+      <HelpTOCNode Title="FaceRecognizedHandler Members" Url="html/1690070467.htm" />
+      <HelpTOCNode Title="FaceRecognizedHandler Constructor " Url="html/547082540.htm" />
+      <HelpTOCNode Id="743133a7-aa4f-4714-a5b8-db40c8749ee0" Title="FaceRecognizedHandler Fields" Url="html/356417718.htm">
+        <HelpTOCNode Title="face Field" Url="html/1457949467.htm" />
+        <HelpTOCNode Title="faceLearner Field" Url="html/1126885316.htm" />
+        <HelpTOCNode Title="faceLoader Field" Url="html/1306416149.htm" />
+        <HelpTOCNode Title="faceRecognitionExpireTimer Field" Url="html/496894034.htm" />
+        <HelpTOCNode Title="learnNewFaces Field" Url="html/450373037.htm" />
+        <HelpTOCNode Title="newLearnedFacesCount Field" Url="html/207024200.htm" />
+        <HelpTOCNode Title="personName Field" Url="html/1224371508.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="4b666bfa-90f4-4b01-b81f-7e2de85081e4" Title="FaceRecognizedHandler Methods" Url="html/398211134.htm">
+        <HelpTOCNode Title="FaceRecognition Method " Url="html/1960931180.htm" />
+        <HelpTOCNode Title="OnFaceRecognizedExpired Method " Url="html/103176398.htm" />
+        <HelpTOCNode Title="SetLearnNewFaces Method " Url="html/1633544164.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="3b8d53ca-7aeb-4a62-92bd-4b399f984300" Title="MirrorInteractions.Gestures Namespace" Url="html/1175355816.htm">
+    <HelpTOCNode Id="05002448-8aef-49a9-9e46-6ffe823540c3" Title="GestureDatabase Class" Url="html/259044065.htm">
+      <HelpTOCNode Title="GestureDatabase Members" Url="html/1899823908.htm" />
+      <HelpTOCNode Title="GestureDatabase Constructor " Url="html/1696446461.htm" />
+      <HelpTOCNode Id="454f6e8c-3713-45e3-9dea-6b1000984748" Title="GestureDatabase Fields" Url="html/51798094.htm">
+        <HelpTOCNode Title="dragToLeftGesture Field" Url="html/1832527908.htm" />
+        <HelpTOCNode Title="dragToRightGesture Field" Url="html/534639819.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="06589b9f-812a-4afa-9f6b-e6d0f8c52532" Title="GestureDatabase Methods" Url="html/1885532538.htm">
+        <HelpTOCNode Title="LoadGestures Method " Url="html/715195593.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="b333f348-2d0c-4a73-a88e-56de88738502" Title="GestureRecognition Class" Url="html/1101536277.htm">
+      <HelpTOCNode Title="GestureRecognition Members" Url="html/1898594934.htm" />
+      <HelpTOCNode Title="GestureRecognition Constructor " Url="html/1426749890.htm" />
+      <HelpTOCNode Id="bd68099b-8df5-4546-aadd-ed71bbf0064b" Title="GestureRecognition Fields" Url="html/1375083488.htm">
+        <HelpTOCNode Title="bodies Field" Url="html/1612830026.htm" />
+        <HelpTOCNode Title="bodyReader Field" Url="html/1936179250.htm" />
+        <HelpTOCNode Title="gestureReader Field" Url="html/282667850.htm" />
+        <HelpTOCNode Title="gestureRecognizedHandler Field" Url="html/1657441397.htm" />
+        <HelpTOCNode Title="gestureSource Field" Url="html/1655771147.htm" />
+        <HelpTOCNode Title="sensor Field" Url="html/2074645651.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="152823ae-9081-4c44-a7e5-f4f8b6814a6c" Title="GestureRecognition Methods" Url="html/426008848.htm">
+        <HelpTOCNode Title="CloseReaders Method " Url="html/108914529.htm" />
+        <HelpTOCNode Title="InitializeReaders Method " Url="html/543573981.htm" />
+        <HelpTOCNode Title="OpenBodyReader Method " Url="html/1899149143.htm" />
+        <HelpTOCNode Title="OpenGestureReader Method " Url="html/39116548.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="32194b11-8f2c-4b95-90e3-ce7f701f124c" Title="GestureRecognizedHandler Class" Url="html/1074625685.htm">
+      <HelpTOCNode Title="GestureRecognizedHandler Members" Url="html/2025354478.htm" />
+      <HelpTOCNode Title="GestureRecognizedHandler Constructor " Url="html/1613899802.htm" />
+      <HelpTOCNode Id="443aee3b-6188-400d-b8f8-0212a1bdeee0" Title="GestureRecognizedHandler Fields" Url="html/1873823474.htm">
+        <HelpTOCNode Title="bodies Field" Url="html/766039101.htm" />
+        <HelpTOCNode Title="gestureComplete Field" Url="html/1948352656.htm" />
+        <HelpTOCNode Title="gestureDatabase Field" Url="html/1480635475.htm" />
+        <HelpTOCNode Title="gestureReader Field" Url="html/858351047.htm" />
+        <HelpTOCNode Title="gestureSource Field" Url="html/861607692.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="b1c9a770-e0d3-4486-bfed-4b33c781e731" Title="GestureRecognizedHandler Methods" Url="html/537151155.htm">
+        <HelpTOCNode Title="OnBodyFrameArrived Method " Url="html/417537944.htm" />
+        <HelpTOCNode Title="OnGestureFrameArrived Method " Url="html/215885294.htm" />
+        <HelpTOCNode Title="OnTrackingIdLost Method " Url="html/772819756.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="755f68a5-d7c7-4488-8d0a-30ebd495361f" Title="MirrorInteractions.Models Namespace" Url="html/1336112473.htm">
+    <HelpTOCNode Id="7bdc6ee5-863e-470a-b137-4c20be1e11a9" Title="Appointment Class" Url="html/1464632902.htm">
+      <HelpTOCNode Title="Appointment Members" Url="html/1848163465.htm" />
+      <HelpTOCNode Id="e7a11954-91e1-48cb-9fbd-4a670cee8bb7" Title="Appointment Constructor " Url="html/1693980102.htm">
+        <HelpTOCNode Title="Appointment Constructor (String, String, DateTime)" Url="html/1195525047.htm" />
+        <HelpTOCNode Title="Appointment Constructor (String, DateTime)" Url="html/819008445.htm" />
+        <HelpTOCNode Title="Appointment Constructor (DateTime)" Url="html/634993193.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="1ad0260b-de01-47a2-96ca-1cc2b4dbcdae" Title="Appointment Fields" Url="html/1536453133.htm">
+        <HelpTOCNode Title="datetime Field" Url="html/692554109.htm" />
+        <HelpTOCNode Title="desc Field" Url="html/520915313.htm" />
+        <HelpTOCNode Title="NO_DESC Field" Url="html/1475605639.htm" />
+        <HelpTOCNode Title="NO_TITLE Field" Url="html/1593700818.htm" />
+        <HelpTOCNode Title="title Field" Url="html/1975330396.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Appointment Methods" Url="html/846213903.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Title="InteractionType Enumeration" Url="html/1482297050.htm" />
+    <HelpTOCNode Id="e2e0e518-9a99-4681-b25d-739dcb18a1ed" Title="RecognizedPerson Class" Url="html/7418891.htm">
+      <HelpTOCNode Title="RecognizedPerson Members" Url="html/1530200021.htm" />
+      <HelpTOCNode Title="RecognizedPerson Methods" Url="html/578972751.htm" />
+      <HelpTOCNode Id="08242d8f-5dc5-418c-af88-3ac012572fc9" Title="RecognizedPerson Properties" Url="html/1133302899.htm">
+        <HelpTOCNode Title="recognizedPerson Property " Url="html/1558389388.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="c5d748bd-8dd4-43be-93e8-367c143a0345" Title="WSMessage Class" Url="html/1056120421.htm">
+      <HelpTOCNode Title="WSMessage Members" Url="html/1620852914.htm" />
+      <HelpTOCNode Id="7fb4560a-2e0d-4142-b568-60f2e20bb212" Title="WSMessage Constructor " Url="html/1857776540.htm">
+        <HelpTOCNode Title="WSMessage Constructor (String, InteractionType, String, String, Appointment)" Url="html/326084332.htm" />
+        <HelpTOCNode Title="WSMessage Constructor (String, InteractionType, String, String)" Url="html/564407715.htm" />
+        <HelpTOCNode Title="WSMessage Constructor (String, String)" Url="html/158842504.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="cf8cdc21-bc72-4529-aa59-f0e6e08b744d" Title="WSMessage Fields" Url="html/332944106.htm">
+        <HelpTOCNode Title="action Field" Url="html/737470196.htm" />
+        <HelpTOCNode Title="app Field" Url="html/909773092.htm" />
+        <HelpTOCNode Title="appointment Field" Url="html/633511960.htm" />
+        <HelpTOCNode Title="interactionType Field" Url="html/1685429992.htm" />
+        <HelpTOCNode Title="person Field" Url="html/58600387.htm" />
+        <HelpTOCNode Title="type Field" Url="html/1214313731.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="8df7626b-905d-4cda-9944-7fa9624a865b" Title="WSMessage Methods" Url="html/1507132186.htm">
+        <HelpTOCNode Title="getInteractionType Method " Url="html/1609798393.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="b97a9074-7b76-48c8-9b92-f6c88b50d524" Title="MirrorInteractions.Network Namespace" Url="html/121294670.htm">
+    <HelpTOCNode Id="de1992df-dbf4-4d9b-b87d-a53aea80cbaf" Title="NetworkCommunicator Class" Url="html/884072948.htm">
+      <HelpTOCNode Title="NetworkCommunicator Members" Url="html/693549746.htm" />
+      <HelpTOCNode Id="7683741f-feae-4184-b935-a6715773c357" Title="NetworkCommunicator Fields" Url="html/1750363621.htm">
+        <HelpTOCNode Title="serverAdress Field" Url="html/189072631.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="a7473cfc-a48e-42e2-b133-4f16c169abb2" Title="NetworkCommunicator Methods" Url="html/2031135383.htm">
+        <HelpTOCNode Title="ConvertToJson Method " Url="html/684326696.htm" />
+        <HelpTOCNode Title="SendToServer Method " Url="html/2039433073.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="5b498766-b958-4f45-9047-f6d019733bef" Title="MirrorInteractions.Properties Namespace" Url="html/1776324201.htm">
+    <HelpTOCNode Id="764c5d9f-65a0-405b-b9ec-f0493771edfb" Title="Resources Class" Url="html/244575850.htm">
+      <HelpTOCNode Title="Resources Members" Url="html/53313615.htm" />
+      <HelpTOCNode Title="Resources Constructor " Url="html/24139456.htm" />
+      <HelpTOCNode Id="bac7836c-c708-47aa-9adb-e224a9f43732" Title="Resources Fields" Url="html/1291968035.htm">
+        <HelpTOCNode Title="resourceCulture Field" Url="html/764923390.htm" />
+        <HelpTOCNode Title="resourceMan Field" Url="html/138486217.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Resources Methods" Url="html/970019206.htm" />
+      <HelpTOCNode Id="ba188817-3cad-4406-a178-871b2454c0d5" Title="Resources Properties" Url="html/790709294.htm">
+        <HelpTOCNode Title="Culture Property " Url="html/922870140.htm" />
+        <HelpTOCNode Title="NoKinectReady Property " Url="html/641641519.htm" />
+        <HelpTOCNode Title="NoSpeechRecognizer Property " Url="html/1996724364.htm" />
+        <HelpTOCNode Title="ResourceManager Property " Url="html/1036676944.htm" />
+        <HelpTOCNode Title="SpeechGrammar Property " Url="html/84846169.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="63c50065-58e4-4bde-9408-a20994c55489" Title="Settings Class" Url="html/1403620784.htm">
+      <HelpTOCNode Title="Settings Members" Url="html/1771834900.htm" />
+      <HelpTOCNode Id="be6c1bc6-c9bd-494b-a181-25c19b0f71dd" Title="Settings Fields" Url="html/1575161678.htm">
+        <HelpTOCNode Title="defaultInstance Field" Url="html/883353164.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Settings Methods" Url="html/1113642643.htm" />
+      <HelpTOCNode Id="94d6c666-c997-4777-a3cd-901fb274ffe0" Title="Settings Properties" Url="html/922674189.htm">
+        <HelpTOCNode Title="Default Property " Url="html/1067361747.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="Settings Events" Url="html/627423900.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="9ad217c5-e45d-4e58-8142-e8ffd075e0eb" Title="MirrorInteractions.Speech Namespace" Url="html/2103765385.htm">
+    <HelpTOCNode Id="02681f06-f7ce-4bc2-b54e-af19ee14556c" Title="KinectAudioStream Class" Url="html/1326543053.htm">
+      <HelpTOCNode Title="KinectAudioStream Members" Url="html/965698447.htm" />
+      <HelpTOCNode Title="KinectAudioStream Constructor " Url="html/699595724.htm" />
+      <HelpTOCNode Id="75cde66b-24a4-4857-8699-fda1a1359053" Title="KinectAudioStream Fields" Url="html/810846124.htm">
+        <HelpTOCNode Title="kinect32BitStream Field" Url="html/1322239641.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="f7294662-fe3a-4c9c-8956-cc0c5511b90e" Title="KinectAudioStream Methods" Url="html/1974937457.htm">
+        <HelpTOCNode Title="Flush Method " Url="html/1759813244.htm" />
+        <HelpTOCNode Id="4dbddb4e-62e4-4b64-88b9-a4c311f46b44" Title="Read Method " Url="html/568759260.htm">
+          <HelpTOCNode Title="Read Method " Url="html/2110690696.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="b8f62024-3102-4003-89a5-ea5b6152afc6" Title="Seek Method " Url="html/1335595983.htm">
+          <HelpTOCNode Title="Seek Method " Url="html/591738161.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="SetLength Method " Url="html/1309412772.htm" />
+        <HelpTOCNode Title="Write Method " Url="html/1755324575.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="8f25f146-ff67-42f5-a290-58f593e11622" Title="KinectAudioStream Properties" Url="html/1754103422.htm">
+        <HelpTOCNode Title="CanRead Property " Url="html/475961111.htm" />
+        <HelpTOCNode Title="CanSeek Property " Url="html/286550248.htm" />
+        <HelpTOCNode Title="CanWrite Property " Url="html/1370820698.htm" />
+        <HelpTOCNode Title="Length Property " Url="html/80670946.htm" />
+        <HelpTOCNode Title="Position Property " Url="html/1696744399.htm" />
+        <HelpTOCNode Title="SpeechActive Property " Url="html/822021141.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="70f0a83c-270b-42b2-a28c-6ca518712f75" Title="SpeechRecognition Class" Url="html/1697606066.htm">
+      <HelpTOCNode Title="SpeechRecognition Members" Url="html/1167331018.htm" />
+      <HelpTOCNode Title="SpeechRecognition Constructor " Url="html/868993030.htm" />
+      <HelpTOCNode Id="db3f9e26-7936-4374-9bf2-b765d300fe02" Title="SpeechRecognition Fields" Url="html/1569663104.htm">
+        <HelpTOCNode Title="kinectAudioStream Field" Url="html/553795955.htm" />
+        <HelpTOCNode Title="speechEngine Field" Url="html/634977272.htm" />
+        <HelpTOCNode Title="speechRecognizedEvent Field" Url="html/1298815343.htm" />
+        <HelpTOCNode Title="speechRejectedEvent Field" Url="html/1808941787.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="70b8333d-fe82-48ee-8127-e75d7a36c260" Title="SpeechRecognition Methods" Url="html/1392793928.htm">
+        <HelpTOCNode Title="CloseSpeechRecognitionEngine Method " Url="html/1615484820.htm" />
+        <HelpTOCNode Title="OpenSpeechRecognitionEngine Method " Url="html/1131719108.htm" />
+        <HelpTOCNode Title="TryGetKinectRecognizer Method " Url="html/771070700.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="ee97e33b-5892-4ee1-b06a-07d009cc25f1" Title="SpeechRecognizedHandler Class" Url="html/1760519762.htm">
+      <HelpTOCNode Title="SpeechRecognizedHandler Members" Url="html/1194898707.htm" />
+      <HelpTOCNode Id="a4ddaff9-215c-4c63-8af7-a55e200b8820" Title="SpeechRecognizedHandler Methods" Url="html/2043456749.htm">
+        <HelpTOCNode Title="SpeechRecognized Method " Url="html/426016252.htm" />
+        <HelpTOCNode Title="SpeechRejected Method " Url="html/1338276362.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="ccb008d3-ceaa-489f-829b-f593e2681432" Title="Sacknet.KinectFacialRecognition Namespace" Url="html/2119518393.htm">
+    <HelpTOCNode Id="21eaabbe-2fdc-45d4-8ed2-e65f1f3fb01d" Title="BitmapExtensions Class" Url="html/1322398131.htm">
+      <HelpTOCNode Title="BitmapExtensions Members" Url="html/51570379.htm" />
+      <HelpTOCNode Id="b3717626-acb7-4444-abd1-8c8fe064e72a" Title="BitmapExtensions Methods" Url="html/1224877767.htm">
+        <HelpTOCNode Title="CopyBitmapToByteArray Method " Url="html/1434966039.htm" />
+        <HelpTOCNode Title="CopyGrayscaleBitmapToByteArray Method " Url="html/791306247.htm" />
+        <HelpTOCNode Title="HistogramEqualizationLut Method " Url="html/304989085.htm" />
+        <HelpTOCNode Title="HistogramEqualize Method " Url="html/817956339.htm" />
+        <HelpTOCNode Title="ImageHistogram Method " Url="html/967971535.htm" />
+        <HelpTOCNode Title="MakeGrayscale Method " Url="html/872450762.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="BitmapExtensions.RGB Enumeration" Url="html/918178761.htm" />
+    <HelpTOCNode Id="bc4b4072-f2cb-4eae-9ff1-4b9e0ad2ed05" Title="DoubleImage Class" Url="html/2146977562.htm">
+      <HelpTOCNode Title="DoubleImage Members" Url="html/55619834.htm" />
+      <HelpTOCNode Title="DoubleImage Constructor " Url="html/2031296960.htm" />
+      <HelpTOCNode Title="DoubleImage Methods" Url="html/1159412255.htm" />
+      <HelpTOCNode Id="213443bc-0b84-4208-963c-d7cb025c3ede" Title="DoubleImage Properties" Url="html/114470937.htm">
+        <HelpTOCNode Title="Data Property " Url="html/545377358.htm" />
+        <HelpTOCNode Title="Size Property " Url="html/559787425.htm" />
+        <HelpTOCNode Title="Step Property " Url="html/1866748530.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f941deaa-fe12-429d-806c-d64c4e886096" Title="Extensions Class" Url="html/1354277252.htm">
+      <HelpTOCNode Title="Extensions Members" Url="html/993278188.htm" />
+      <HelpTOCNode Id="a5646b1f-d4be-41aa-8525-a960036c6d0d" Title="Extensions Methods" Url="html/1990705373.htm">
+        <HelpTOCNode Title="CalculateNormalized3DFacePoints Method " Url="html/755185139.htm" />
+        <HelpTOCNode Title="ExtractFaceRotationInRadians Method " Url="html/966844048.htm" />
+        <HelpTOCNode Title="RotateX3D Method " Url="html/1238462387.htm" />
+        <HelpTOCNode Title="RotateY3D Method " Url="html/1233307498.htm" />
+        <HelpTOCNode Title="RotateZ3D Method " Url="html/891099463.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="ee3aa3c5-e845-4637-a014-d1ddea814d0a" Title="IKinectFacialRecognitionEngine Interface" Url="html/22861290.htm">
+      <HelpTOCNode Title="IKinectFacialRecognitionEngine Members" Url="html/333372812.htm" />
+      <HelpTOCNode Title="IKinectFacialRecognitionEngine Methods" Url="html/837125586.htm" />
+      <HelpTOCNode Id="3a1eda5f-14f7-46e5-a290-69e6256d7fac" Title="IKinectFacialRecognitionEngine Properties" Url="html/354624704.htm">
+        <HelpTOCNode Title="ProcessingEnabled Property " Url="html/1148310743.htm" />
+        <HelpTOCNode Title="Processors Property " Url="html/39391579.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="de13b555-8dd5-457d-b05e-e4dba465811b" Title="IKinectFacialRecognitionEngine Events" Url="html/406481446.htm">
+        <HelpTOCNode Title="RecognitionComplete Event" Url="html/74667365.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="3ad08a0b-cbfe-4691-b1a7-ea5b979cc1b2" Title="IRecognitionProcessor Interface" Url="html/1469813403.htm">
+      <HelpTOCNode Title="IRecognitionProcessor Members" Url="html/1092775724.htm" />
+      <HelpTOCNode Id="81acbab0-f37d-4655-b5ea-435f5c8a5786" Title="IRecognitionProcessor Methods" Url="html/1023311101.htm">
+        <HelpTOCNode Title="Process Method " Url="html/974028873.htm" />
+        <HelpTOCNode Title="SetTargetFaces Method " Url="html/1190641737.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="b74dbe83-3be1-42ef-bb5d-5842e8b674e7" Title="IRecognitionProcessor Properties" Url="html/985096525.htm">
+        <HelpTOCNode Title="RequiresFaceModelBuilder Property " Url="html/425206030.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="06618af6-bf37-4890-bbd4-50737e535341" Title="IRecognitionProcessorResult Interface" Url="html/2234824.htm">
+      <HelpTOCNode Title="IRecognitionProcessorResult Members" Url="html/851326160.htm" />
+      <HelpTOCNode Title="IRecognitionProcessorResult Methods" Url="html/1330380604.htm" />
+      <HelpTOCNode Id="3f9b8718-edc9-47bb-b323-dbce43af49cf" Title="IRecognitionProcessorResult Properties" Url="html/86304956.htm">
+        <HelpTOCNode Title="Key Property " Url="html/232163453.htm" />
+        <HelpTOCNode Title="Score Property " Url="html/542405272.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="e96d9e86-4fb0-4ef5-95e9-b25f16fb5896" Title="ITargetFace Interface" Url="html/2069611408.htm">
+      <HelpTOCNode Title="ITargetFace Members" Url="html/1488061519.htm" />
+      <HelpTOCNode Title="ITargetFace Methods" Url="html/1736257899.htm" />
+      <HelpTOCNode Id="3aee0bbb-b386-4e2e-abc9-0e7eede8677a" Title="ITargetFace Properties" Url="html/1147848137.htm">
+        <HelpTOCNode Title="Key Property " Url="html/2015156274.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="83f49a86-1ac9-429e-9599-2ac7eb1c6fe5" Title="KinectFaceTrackingResult Class" Url="html/702664509.htm">
+      <HelpTOCNode Title="KinectFaceTrackingResult Members" Url="html/1536249955.htm" />
+      <HelpTOCNode Id="c11246d4-b0c3-48a9-aabe-0f2ff0150775" Title="KinectFaceTrackingResult Constructor " Url="html/41970016.htm">
+        <HelpTOCNode Title="KinectFaceTrackingResult Constructor " Url="html/1377158266.htm" />
+        <HelpTOCNode Title="KinectFaceTrackingResult Constructor (FaceModel, FaceModel, FaceModelBuilderCollectionStatus, FaceAlignment, CoordinateMapper)" Url="html/496871939.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="58996d0c-1ba5-46d7-9df5-f0e392c6e1ba" Title="KinectFaceTrackingResult Fields" Url="html/226276542.htm">
+        <HelpTOCNode Title="BOUNDING_HIGH_DETAIL_FACE_POINTS Field" Url="html/1365488016.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="689bd595-160a-40e1-8180-cd16d7a9c3d1" Title="KinectFaceTrackingResult Methods" Url="html/862166071.htm">
+        <HelpTOCNode Title="CalculateBoundingHighDefinitionFacePoints Method " Url="html/1166041153.htm" />
+        <HelpTOCNode Title="FaceBoundaryPoints Method " Url="html/751713367.htm" />
+        <HelpTOCNode Title="GetCroppedFace Method " Url="html/1662158888.htm" />
+        <HelpTOCNode Title="GetFacePath Method " Url="html/239369568.htm" />
+        <HelpTOCNode Title="TranslatePoint Method " Url="html/1881312406.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="0fb1e954-dbf5-4854-bade-3e3adbe4f2b6" Title="KinectFaceTrackingResult Properties" Url="html/1657826084.htm">
+        <HelpTOCNode Title="BuilderStatus Property " Url="html/1746872758.htm" />
+        <HelpTOCNode Title="ColorSpaceFacePoints Property " Url="html/1252681784.htm" />
+        <HelpTOCNode Title="ConstructedFaceModel Property " Url="html/1668380711.htm" />
+        <HelpTOCNode Title="FaceAlignment Property " Url="html/1474127804.htm" />
+        <HelpTOCNode Title="FaceModel Property " Url="html/1381957870.htm" />
+        <HelpTOCNode Title="FaceRect Property " Url="html/818920807.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="7bc2b9dc-e72c-49c6-96ce-44758392daf1" Title="KinectFaceTrackingResult.VertexMap Class" Url="html/2128811105.htm">
+      <HelpTOCNode Title="KinectFaceTrackingResult.VertexMap Members" Url="html/232165558.htm" />
+      <HelpTOCNode Title="KinectFaceTrackingResult.VertexMap Methods" Url="html/2013648680.htm" />
+      <HelpTOCNode Id="14e69cad-5884-464a-862d-1c0ec68eb4c9" Title="KinectFaceTrackingResult.VertexMap Properties" Url="html/1014129524.htm">
+        <HelpTOCNode Title="Degree Property " Url="html/1434234833.htm" />
+        <HelpTOCNode Title="Distance Property " Url="html/1310175174.htm" />
+        <HelpTOCNode Title="Index Property " Url="html/1474980507.htm" />
+        <HelpTOCNode Title="Vertex Property " Url="html/474809308.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="2e763dc8-7de9-40df-9552-367782a7ba2a" Title="KinectFacialRecognitionEngine Class" Url="html/1375978608.htm">
+      <HelpTOCNode Title="KinectFacialRecognitionEngine Members" Url="html/1801262397.htm" />
+      <HelpTOCNode Title="KinectFacialRecognitionEngine Constructor " Url="html/556941634.htm" />
+      <HelpTOCNode Id="141bde3e-fbad-4b6e-9370-0886f31b9000" Title="KinectFacialRecognitionEngine Fields" Url="html/1109546043.htm">
+        <HelpTOCNode Title="bodies Field" Url="html/1795424956.htm" />
+        <HelpTOCNode Title="colorImageBuffer Field" Url="html/1802816248.htm" />
+        <HelpTOCNode Title="constructedFaceModel Field" Url="html/1024688383.htm" />
+        <HelpTOCNode Title="constructionInProcess Field" Url="html/1041354178.htm" />
+        <HelpTOCNode Title="currentTrackingId Field" Url="html/12075896.htm" />
+        <HelpTOCNode Title="faceAlignment Field" Url="html/725451401.htm" />
+        <HelpTOCNode Title="faceModel Field" Url="html/324061244.htm" />
+        <HelpTOCNode Title="faceReader Field" Url="html/2053625535.htm" />
+        <HelpTOCNode Title="faceReady Field" Url="html/2048513715.htm" />
+        <HelpTOCNode Title="faceSource Field" Url="html/77204750.htm" />
+        <HelpTOCNode Title="fmb Field" Url="html/223915554.htm" />
+        <HelpTOCNode Title="imageHeight Field" Url="html/899956014.htm" />
+        <HelpTOCNode Title="imageWidth Field" Url="html/2017495358.htm" />
+        <HelpTOCNode Title="msReader Field" Url="html/64704378.htm" />
+        <HelpTOCNode Title="multiSourceReady Field" Url="html/1859488909.htm" />
+        <HelpTOCNode Title="processFaceModelMutex Field" Url="html/122008166.htm" />
+        <HelpTOCNode Title="processors Field" Url="html/1163594883.htm" />
+        <HelpTOCNode Title="recognizerWorker Field" Url="html/1735217285.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="eb84f03c-ea7f-4e28-8860-bd5161f5cafe" Title="KinectFacialRecognitionEngine Methods" Url="html/101323867.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/2005943914.htm" />
+        <HelpTOCNode Title="DisposeFaceModelBuilder Method " Url="html/552000998.htm" />
+        <HelpTOCNode Title="FaceFrameArrived Method " Url="html/1351259045.htm" />
+        <HelpTOCNode Title="FaceModelBuilderCollectionCompleted Method " Url="html/939760629.htm" />
+        <HelpTOCNode Title="ImageToBitmap Method " Url="html/97141357.htm" />
+        <HelpTOCNode Title="MultiSourceFrameArrived Method " Url="html/1110591048.htm" />
+        <HelpTOCNode Title="RecognizerWorker_DoWork Method " Url="html/310735071.htm" />
+        <HelpTOCNode Title="RecognizerWorker_RunWorkerCompleted Method " Url="html/478302907.htm" />
+        <HelpTOCNode Title="StartWorkerIfReady Method " Url="html/154469693.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="bcd493e6-07df-43de-9f43-f4b634a62278" Title="KinectFacialRecognitionEngine Properties" Url="html/310012114.htm">
+        <HelpTOCNode Title="Kinect Property " Url="html/1428614311.htm" />
+        <HelpTOCNode Title="ProcessingEnabled Property " Url="html/1257826936.htm" />
+        <HelpTOCNode Title="Processors Property " Url="html/916452950.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="cd509a20-cec5-4473-96e4-388ffa7bee74" Title="KinectFacialRecognitionEngine Events" Url="html/809509527.htm">
+        <HelpTOCNode Title="RecognitionComplete Event" Url="html/853680988.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="905ec7da-0dc6-4f76-99a4-1d442b817914" Title="Point3D Class" Url="html/1133892266.htm">
+      <HelpTOCNode Title="Point3D Members" Url="html/1965280368.htm" />
+      <HelpTOCNode Title="Point3D Methods" Url="html/1205228308.htm" />
+      <HelpTOCNode Id="3058e243-5435-4791-8bad-3fe70559fd4d" Title="Point3D Properties" Url="html/484868913.htm">
+        <HelpTOCNode Title="X Property " Url="html/902702270.htm" />
+        <HelpTOCNode Title="Y Property " Url="html/663381671.htm" />
+        <HelpTOCNode Title="Z Property " Url="html/260097144.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="49918f2d-1541-4382-85dc-caa7a082ea23" Title="RecognitionResult Class" Url="html/1862536498.htm">
+      <HelpTOCNode Title="RecognitionResult Members" Url="html/1159285343.htm" />
+      <HelpTOCNode Title="RecognitionResult Constructor " Url="html/125727292.htm" />
+      <HelpTOCNode Id="ea1c76a8-2b3a-4437-a7a7-a62557ed4ac6" Title="RecognitionResult Methods" Url="html/769699001.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/824231621.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="9230e6fd-5fde-452d-9ae0-4a8bb0c0fbe5" Title="RecognitionResult Properties" Url="html/1744690756.htm">
+        <HelpTOCNode Title="ColorSpaceBitmap Property " Url="html/1851466168.htm" />
+        <HelpTOCNode Title="Faces Property " Url="html/2027168474.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="4b37f1f0-df9a-45a3-ab9f-431857a7437b" Title="TrackedFace Class" Url="html/725581592.htm">
+      <HelpTOCNode Title="TrackedFace Members" Url="html/180327669.htm" />
+      <HelpTOCNode Id="8d74c9af-0738-4274-9241-1b591527b962" Title="TrackedFace Methods" Url="html/1174120285.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/392163999.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="cf17dedb-f450-4f5e-91c2-ae67533c87a6" Title="TrackedFace Properties" Url="html/1795891425.htm">
+        <HelpTOCNode Title="Key Property " Url="html/252705202.htm" />
+        <HelpTOCNode Title="ProcessorResults Property " Url="html/1958267023.htm" />
+        <HelpTOCNode Title="TrackingResult Property " Url="html/612916189.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="d758a6aa-827a-4c90-932a-5239047790ec" Title="Sacknet.KinectFacialRecognition.KinectFaceModel Namespace" Url="html/272000035.htm">
+    <HelpTOCNode Id="b799457a-bbda-47ba-ad3b-d146350f57ce" Title="FaceModelRecognitionProcessor Class" Url="html/1958598025.htm">
+      <HelpTOCNode Title="FaceModelRecognitionProcessor Members" Url="html/565327338.htm" />
+      <HelpTOCNode Id="2262e5b5-eaa1-49be-878e-0f242c552df7" Title="FaceModelRecognitionProcessor Constructor " Url="html/1673252081.htm">
+        <HelpTOCNode Title="FaceModelRecognitionProcessor Constructor " Url="html/1524999035.htm" />
+        <HelpTOCNode Title="FaceModelRecognitionProcessor Constructor (IEnumerable(IFaceModelTargetFace))" Url="html/142061075.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="184f334a-5ae6-458a-97ae-ed04ca5fc2ef" Title="FaceModelRecognitionProcessor Fields" Url="html/914327240.htm">
+        <HelpTOCNode Title="faces Field" Url="html/1899291564.htm" />
+        <HelpTOCNode Title="processingMutex Field" Url="html/1766470642.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="aaf95a27-c64b-4b2a-b3dc-df6277c6aef4" Title="FaceModelRecognitionProcessor Methods" Url="html/177449852.htm">
+        <HelpTOCNode Id="db1e292d-50fe-45b5-bba9-5ad848fc555c" Title="Process Method " Url="html/23540096.htm">
+          <HelpTOCNode Title="Process Method (Bitmap, KinectFaceTrackingResult)" Url="html/1111539776.htm" />
+          <HelpTOCNode Title="Process Method (FaceModelRecognitionProcessorResult)" Url="html/367318946.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="ScoreFaceDifferences Method " Url="html/1411652483.htm" />
+        <HelpTOCNode Id="cd74954e-3e27-4237-bdc8-ab6571f2b47c" Title="SetTargetFaces Method " Url="html/294210375.htm">
+          <HelpTOCNode Title="SetTargetFaces Method (IEnumerable(ITargetFace))" Url="html/227525389.htm" />
+          <HelpTOCNode Title="SetTargetFaces Method (IEnumerable(IFaceModelTargetFace))" Url="html/175104347.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="UIntToColor Method " Url="html/1849032488.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="a5155bdf-d22f-41c9-9f90-56cc9687bc1c" Title="FaceModelRecognitionProcessor Properties" Url="html/333940458.htm">
+        <HelpTOCNode Title="RequiresFaceModelBuilder Property " Url="html/1676971186.htm" />
+        <HelpTOCNode Title="Threshold Property " Url="html/1379677080.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="9962ad9f-1feb-471b-a036-2ba41ce1a3a5" Title="FaceModelRecognitionProcessorResult Class" Url="html/1004317244.htm">
+      <HelpTOCNode Title="FaceModelRecognitionProcessorResult Members" Url="html/1380156112.htm" />
+      <HelpTOCNode Id="0cd857ff-bc78-4ebe-8848-ec2e01be044b" Title="FaceModelRecognitionProcessorResult Methods" Url="html/2039362821.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/1885987043.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="dd0a6e47-b88e-4d38-acad-5c75264df8d9" Title="FaceModelRecognitionProcessorResult Properties" Url="html/318341510.htm">
+        <HelpTOCNode Title="Deformations Property " Url="html/1544518374.htm" />
+        <HelpTOCNode Title="HairColor Property " Url="html/2133810544.htm" />
+        <HelpTOCNode Title="Key Property " Url="html/1926658416.htm" />
+        <HelpTOCNode Title="Score Property " Url="html/169614943.htm" />
+        <HelpTOCNode Title="SkinColor Property " Url="html/148640417.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="2c368256-372d-4bc5-bc2c-61671fb425b5" Title="FaceModelTargetFace Class" Url="html/1024071066.htm">
+      <HelpTOCNode Title="FaceModelTargetFace Members" Url="html/1305493858.htm" />
+      <HelpTOCNode Title="FaceModelTargetFace Methods" Url="html/815642721.htm" />
+      <HelpTOCNode Id="12fb4371-f9b6-40c4-ad09-81e878bf62bf" Title="FaceModelTargetFace Properties" Url="html/58801778.htm">
+        <HelpTOCNode Title="Deformations Property " Url="html/197634590.htm" />
+        <HelpTOCNode Title="HairColor Property " Url="html/168606318.htm" />
+        <HelpTOCNode Title="Key Property " Url="html/379079931.htm" />
+        <HelpTOCNode Title="SkinColor Property " Url="html/546582283.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="a677dab5-9700-48b8-b493-1bab79a0f794" Title="IFaceModelTargetFace Interface" Url="html/1561906657.htm">
+      <HelpTOCNode Title="IFaceModelTargetFace Members" Url="html/231597969.htm" />
+      <HelpTOCNode Title="IFaceModelTargetFace Methods" Url="html/889305523.htm" />
+      <HelpTOCNode Id="d8891438-ddd1-448a-80ad-efe193634b5b" Title="IFaceModelTargetFace Properties" Url="html/1352158338.htm">
+        <HelpTOCNode Title="Deformations Property " Url="html/230864964.htm" />
+        <HelpTOCNode Title="HairColor Property " Url="html/740182405.htm" />
+        <HelpTOCNode Title="SkinColor Property " Url="html/214088917.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="a3fb151a-96e0-43be-9811-e2925520ba4c" Title="Sacknet.KinectFacialRecognition.ManagedEigenObject Namespace" Url="html/160902571.htm">
+    <HelpTOCNode Id="a60b12f6-ee19-4a2a-8319-f0f7445cd399" Title="EigenObjectException Class" Url="html/1477085802.htm">
+      <HelpTOCNode Title="EigenObjectException Members" Url="html/2011137599.htm" />
+      <HelpTOCNode Title="EigenObjectException Constructor " Url="html/488180742.htm" />
+      <HelpTOCNode Title="EigenObjectException Methods" Url="html/912256377.htm" />
+      <HelpTOCNode Title="EigenObjectException Properties" Url="html/1727233227.htm" />
+      <HelpTOCNode Title="EigenObjectException Events" Url="html/1980854315.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="ff7fc3cb-c8a7-4f01-bee1-0e840f360470" Title="EigenObjectRecognitionProcessor Class" Url="html/668982946.htm">
+      <HelpTOCNode Title="EigenObjectRecognitionProcessor Members" Url="html/1856813904.htm" />
+      <HelpTOCNode Id="dd7c3ea0-85e6-4238-9ac6-4473d9bfd319" Title="EigenObjectRecognitionProcessor Constructor " Url="html/1272124463.htm">
+        <HelpTOCNode Title="EigenObjectRecognitionProcessor Constructor " Url="html/401392880.htm" />
+        <HelpTOCNode Title="EigenObjectRecognitionProcessor Constructor (IEnumerable(IEigenObjectTargetFace))" Url="html/180267271.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="8ba5fa57-8767-49ce-9ea2-73879ca267a8" Title="EigenObjectRecognitionProcessor Fields" Url="html/1497036333.htm">
+        <HelpTOCNode Title="instance Field" Url="html/380945845.htm" />
+        <HelpTOCNode Title="processingMutex Field" Url="html/1019705123.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="045ca900-8400-46d8-959d-f27d551af2f1" Title="EigenObjectRecognitionProcessor Methods" Url="html/1906896672.htm">
+        <HelpTOCNode Title="Process Method " Url="html/1296979035.htm" />
+        <HelpTOCNode Id="46f6e72d-7e31-40d5-8b1a-a8b5182006d3" Title="SetTargetFaces Method " Url="html/205838758.htm">
+          <HelpTOCNode Title="SetTargetFaces Method (IEnumerable(ITargetFace))" Url="html/1729117808.htm" />
+          <HelpTOCNode Title="SetTargetFaces Method (IEnumerable(IEigenObjectTargetFace))" Url="html/1143090371.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="f6b43ca1-f2df-4b25-83b5-567203da4090" Title="EigenObjectRecognitionProcessor Properties" Url="html/1476966065.htm">
+        <HelpTOCNode Title="Instance Property " Url="html/1573698846.htm" />
+        <HelpTOCNode Title="Recognizer Property " Url="html/495637951.htm" />
+        <HelpTOCNode Title="RequiresFaceModelBuilder Property " Url="html/1832299957.htm" />
+        <HelpTOCNode Title="Threshold Property " Url="html/664599959.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="524460c5-9db7-4a3a-999a-26aa911f1ad1" Title="EigenObjectRecognitionProcessorResult Class" Url="html/1017545022.htm">
+      <HelpTOCNode Title="EigenObjectRecognitionProcessorResult Members" Url="html/1012808567.htm" />
+      <HelpTOCNode Id="9cb8f1b9-2511-44eb-a62b-789ecba375e2" Title="EigenObjectRecognitionProcessorResult Methods" Url="html/1830959150.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/806252396.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="79155d08-9ce5-48b9-84e4-3aec43181c3c" Title="EigenObjectRecognitionProcessorResult Properties" Url="html/332475165.htm">
+        <HelpTOCNode Title="Image Property " Url="html/1074979518.htm" />
+        <HelpTOCNode Title="Key Property " Url="html/2044966656.htm" />
+        <HelpTOCNode Title="Score Property " Url="html/1885944639.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="8c74ccdc-d1be-403a-8f9f-85b6a7ec5c32" Title="EigenObjectRecognizer Class" Url="html/1904656390.htm">
+      <HelpTOCNode Title="EigenObjectRecognizer Members" Url="html/26272306.htm" />
+      <HelpTOCNode Id="b1dd0d06-746d-42a2-80d5-4f557241bf1f" Title="EigenObjectRecognizer Constructor " Url="html/527074101.htm">
+        <HelpTOCNode Title="EigenObjectRecognizer Constructor (IEnumerable(IEigenObjectTargetFace))" Url="html/1789048250.htm" />
+        <HelpTOCNode Title="EigenObjectRecognizer Constructor (IEnumerable(IEigenObjectTargetFace), Double)" Url="html/1230380262.htm" />
+        <HelpTOCNode Title="EigenObjectRecognizer Constructor (IEnumerable(IEigenObjectTargetFace), Double, Int32, Double)" Url="html/1408147668.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="600aa305-425e-4d09-b373-17fc75d62895" Title="EigenObjectRecognizer Methods" Url="html/1542869244.htm">
+        <HelpTOCNode Title="CalcEigenObjects Method " Url="html/742387922.htm" />
+        <HelpTOCNode Title="EigenDecomposite Method " Url="html/1715340637.htm" />
+        <HelpTOCNode Title="FindMostSimilarObject Method " Url="html/1803963920.htm" />
+        <HelpTOCNode Title="GetEigenDistances Method " Url="html/207888692.htm" />
+        <HelpTOCNode Title="Recognize Method " Url="html/1872875006.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="0bff0143-43b7-4629-81ac-1f5710f2af3a" Title="EigenObjectRecognizer Properties" Url="html/1520867366.htm">
+        <HelpTOCNode Title="AverageImage Property " Url="html/736016254.htm" />
+        <HelpTOCNode Title="EigenDistanceThreshold Property " Url="html/1245286250.htm" />
+        <HelpTOCNode Title="EigenImages Property " Url="html/502760421.htm" />
+        <HelpTOCNode Title="EigenValues Property " Url="html/1866711619.htm" />
+        <HelpTOCNode Title="Labels Property " Url="html/1447389214.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="0629a74f-2f71-4f32-ac80-d234cd03fcdc" Title="EigenObjects Class" Url="html/1251937151.htm">
+      <HelpTOCNode Title="EigenObjects Members" Url="html/1872209898.htm" />
+      <HelpTOCNode Id="ea69958f-ed1e-4da4-9aa0-64a304a0f492" Title="EigenObjects Methods" Url="html/1149765606.htm">
+        <HelpTOCNode Title="CalcCovarMatrixEx Method " Url="html/925955267.htm" />
+        <HelpTOCNode Title="CalcDecompCoeff Method " Url="html/1918474277.htm" />
+        <HelpTOCNode Id="395cf701-3d63-415a-8b6d-fde97b01149e" Title="CalcEigenObjects Method " Url="html/1981725606.htm">
+          <HelpTOCNode Title="CalcEigenObjects Method (Bitmap[], Int32, Double, DoubleImage[], Double[], DoubleImage)" Url="html/1410716084.htm" />
+          <HelpTOCNode Title="CalcEigenObjects Method (Int32, Byte[][], Int32, Double[][], Int32, Size, Int32, Double, Double[], Int32, Double[])" Url="html/1345736483.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="e639cad0-ff54-4b37-ae19-854e814e301b" Title="EigenDecomposite Method " Url="html/1910875872.htm">
+          <HelpTOCNode Title="EigenDecomposite Method (Bitmap, DoubleImage[], DoubleImage)" Url="html/1362886390.htm" />
+          <HelpTOCNode Title="EigenDecomposite Method (Byte[], Int32, Int32, Double[][], Int32, Double[], Int32, Size, Double[])" Url="html/376866396.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="JacobiEigens Method " Url="html/1075947006.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="57f77863-7b13-4ba1-af2c-2135c388b155" Title="EigenObjectTargetFace Class" Url="html/499407976.htm">
+      <HelpTOCNode Title="EigenObjectTargetFace Members" Url="html/366695222.htm" />
+      <HelpTOCNode Title="EigenObjectTargetFace Methods" Url="html/1502830912.htm" />
+      <HelpTOCNode Id="a58c0a55-e07d-4f1b-a1ff-e6debf39be66" Title="EigenObjectTargetFace Properties" Url="html/122087078.htm">
+        <HelpTOCNode Title="Image Property " Url="html/623563527.htm" />
+        <HelpTOCNode Title="Key Property " Url="html/850403627.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d64e9de2-7d03-4f42-b3d1-907761e8b5bb" Title="IEigenObjectTargetFace Interface" Url="html/530912550.htm">
+      <HelpTOCNode Title="IEigenObjectTargetFace Members" Url="html/149608476.htm" />
+      <HelpTOCNode Title="IEigenObjectTargetFace Methods" Url="html/268650511.htm" />
+      <HelpTOCNode Id="b964492f-e397-4510-a9b1-3c7dd9dc9ed9" Title="IEigenObjectTargetFace Properties" Url="html/1331429157.htm">
+        <HelpTOCNode Title="Image Property " Url="html/537757075.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="4dcd8731-7703-4db6-98f1-06a7f1912fbd" Title="UnitTests Namespace" Url="html/1684093134.htm">
+    <HelpTOCNode Id="b8b30df3-03e6-43bc-8f26-766d5daed88f" Title="UnitTest1 Class" Url="html/91445099.htm">
+      <HelpTOCNode Title="UnitTest1 Members" Url="html/1105020209.htm" />
+      <HelpTOCNode Id="1d03d6d9-715a-4657-a06c-821206d16c30" Title="UnitTest1 Fields" Url="html/1444668846.htm">
+        <HelpTOCNode Title="ACTION Field" Url="html/2036777383.htm" />
+        <HelpTOCNode Title="APP Field" Url="html/1842768406.htm" />
+        <HelpTOCNode Title="FACE_RECOGNITION Field" Url="html/921046174.htm" />
+        <HelpTOCNode Title="GESTURE Field" Url="html/614586536.htm" />
+        <HelpTOCNode Title="NULL_APPOINTMENT Field" Url="html/1336514085.htm" />
+        <HelpTOCNode Title="PERSON Field" Url="html/745369784.htm" />
+        <HelpTOCNode Title="VOICE Field" Url="html/640526425.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="679de86d-c839-44ad-93b9-316d221da9a0" Title="UnitTest1 Methods" Url="html/1648559312.htm">
+        <HelpTOCNode Title="ActionTests Method " Url="html/614568737.htm" />
+        <HelpTOCNode Title="ActionTypeTests Method " Url="html/39188708.htm" />
+        <HelpTOCNode Title="IsInteractionType Method " Url="html/118659176.htm" />
+        <HelpTOCNode Title="JSONTests Method " Url="html/924214016.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

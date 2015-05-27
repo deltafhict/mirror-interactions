@@ -1,28 +1,46 @@
-﻿using MirrorInteractions.Models;
+﻿// ***********************************************************************
+// Assembly         : MirrorInteractions
+// Author           : delta
+// Created          : 05-27-2015
+//
+// Last Modified By : delta
+// Last Modified On : 05-27-2015
+// ***********************************************************************
+// <copyright file="FaceLoader.cs" company="">
+//     Copyright (c) . All rights reserved.
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
 using Newtonsoft.Json;
 using Sacknet.KinectFacialRecognition;
-using Sacknet.KinectFacialRecognition.KinectFaceModel;
 using Sacknet.KinectFacialRecognition.ManagedEigenObject;
-using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
+/// <summary>
+/// The Face namespace.
+/// </summary>
 namespace MirrorInteractions.Face
 {
+    /// <summary>
+    /// Class FaceLoader.
+    /// </summary>
     public class FaceLoader
     {
         /// <summary>
-        /// Store for the faces property. </summary>
+        /// Store for the faces property.
+        /// </summary>
         private List<BitmapSourceTargetFace> faces = new List<BitmapSourceTargetFace>();
 
         /// <summary>
-        /// Store for the activeProcessor property</summary>
+        /// Store for the activeProcessor property
+        /// </summary>
         private IRecognitionProcessor activeProcessor;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FaceLoader"/> class.
+        /// </summary>
         public FaceLoader()
         {
             activeProcessor = EigenObjectRecognitionProcessor.Instance;
@@ -47,6 +65,9 @@ namespace MirrorInteractions.Face
             UpdateTargetFaces();
         }
 
+        /// <summary>
+        /// Updates the target faces.
+        /// </summary>
         public void UpdateTargetFaces()
         {
             if (this.faces.Count > 1)

@@ -4,7 +4,8 @@
       <item>
         <tag>AGENDA</tag>
         <item>
-          <ruleref uri="#Commands"/> agenda
+          <ruleref uri="#AgendaCommands"/> 
+          <ruleref uri="#AgendaKeys"/>
         </item>
       </item>
       <item>
@@ -13,13 +14,63 @@
           initialize face
         </item>
       </item>
+      <item>
+        <tag>OPUS</tag>
+        <item>
+          Opus, <ruleref uri="#OpusCommands"/>
+        </item>
+      </item>
+      <item>
+        <tag>JOKE</tag>
+        <item>
+          <ruleref uri="#JokeCommands"/> joke
+        </item>
+      </item>
+      <item>
+        <tag>WEATHER</tag>
+        <item>
+          <ruleref uri="#AgendaCommands"/> weather
+        </item>
+      </item>
+      <item>
+        <tag>MAIL</tag>
+        <item>
+          <ruleref uri="#AgendaCommands"/> mail
+        </item>
+      </item>
     </one-of>
   </rule>
-  <rule id="Commands">
+  <rule id="AgendaCommands">
     <item>
       <one-of>
         <item>Open</item>
+        <item>Show</item>
         <item>Close</item>
+      </one-of>
+    </item>
+  </rule>
+  <rule id="AgendaKeys">
+    <item>
+      <one-of>
+        <item>agenda</item>
+        <item>schedule</item>
+        <item>calender</item>
+      </one-of>
+    </item>
+  </rule>
+  <rule id="OpusCommands">
+    <item>
+      <one-of>
+        <item>on</item>
+        <item>off</item>
+      </one-of>
+    </item>
+  </rule>
+  <rule id="JokeCommands">
+    <item>
+      <one-of>
+        <item>Tell a</item>
+        <item>Make a</item>
       </one-of>
     </item>
   </rule>

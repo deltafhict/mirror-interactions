@@ -7,28 +7,11 @@
 namespace MirrorInteractions
 {
     using Microsoft.Kinect;
-    using Microsoft.Speech.AudioFormat;
-    using Microsoft.Speech.Recognition;
-    using MirrorGesture;
     using MirrorInteractions.Face;
-    using MirrorInteractions.Network;
+    using MirrorInteractions.Gestures;
     using MirrorInteractions.Speech;
-    using Newtonsoft.Json;
-    using Sacknet.KinectFacialRecognition;
-    using Sacknet.KinectFacialRecognition.ManagedEigenObject;
-    using System;
-    using System.Collections.Generic;
     using System.ComponentModel;
-    using System.Drawing;
-    using System.IO;
-    using System.Linq;
-    using System.Runtime.InteropServices;
-    using System.Text;
-    using System.Timers;
-    using System.Web.Script.Serialization;
     using System.Windows;
-    using System.Windows.Media.Imaging;
-    using WebSocketSharp;
 
     /// <summary>
     /// Interaction logic for MainWindow

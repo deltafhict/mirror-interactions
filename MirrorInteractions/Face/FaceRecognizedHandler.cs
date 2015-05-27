@@ -1,28 +1,66 @@
-﻿using MirrorInteractions.Models;
+﻿// ***********************************************************************
+// Assembly         : MirrorInteractions
+// Author           : delta
+// Created          : 05-27-2015
+//
+// Last Modified By : delta
+// Last Modified On : 05-27-2015
+// ***********************************************************************
+// <copyright file="FaceRecognizedHandler.cs" company="">
+//     Copyright (c) . All rights reserved.
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using MirrorInteractions.Models;
 using Sacknet.KinectFacialRecognition;
-using Sacknet.KinectFacialRecognition.KinectFaceModel;
-using Sacknet.KinectFacialRecognition.ManagedEigenObject;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Timers;
 
+/// <summary>
+/// The Face namespace.
+/// </summary>
 namespace MirrorInteractions.Face
 {
+    /// <summary>
+    /// Class FaceRecognizedHandler.
+    /// </summary>
     public class FaceRecognizedHandler
     {
 
+        /// <summary>
+        /// The face recognition expire timer
+        /// </summary>
         private Timer faceRecognitionExpireTimer;
+        /// <summary>
+        /// The face
+        /// </summary>
         private TrackedFace face = null;
+        /// <summary>
+        /// The new learned faces count
+        /// </summary>
         private int newLearnedFacesCount = 0;
+        /// <summary>
+        /// The learn new faces
+        /// </summary>
         private static bool learnNewFaces = false;
+        /// <summary>
+        /// The person name
+        /// </summary>
         private static string personName = null;
+        /// <summary>
+        /// The face learner
+        /// </summary>
         private FaceLearner faceLearner;
+        /// <summary>
+        /// The face loader
+        /// </summary>
         private FaceLoader faceLoader;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FaceRecognizedHandler"/> class.
+        /// </summary>
         public FaceRecognizedHandler()
         {
             this.faceLearner = new FaceLearner();
@@ -30,6 +68,11 @@ namespace MirrorInteractions.Face
             faceLoader.LoadAllTargetFaces();
         }
 
+        /// <summary>
+        /// Faces the recognition.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The e.</param>
         public void FaceRecognition(object sender, Sacknet.KinectFacialRecognition.RecognitionResult e)
         {
             //Console.WriteLine("face detected");
@@ -78,11 +121,20 @@ namespace MirrorInteractions.Face
             }
         }
 
+        /// <summary>
+        /// Sets the learn new faces.
+        /// </summary>
+        /// <param name="personName">Name of the person.</param>
         public static void SetLearnNewFaces(String personName)
         {
             learnNewFaces = true;
         }
 
+        /// <summary>
+        /// Handles the <see cref="E:FaceRecognizedExpired" /> event.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="ElapsedEventArgs"/> instance containing the event data.</param>
         private void OnFaceRecognizedExpired(object sender, ElapsedEventArgs e)
         {
             faceRecognitionExpireTimer.Stop();

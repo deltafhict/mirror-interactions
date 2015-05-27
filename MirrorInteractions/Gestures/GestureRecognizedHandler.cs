@@ -1,25 +1,61 @@
-﻿using Microsoft.Kinect;
+﻿// ***********************************************************************
+// Assembly         : MirrorInteractions
+// Author           : delta
+// Created          : 05-27-2015
+//
+// Last Modified By : delta
+// Last Modified On : 05-27-2015
+// ***********************************************************************
+// <copyright file="GestureRecognizedHandler.cs" company="">
+//     Copyright (c) . All rights reserved.
+// </copyright>
+// <summary></summary>s
+// ***********************************************************************
+using Microsoft.Kinect;
 using Microsoft.Kinect.VisualGestureBuilder;
-using MirrorInteractions;
+using MirrorInteractions.Models;
 using MirrorInteractions.Network;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace MirrorGesture
+/// <summary>
+/// The MirrorGesture namespace.
+/// </summary>
+namespace MirrorInteractions.Gestures
 {
-    class GestureRecognizedHandler
+    /// <summary>
+    /// Class GestureRecognizedHandler.
+    /// </summary>
+    public class GestureRecognizedHandler
     {
+        /// <summary>
+        /// The bodies
+        /// </summary>
         Body[] bodies;
+        /// <summary>
+        /// The gesture source
+        /// </summary>
         VisualGestureBuilderFrameSource gestureSource;
+        /// <summary>
+        /// The gesture reader
+        /// </summary>
         VisualGestureBuilderFrameReader gestureReader;
 
+        /// <summary>
+        /// The gesture complete
+        /// </summary>
         bool gestureComplete = false;
+        /// <summary>
+        /// The gesture database
+        /// </summary>
         public GestureDatabase gestureDatabase = null;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GestureRecognizedHandler"/> class.
+        /// </summary>
+        /// <param name="bodies">The bodies.</param>
+        /// <param name="gestureSource">The gesture source.</param>
+        /// <param name="gestureReader">The gesture reader.</param>
         public GestureRecognizedHandler(Body[] bodies, VisualGestureBuilderFrameSource gestureSource, VisualGestureBuilderFrameReader gestureReader)
         {
             this.gestureDatabase = new GestureDatabase();
@@ -34,6 +70,11 @@ namespace MirrorGesture
             this.gestureSource.AddGesture(gestureDatabase.dragToRightGesture);
         }
 
+        /// <summary>
+        /// Handles the <see cref="E:BodyFrameArrived"/> event.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="BodyFrameArrivedEventArgs"/> instance containing the event data.</param>
         public void OnBodyFrameArrived(object sender, BodyFrameArrivedEventArgs e)
         {
             using (var frame = e.FrameReference.AcquireFrame())
@@ -61,11 +102,21 @@ namespace MirrorGesture
             }
         }
 
+        /// <summary>
+        /// Handles the <see cref="E:TrackingIdLost"/> event.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="TrackingIdLostEventArgs"/> instance containing the event data.</param>
         public void OnTrackingIdLost(object sender, TrackingIdLostEventArgs e)
         {
             this.gestureReader.IsPaused = true;
         }
 
+        /// <summary>
+        /// Handles the <see cref="E:GestureFrameArrived"/> event.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="VisualGestureBuilderFrameArrivedEventArgs"/> instance containing the event data.</param>
         public void OnGestureFrameArrived(object sender, VisualGestureBuilderFrameArrivedEventArgs e)
         {
             using (var frame = e.FrameReference.AcquireFrame())

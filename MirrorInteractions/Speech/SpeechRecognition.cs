@@ -1,16 +1,33 @@
-﻿using Microsoft.Kinect;
+﻿// ***********************************************************************
+// Assembly         : MirrorInteractions
+// Author           : delta
+// Created          : 05-27-2015
+//
+// Last Modified By : delta
+// Last Modified On : 05-27-2015
+// ***********************************************************************
+// <copyright file="SpeechRecognition.cs" company="">
+//     Copyright (c) . All rights reserved.
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using Microsoft.Kinect;
 using Microsoft.Speech.AudioFormat;
 using Microsoft.Speech.Recognition;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading.Tasks;
 
+/// <summary>
+/// The Speech namespace.
+/// </summary>
 namespace MirrorInteractions.Speech
 {
+    /// <summary>
+    /// Class SpeechRecognition.
+    /// </summary>
     public class SpeechRecognition
     {
         /// <summary>
@@ -33,6 +50,10 @@ namespace MirrorInteractions.Speech
         /// </summary>
         private EventHandler<SpeechRecognitionRejectedEventArgs> speechRejectedEvent;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SpeechRecognition" /> class.
+        /// </summary>
+        /// <param name="kinectSensor">The kinect sensor.</param>
         public SpeechRecognition(KinectSensor kinectSensor)
         {
             SpeechRecognizedHandler speechRecognizedHandler = new SpeechRecognizedHandler();
@@ -45,6 +66,9 @@ namespace MirrorInteractions.Speech
             this.speechRejectedEvent = speechRecognizedHandler.SpeechRejected;
         }
 
+        /// <summary>
+        /// Opens the speech recognition engine.
+        /// </summary>
         public void OpenSpeechRecognitionEngine()
         {
             RecognizerInfo ri = TryGetKinectRecognizer();
@@ -82,9 +106,7 @@ namespace MirrorInteractions.Speech
         /// Gets the metadata for the speech recognizer (acoustic model) most suitable to
         /// process audio from Kinect device.
         /// </summary>
-        /// <returns>
-        /// RecognizerInfo if found, <code>null</code> otherwise.
-        /// </returns>
+        /// <returns>RecognizerInfo if found, <code>null</code> otherwise.</returns>
         private static RecognizerInfo TryGetKinectRecognizer()
         {
             IEnumerable<RecognizerInfo> recognizers;
@@ -113,6 +135,9 @@ namespace MirrorInteractions.Speech
             return null;
         }
 
+        /// <summary>
+        /// Closes the speech recognition engine.
+        /// </summary>
         public void CloseSpeechRecognitionEngine()
         {
 

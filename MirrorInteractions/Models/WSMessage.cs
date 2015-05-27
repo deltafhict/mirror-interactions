@@ -1,31 +1,75 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// ***********************************************************************
+// Assembly         : MirrorInteractions
+// Author           : delta
+// Created          : 05-27-2015
+//
+// Last Modified By : delta
+// Last Modified On : 05-27-2015
+// ***********************************************************************
+// <copyright file="WSMessage.cs" company="">
+//     Copyright (c) . All rights reserved.
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using System;
 
-namespace MirrorInteractions {
+namespace MirrorInteractions.Models
+{
     /// <summary>
     /// Enum collection of the available interaction types.
     /// </summary>
-    public enum InteractionType {
+    public enum InteractionType
+    {
+        /// <summary>
+        /// The voice
+        /// </summary>
         Voice,
+        /// <summary>
+        /// The gesture
+        /// </summary>
         Gesture,
+        /// <summary>
+        /// The face recognition
+        /// </summary>
         FaceRecognition
     }
 
     /// <summary>
     /// Class containing a message for the Websocket.
     /// </summary>
-    public class WSMessage {
+    public class WSMessage
+    {
+        /// <summary>
+        /// The application
+        /// </summary>
         public readonly String app;
+        /// <summary>
+        /// The type
+        /// </summary>
         public readonly String type;
+        /// <summary>
+        /// The interaction type
+        /// </summary>
         private InteractionType interactionType;
+        /// <summary>
+        /// The action
+        /// </summary>
         public readonly String action;
+        /// <summary>
+        /// The person
+        /// </summary>
         public readonly String person;
+        /// <summary>
+        /// The appointment
+        /// </summary>
         public readonly Appointment appointment;
 
-        public InteractionType getInteractionType() {
+        /// <summary>
+        /// Gets the type of the interaction.
+        /// </summary>
+        /// <returns>MirrorInteractions.InteractionType.</returns>
+        public InteractionType getInteractionType()
+        {
             return this.interactionType;
         }
 
@@ -37,7 +81,8 @@ namespace MirrorInteractions {
         /// <param name="action">The action of the message.</param>
         /// <param name="person">The person that sent the message.</param>
         /// <param name="appointment">The appointment to add to  the message.</param>
-        public WSMessage(String app, InteractionType type, String action, String person, Appointment appointment) {
+        public WSMessage(String app, InteractionType type, String action, String person, Appointment appointment)
+        {
             this.app = app;
             this.type = type.ToString().ToLower();
             this.interactionType = type;
@@ -53,7 +98,8 @@ namespace MirrorInteractions {
         /// <param name="type">The interaction that created the message.</param>
         /// <param name="action">The action of the message.</param>
         /// <param name="person">The person that sent the message.</param>
-        public WSMessage(String app, InteractionType type, String action, String person) {
+        public WSMessage(String app, InteractionType type, String action, String person)
+        {
             this.app = app;
             this.type = type.ToString().ToLower();
             this.interactionType = type;
@@ -66,7 +112,8 @@ namespace MirrorInteractions {
         /// </summary>
         /// <param name="app">The app the message was created for.</param>
         /// <param name="action">The action of the message.</param>
-        public WSMessage(String app, String action) {
+        public WSMessage(String app, String action)
+        {
             this.app = app;
             this.action = action;
         }
@@ -75,12 +122,28 @@ namespace MirrorInteractions {
     /// <summary>
     /// Class containing an appointment for the agenda app.
     /// </summary>
-    public class Appointment {
+    public class Appointment
+    {
+        /// <summary>
+        /// The n o_ desc
+        /// </summary>
         public const String NO_DESC = "No description";
+        /// <summary>
+        /// The n o_ title
+        /// </summary>
         public const String NO_TITLE = "No title";
 
+        /// <summary>
+        /// The title
+        /// </summary>
         public readonly String title = NO_TITLE;
+        /// <summary>
+        /// The desc
+        /// </summary>
         public readonly String desc = NO_DESC;
+        /// <summary>
+        /// The datetime
+        /// </summary>
         public readonly String datetime;
 
         /// <summary>
@@ -89,7 +152,8 @@ namespace MirrorInteractions {
         /// <param name="title">The title of the appointment.</param>
         /// <param name="desc">The description of the appointment.</param>
         /// <param name="datetime">The time of the appointment.</param>
-        public Appointment(String title, String desc, DateTime datetime) {
+        public Appointment(String title, String desc, DateTime datetime)
+        {
             this.title = title;
             this.desc = desc;
             this.datetime = datetime.ToString();
@@ -100,7 +164,8 @@ namespace MirrorInteractions {
         /// </summary>
         /// <param name="title">The title of the appointment.</param>
         /// <param name="datetime">The time of the appointment.</param>
-        public Appointment(String title, DateTime datetime) {
+        public Appointment(String title, DateTime datetime)
+        {
             this.title = title;
             this.datetime = datetime.ToString();
         }
@@ -108,8 +173,9 @@ namespace MirrorInteractions {
         /// <summary>
         /// Creates an appointment with an empty title, empty description and time.
         /// </summary>
-        /// <param name="datetime"></param>
-        public Appointment(DateTime datetime) {
+        /// <param name="datetime">The datetime.</param>
+        public Appointment(DateTime datetime)
+        {
             this.datetime = datetime.ToString();
         }
     }

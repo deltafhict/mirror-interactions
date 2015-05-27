@@ -1,10 +1,17 @@
-﻿//------------------------------------------------------------------------------
-// <copyright file="App.xaml.cs" company="Microsoft">
-//     Copyright (c) Microsoft Corporation.  All rights reserved.
+﻿// ***********************************************************************
+// Assembly         : MirrorInteractions
+// Author           : delta
+// Created          : 05-27-2015
+//
+// Last Modified By : delta
+// Last Modified On : 05-27-2015
+// ***********************************************************************
+// <copyright file="App.xaml.cs" company="">
+//     Copyright (c) . All rights reserved.
 // </copyright>
-//------------------------------------------------------------------------------
-
-namespace Microsoft.Samples.Kinect.SpeechBasics
+// <summary></summary>
+// ***********************************************************************
+namespace MirrorInteractions
 {
     using System.Windows;
 
