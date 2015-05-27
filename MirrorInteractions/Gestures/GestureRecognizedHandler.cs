@@ -94,11 +94,7 @@ namespace MirrorGesture
                         {
                             Debug.WriteLine("Drag to Left complete");
                             gestureComplete = true;
-                            WSMessage messageToSend = new WSMessage
-                            {
-                                action = "DragToLeft",
-                                app = "gesture"
-                            };
+                            WSMessage messageToSend = new WSMessage("gesture", "dragToLeft");
                             NetworkCommunicator.SendToServer(messageToSend);
                         }
                     }
@@ -121,11 +117,8 @@ namespace MirrorGesture
                         {
                             Debug.WriteLine("Drag to Right complete");
                             gestureComplete = true;
-                            WSMessage messageToSend = new WSMessage
-                            {
-                                action = "DragToRight",
-                                app = "gesture"
-                            };
+                            WSMessage messageToSend = new WSMessage("gesture", "DragToRight");
+
                             NetworkCommunicator.SendToServer(messageToSend);
                         }
                     }

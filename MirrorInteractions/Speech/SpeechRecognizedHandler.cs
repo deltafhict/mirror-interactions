@@ -33,12 +33,7 @@ namespace MirrorInteractions.Speech {
                         } else if (resultText.Contains("close")) {
                             action = "close";
                         }
-                        WSMessage messageToSend = new WSMessage {
-                            action = action,
-                            app = app,
-                            actionType = InteractionType.Voice,
-                            person = RecognizedPerson.recognizedPerson
-                        };
+                        WSMessage messageToSend = new WSMessage(app, InteractionType.Voice, action, RecognizedPerson.recognizedPerson);
                         NetworkCommunicator.SendToServer(messageToSend);
                         break;
 
