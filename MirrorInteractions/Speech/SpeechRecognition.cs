@@ -56,28 +56,23 @@ namespace MirrorInteractions.Speech
         /// <param name="kinectSensor">The kinect sensor.</param>
         public SpeechRecognition(KinectSensor kinectSensor)
         {
-            SpeechRecognizedHandler speechRecognizedHandler = new SpeechRecognizedHandler();
             // grab the audio stream from the kinect
             IReadOnlyList<AudioBeam> audioBeamList = kinectSensor.AudioSource.AudioBeams;
             System.IO.Stream audioStream = audioBeamList[0].OpenInputStream();
             
             this.kinectAudioStream = new KinectAudioStream(audioStream);
-            this.speechRecognizedEvent = speechRecognizedHandler.SpeechRecognized;
-            this.speechRejectedEvent = speechRecognizedHandler.SpeechRejected;
         }
 
         /// <summary>
         /// Opens the speech recognition engine.
         /// </summary>
-        public void OpenSpeechRecognitionEngine()
+        public void OpenSpeechRecognitionEngine(MemoryStream memoryStream, EventHandler<SpeechRecognizedEventArgs> speechRecognizedEvent, EventHandler<SpeechRecognitionRejectedEventArgs> speechRejectedEvent)
         {
             RecognizerInfo ri = TryGetKinectRecognizer();
 
             if (null != ri)
             {
                 this.speechEngine = new SpeechRecognitionEngine(ri.Id);
-
-                var memoryStream = new MemoryStream(Encoding.ASCII.GetBytes(Properties.Resources.SpeechGrammar));
 
                 // Create a grammar from grammar definition XML file.
                 using (memoryStream)
@@ -88,6 +83,9 @@ namespace MirrorInteractions.Speech
 
                 this.speechEngine.SpeechRecognized += speechRecognizedEvent;
                 this.speechEngine.SpeechRecognitionRejected += speechRejectedEvent;
+
+                this.speechRecognizedEvent = speechRecognizedEvent;
+                this.speechRejectedEvent = speechRejectedEvent;
 
                 // let the convertStream know speech is going active
                 this.kinectAudioStream.SpeechActive = true;

@@ -23,6 +23,7 @@ namespace MirrorInteractions.Speech {
     /// Class SpeechRecognizedHandler.
     /// </summary>
     class SpeechRecognizedHandler {
+        public double ConfidenceThreshold = 0.5;
         /// <summary>
         /// Handler for recognized speech events.
         /// </summary>
@@ -30,7 +31,7 @@ namespace MirrorInteractions.Speech {
         /// <param name="e1">event arguments.</param>
         public void SpeechRecognized(object sender1, SpeechRecognizedEventArgs e1) {
             // Speech utterance confidence below which we treat speech as if it hadn't been heard
-            const double ConfidenceThreshold = 0.3;
+            //const double ConfidenceThreshold = 0.3;
 
             if (e1.Result.Confidence >= ConfidenceThreshold) {
                 Console.WriteLine("Speech recognized: " + e1.Result.Text.ToLower());
