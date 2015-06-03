@@ -70,6 +70,16 @@ namespace MirrorInteractions {
             this.app = app;
             this.action = action;
         }
+
+        /// <summary>
+        /// Creates a message send as an gesture.
+        /// </summary>
+        /// <param name="type">The interaction that created the message.</param>
+        /// <param name="action">The action of the message.</param>
+        public WSMessage(InteractionType type, String action) {
+            this.type = type.ToString().ToLower();
+            this.action = action;
+        }
     }
 
     /// <summary>

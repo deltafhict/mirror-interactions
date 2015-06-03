@@ -42,7 +42,15 @@ namespace UnitTests {
             json = NetworkCommunicator.ConvertToJson(message);
 
             Assert.IsTrue(message.getInteractionType().Equals(InteractionType.Voice), "The message was not sent with voice.");
-            Assert.AreEqual(json.Contains(VOICE), true, "The message was not a voice command.");
+            Assert.IsTrue(json.Contains(VOICE), "The message was not a voice command.");
+        }
+
+        [TestMethod]
+        public void GestureTest() {
+            WSMessage message = new WSMessage(InteractionType.Gesture, "right");
+            String json = NetworkCommunicator.ConvertToJson(message);
+
+            Assert.IsTrue(json.Contains(GESTURE), "The message was not a gesture: " + json);
         }
 
         /// <summary>
