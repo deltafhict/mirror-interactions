@@ -63,6 +63,10 @@ namespace MirrorInteractions.Speech {
                         break;
                 }
             }
+            else
+            {
+                Console.WriteLine("Speech recognized but confidence too low: " + e1.Result.Confidence);
+            }
         }
 
         /// <summary>

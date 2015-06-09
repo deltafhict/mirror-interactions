@@ -156,6 +156,8 @@
     <Compile Include="Models\RecognizedPerson.cs" />
     <Compile Include="Models\WSMessage.cs" />
     <Compile Include="Network\NetworkCommunicator.cs" />
+    <Compile Include="Speech\SpeechCalibrationHandler.cs" />
+    <Compile Include="Speech\SpeechDelegate.cs" />
     <Compile Include="Speech\SpeechRecognition.cs" />
     <Compile Include="Speech\SpeechRecognizedHandler.cs" />
     <Page Include="MainWindow.xaml">

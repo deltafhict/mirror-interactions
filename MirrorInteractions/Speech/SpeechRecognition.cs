@@ -4,7 +4,7 @@
 // Created          : 05-27-2015
 //
 // Last Modified By : delta
-// Last Modified On : 05-27-2015
+// Last Modified On : 06-09-2015
 // ***********************************************************************
 // <copyright file="SpeechRecognition.cs" company="">
 //     Copyright (c) . All rights reserved.
@@ -64,8 +64,38 @@ namespace MirrorInteractions.Speech
         }
 
         /// <summary>
+        /// Initializes the speech recognition.
+        /// </summary>
+        /// <param name="threshold">The threshold.</param>
+        public void InitializeSpeechRecognition(double threshold)
+        {
+            // and make a new one with the new grammar
+            var memoryStream = new MemoryStream(Encoding.ASCII.GetBytes(Properties.Resources.SpeechGrammar));
+            SpeechRecognizedHandler speechRecognizedHandler = new SpeechRecognizedHandler();
+            speechRecognizedHandler.ConfidenceThreshold = threshold;
+            OpenSpeechRecognitionEngine(memoryStream, speechRecognizedHandler.SpeechRecognized, speechRecognizedHandler.SpeechRejected);
+        }
+
+        /// <summary>
+        /// Initializes the speech calibration.
+        /// </summary>
+        public void InitializeSpeechCalibration()
+        {
+            // Set up speech recognition for calibration
+            var memoryStream = new MemoryStream(Encoding.ASCII.GetBytes(Properties.Resources.CalibrationSpeechGrammar));
+            SpeechCalibrationHandler speechCalibrationHandler = new SpeechCalibrationHandler(new SpeechDelegate.SpeechCalibratedDelegate(InitializeSpeechRecognition));
+            OpenSpeechRecognitionEngine(memoryStream, speechCalibrationHandler.SpeechRecognized, speechCalibrationHandler.SpeechRejected);
+            // start calibration
+            Console.WriteLine("===== Calibration start ======");
+            Console.WriteLine("Say start calibration' plz");
+        }
+
+        /// <summary>
         /// Opens the speech recognition engine.
         /// </summary>
+        /// <param name="memoryStream">The memory stream.</param>
+        /// <param name="speechRecognizedEvent">The speech recognized event.</param>
+        /// <param name="speechRejectedEvent">The speech rejected event.</param>
         public void OpenSpeechRecognitionEngine(MemoryStream memoryStream, EventHandler<SpeechRecognizedEventArgs> speechRecognizedEvent, EventHandler<SpeechRecognitionRejectedEventArgs> speechRejectedEvent)
         {
             RecognizerInfo ri = TryGetKinectRecognizer();

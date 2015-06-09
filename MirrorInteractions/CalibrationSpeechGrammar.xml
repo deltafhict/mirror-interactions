@@ -1,8 +1,19 @@
 ﻿<grammar version="1.0" xml:lang="en-US" root="CalibrationCommand" tag-format="semantics/1.0-literals" xmlns="http://www.w3.org/2001/06/grammar">
   <rule id="CalibrationCommand">
-    <tag>WEATHER</tag>
-    <item>
-      close agenda
-    </item>
+    <tag>CALIBRATION</tag>
+    <one-of>
+      <item>
+        Close mail
+      </item>
+      <item>
+        thumbleweed
+      </item>
+      <item>
+        colonel
+      </item>
+      <item>
+        start calibration
+      </item>
+    </one-of>
   </rule>
 </grammar>
