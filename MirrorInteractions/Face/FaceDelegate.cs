@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace MirrorInteractions.Speech
 {
-    public abstract class SpeechDelegate
+    public abstract class FaceDelegate
     {
-        public delegate void SpeechCalibratedDelegate(double threshold);
+        public delegate void FaceLearnerDelegate(double threshold);
     }
 }

@@ -4,7 +4,7 @@
 // Created          : 05-27-2015
 //
 // Last Modified By : delta
-// Last Modified On : 05-27-2015
+// Last Modified On : 06-10-2015
 // ***********************************************************************
 // <copyright file="FaceRecognition.cs" company="">
 //     Copyright (c) . All rights reserved.
@@ -17,6 +17,9 @@ using Sacknet.KinectFacialRecognition.ManagedEigenObject;
 using System;
 using System.Collections.Generic;
 
+/// <summary>
+/// The Face namespace.
+/// </summary>
 namespace MirrorInteractions.Face
 {
     /// <summary>
@@ -24,6 +27,11 @@ namespace MirrorInteractions.Face
     /// </summary>
     public class FaceRecognition
     {
+        /// <summary>
+        /// The instance
+        /// </summary>
+        private static FaceRecognition instance;
+
         /// <summary>
         /// Store for the facialRecognitionEngine property.
         /// </summary>
@@ -37,38 +45,58 @@ namespace MirrorInteractions.Face
         /// <summary>
         /// Store for the faceRecognizedEvent property
         /// </summary>
-        EventHandler<RecognitionResult> faceRecognizedEvent;
-
-        /// <summary>
-        /// Store for the kinectSensor property
-        /// </summary>
-        KinectSensor kinectSensor;
+        private EventHandler<RecognitionResult> faceRecognizedEvent;
 
         /// <summary>
         /// The class constructor.
         /// </summary>
-        /// <param name="kinectSensor">The kinect sensor initialized in MainWindow.cs.</param>
-        public FaceRecognition(KinectSensor kinectSensor)
+        private FaceRecognition()
         {
-            this.kinectSensor = kinectSensor;
             this.activeProcessor = EigenObjectRecognitionProcessor.Instance;
             FaceRecognizedHandler faceRecognizedHandler = new FaceRecognizedHandler();
-            this.faceRecognizedEvent = faceRecognizedHandler.FaceRecognition;
+            this.faceRecognizedEvent = faceRecognizedHandler.FaceRecognized;
+        }
+
+        /// <summary>
+        /// Gets the instance.
+        /// </summary>
+        /// <value>The instance.</value>
+        public static FaceRecognition Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new FaceRecognition();
+                }
+                return instance;
+            }
         }
 
         /// <summary>
         /// Opens the facial recognition engine.
         /// </summary>
-        public void OpenFacialRecognitionEngine()
+        /// <param name="kinectSensor">The kinect sensor.</param>
+        public void InitializeFacialRecognitionEngine(KinectSensor kinectSensor)
         {
-
             if (this.facialRecognitionEngine == null)
             {
-                this.facialRecognitionEngine = new KinectFacialRecognitionEngine(this.kinectSensor, this.activeProcessor);
-                this.facialRecognitionEngine.RecognitionComplete += this.faceRecognizedEvent;
+                this.facialRecognitionEngine = new KinectFacialRecognitionEngine(kinectSensor, this.activeProcessor);
+                OpenFacialRecognitionEngine();
             }
 
             this.facialRecognitionEngine.Processors = new List<IRecognitionProcessor> { this.activeProcessor };
+        }
+
+        public void OpenFacialRecognitionEngine()
+        {
+            this.facialRecognitionEngine.RecognitionComplete += this.faceRecognizedEvent;
+        }
+
+        public void LearnNewFaces(string name)
+        {
+            FaceLearnerHandler faceLearnerHandler = new FaceLearnerHandler();
+            this.facialRecognitionEngine.RecognitionComplete += faceLearnerHandler.FaceRecognized;
         }
 
         /// <summary>

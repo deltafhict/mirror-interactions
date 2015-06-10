@@ -67,7 +67,7 @@ namespace MirrorInteractions
                 this.kinectSensor.Open();
 
                 speechRecognition = new SpeechRecognition(kinectSensor);
-                faceRecognition = new FaceRecognition(kinectSensor);
+                faceRecognition = FaceRecognition.Instance;
                 gestureRecognition = new GestureRecognition(kinectSensor);
             }
             else
@@ -77,7 +77,7 @@ namespace MirrorInteractions
 
             InitializeComponent();
             speechRecognition.InitializeSpeechCalibration();
-            faceRecognition.OpenFacialRecognitionEngine();
+            faceRecognition.InitializeFacialRecognitionEngine(kinectSensor);
             gestureRecognition.InitializeReaders();
             // Hide the main window, we don't use the UI anyway
             this.Hide();

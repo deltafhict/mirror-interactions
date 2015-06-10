@@ -52,7 +52,7 @@ namespace MirrorInteractions.Speech {
 
                     case "initialize face":
                         String personName = "Daan";
-                        FaceRecognizedHandler.SetLearnNewFaces(personName);
+                        FaceRecognition.Instance.LearnNewFaces(personName);
                         break;
 
                     case "joke":

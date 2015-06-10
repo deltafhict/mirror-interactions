@@ -38,22 +38,6 @@ namespace MirrorInteractions.Face
         /// </summary>
         private TrackedFace face = null;
         /// <summary>
-        /// The new learned faces count
-        /// </summary>
-        private int newLearnedFacesCount = 0;
-        /// <summary>
-        /// The learn new faces
-        /// </summary>
-        private static bool learnNewFaces = false;
-        /// <summary>
-        /// The person name
-        /// </summary>
-        private static string personName = null;
-        /// <summary>
-        /// The face learner
-        /// </summary>
-        private FaceLearner faceLearner;
-        /// <summary>
         /// The face loader
         /// </summary>
         private FaceLoader faceLoader;
@@ -63,7 +47,6 @@ namespace MirrorInteractions.Face
         /// </summary>
         public FaceRecognizedHandler()
         {
-            this.faceLearner = new FaceLearner();
             this.faceLoader = new FaceLoader();
             faceLoader.LoadAllTargetFaces();
         }
@@ -73,7 +56,7 @@ namespace MirrorInteractions.Face
         /// </summary>
         /// <param name="sender">The sender.</param>
         /// <param name="e">The e.</param>
-        public void FaceRecognition(object sender, Sacknet.KinectFacialRecognition.RecognitionResult e)
+        public void FaceRecognized(object sender, Sacknet.KinectFacialRecognition.RecognitionResult e)
         {
             //Console.WriteLine("face detected");
 
@@ -104,30 +87,10 @@ namespace MirrorInteractions.Face
                             }
                         }
                     }
-
-                    if (learnNewFaces && newLearnedFacesCount != 20)
-                    {
-                        faceLearner.LearnNewFaces(e, personName);
-                    }
-                    else if (newLearnedFacesCount == 20)
-                    {
-                        faceLoader.LoadAllTargetFaces();
-                        learnNewFaces = false;
-                        newLearnedFacesCount = 0;
-                    }
                 }
                 // Without an explicit call to GC.Collect here, memory runs out of control :(
                 GC.Collect();
             }
-        }
-
-        /// <summary>
-        /// Sets the learn new faces.
-        /// </summary>
-        /// <param name="personName">Name of the person.</param>
-        public static void SetLearnNewFaces(String personName)
-        {
-            learnNewFaces = true;
         }
 
         /// <summary>
