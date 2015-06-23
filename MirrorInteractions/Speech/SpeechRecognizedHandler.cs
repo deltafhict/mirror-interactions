@@ -47,7 +47,7 @@ namespace MirrorInteractions.Speech {
                             action = "close";
                         }
                         WSMessage messageToSend = new WSMessage(app, InteractionType.Voice, action, RecognizedPerson.recognizedPerson);
-                        NetworkCommunicator.SendToServer(messageToSend);
+                        NetworkCommunicator.Instance.SendToServer(messageToSend);
                         break;
 
                     case "initialize face":

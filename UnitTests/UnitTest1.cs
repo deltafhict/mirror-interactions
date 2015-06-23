@@ -82,13 +82,13 @@ namespace UnitTests {
         [TestMethod]
         public void JSONTests() {
             WSMessage message = new WSMessage(APP, InteractionType.FaceRecognition, ACTION, PERSON);
-            String json = NetworkCommunicator.ConvertToJson(message);
+            String json = NetworkUtils.ConvertToJson(message);
 
             Assert.AreEqual(json.Contains(NULL_APPOINTMENT), true, "The appointment was not empty.");
             Assert.AreEqual(json.Contains(FACE_RECOGNITION), true, "The checked message was not a face req. (" + json + ")");
 
             message = new WSMessage(APP, InteractionType.Voice, ACTION, PERSON);
-            json = NetworkCommunicator.ConvertToJson(message);
+            json = NetworkUtils.ConvertToJson(message);
 
             Assert.IsTrue(message.getInteractionType().Equals(InteractionType.Voice), "The message was not sent with voice.");
             Assert.IsTrue(json.Contains(VOICE), "The message was not a voice command.");
@@ -97,7 +97,7 @@ namespace UnitTests {
         [TestMethod]
         public void GestureTest() {
             WSMessage message = new WSMessage(InteractionType.Gesture, "right");
-            String json = NetworkCommunicator.ConvertToJson(message);
+            String json = NetworkUtils.ConvertToJson(message);
 
             Assert.IsTrue(json.Contains(GESTURE), "The message was not a gesture: " + json);
         }

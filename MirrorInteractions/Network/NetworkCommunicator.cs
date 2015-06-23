@@ -25,27 +25,44 @@ namespace MirrorInteractions.Network {
         /// The server adress
         /// </summary>
         private readonly static String serverAdress = "ws://127.0.0.1:1337";
+        private static NetworkCommunicator instance;
+        private WebSocket webSocket;
+
+        private NetworkCommunicator()
+        {
+            webSocket = new WebSocket(serverAdress);
+            webSocket.Connect();
+            webSocket.OnMessage += webSocket_OnMessage;
+        }
+
+        public static NetworkCommunicator Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new NetworkCommunicator();
+                }
+                return instance;
+            }
+        }
+
+        void webSocket_OnMessage(object sender, MessageEventArgs e)
+        {
+            //TODO
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Sends the message to the websocket.
         /// </summary>
         /// <param name="wsMessage">The message to send.</param>
-        public static void SendToServer(WSMessage wsMessage) {
-            String json = ConvertToJson(wsMessage);
-
-            using (var ws = new WebSocket(serverAdress)) {
-                ws.Connect();
-                ws.Send(json);
+        public void SendToServer(WSMessage wsMessage) {
+            String json = NetworkUtils.ConvertToJson(wsMessage);
+            using (webSocket)
+            {
+                webSocket.Send(json);
             }
-        }
-
-        /// <summary>
-        /// Converts to json.
-        /// </summary>
-        /// <param name="message">The message.</param>
-        /// <returns>System.String.</returns>
-        public static String ConvertToJson(WSMessage message) {
-            return new JavaScriptSerializer().Serialize(message);
         }
     }
 }

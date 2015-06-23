@@ -146,7 +146,7 @@ namespace MirrorInteractions.Gestures
                             Debug.WriteLine("Drag to Left complete");
                             gestureComplete = true;
                             WSMessage messageToSend = new WSMessage("gesture", "dragToLeft");
-                            NetworkCommunicator.SendToServer(messageToSend);
+                            NetworkCommunicator.Instance.SendToServer(messageToSend);
                         }
                     }
 
@@ -170,7 +170,7 @@ namespace MirrorInteractions.Gestures
                             gestureComplete = true;
                             WSMessage messageToSend = new WSMessage("gesture", "DragToRight");
 
-                            NetworkCommunicator.SendToServer(messageToSend);
+                            NetworkCommunicator.Instance.SendToServer(messageToSend);
                         }
                     }
                 }
