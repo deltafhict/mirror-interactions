@@ -151,9 +151,6 @@
     <Compile Include="Face\FaceLoader.cs" />
     <Compile Include="Face\FaceRecognition.cs" />
     <Compile Include="Face\FaceRecognizedHandler.cs" />
-    <Compile Include="Gestures\GestureDatabase.cs" />
-    <Compile Include="Gestures\GestureRecognition.cs" />
-    <Compile Include="Gestures\GestureRecognizedHandler.cs" />
     <Compile Include="Models\RecognizedPerson.cs" />
     <Compile Include="Models\WSMessage.cs" />
     <Compile Include="Network\NetworkCommunicator.cs" />
@@ -199,9 +196,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="Gestures\MirrorGestures.gbd">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="NuiDatabase\Expression\ExpressionRandomForest.model">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

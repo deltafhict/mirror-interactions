@@ -69,7 +69,6 @@ namespace MirrorInteractions.Face
         /// <param name="e">The e.</param>
         public void FaceRecognized(object sender, Sacknet.KinectFacialRecognition.RecognitionResult e)
         {
-            //Console.WriteLine("face detected");
 
             if (e.Faces != null)
             {
@@ -80,6 +79,7 @@ namespace MirrorInteractions.Face
             {
                 if (face != null)
                 {
+                    Console.WriteLine("face recognized and learned");
                     if (newLearnedFacesCount != 2)
                     {
                         newLearnedFacesCount++;

@@ -19,7 +19,6 @@ namespace MirrorInteractions
 {
     using Microsoft.Kinect;
     using MirrorInteractions.Face;
-    using MirrorInteractions.Gestures;
     using MirrorInteractions.Speech;
     using System.ComponentModel;
     using System.Windows;
@@ -49,11 +48,6 @@ namespace MirrorInteractions
         private FaceRecognition faceRecognition;
 
         /// <summary>
-        /// The gesture recognition
-        /// </summary>
-        private GestureRecognition gestureRecognition;
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="MainWindow"/> class.
         /// </summary>
         public MainWindow()
@@ -68,7 +62,6 @@ namespace MirrorInteractions
 
                 speechRecognition = new SpeechRecognition(kinectSensor);
                 faceRecognition = FaceRecognition.Instance;
-                gestureRecognition = new GestureRecognition(kinectSensor);
             }
             else
             {
@@ -78,7 +71,6 @@ namespace MirrorInteractions
             InitializeComponent();
             speechRecognition.InitializeSpeechCalibration();
             faceRecognition.InitializeFacialRecognitionEngine(kinectSensor);
-            gestureRecognition.InitializeReaders();
             // Hide the main window, we don't use the UI anyway
             this.Hide();
         }
@@ -92,7 +84,6 @@ namespace MirrorInteractions
         {
             speechRecognition.CloseSpeechRecognitionEngine();
             faceRecognition.CloseFacialRecognitionEngine();
-            gestureRecognition.CloseReaders();
 
             if (null != this.kinectSensor)
             {
