@@ -84,7 +84,7 @@ namespace MirrorInteractions.Face
         {
             if (personName == null)
             {
-                NetworkCommunicator.Instance.SendToServer(new WSMessage("face calibration", InteractionType.FaceRecognition, "fail", personName));
+                NetworkCommunicator.Instance.SendToServer(new WSMessage("face learning", InteractionType.FaceRecognition, "fail", personName));
                 FaceRecognition.Instance.OpenFacialRecognitionEngine();
                 faceLoader.LoadAllTargetFaces();
                 return;
@@ -138,7 +138,7 @@ namespace MirrorInteractions.Face
                         newLearnedFacesCount++;
                         faceLearner.LearnNewFaces(e, personName);
                         Console.WriteLine("Face with name: " + personName + " learned looking " + action);
-                        NetworkCommunicator.Instance.SendToServer(new WSMessage("face calibration", InteractionType.FaceRecognition, action, personName));
+                        NetworkCommunicator.Instance.SendToServer(new WSMessage("face learning", InteractionType.FaceRecognition, action, personName));
                         timer.Start();
                     }
                 }

@@ -66,7 +66,7 @@ namespace MirrorInteractions.Speech {
                         break;
 
                     case "initialize face":
-                        String personName = "Daan";
+                        String personName = resultText.Remove(0,20);
                         FaceRecognition.Instance.LearnNewFaces(personName);
                         break;
 
@@ -74,7 +74,6 @@ namespace MirrorInteractions.Speech {
                         speechCalibrateDelegate();
                         break;
 
-                    case "joke":
                     case "opus":
                     case "weather":
                     case "mail":

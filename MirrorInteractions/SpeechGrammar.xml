@@ -11,7 +11,7 @@
       <item>
         <tag>INITIALIZE FACE</tag>
         <item>
-          initialize face
+          initialize face for <ruleref uri="#NameKeys"/>
         </item>
       </item>
       <item>
@@ -24,12 +24,6 @@
         <tag>OPUS</tag>
         <item>
           Opus, <ruleref uri="#OpusCommands"/>
-        </item>
-      </item>
-      <item>
-        <tag>JOKE</tag>
-        <item>
-          <ruleref uri="#JokeCommands"/> joke
         </item>
       </item>
       <item>
@@ -72,11 +66,16 @@
       </one-of>
     </item>
   </rule>
-  <rule id="JokeCommands">
+  <rule id="NameKeys">
     <item>
       <one-of>
-        <item>Tell a</item>
-        <item>Make a</item>
+        <item>Daan</item>
+        <item>Niels</item>
+        <item>Tim</item>
+        <item>Bas</item>
+        <item>Wesley</item>
+        <item>Joris</item>
+        <item>Jan</item>
       </one-of>
     </item>
   </rule>
