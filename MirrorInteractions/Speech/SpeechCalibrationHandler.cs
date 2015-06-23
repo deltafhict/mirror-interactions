@@ -91,7 +91,7 @@ namespace MirrorInteractions.Speech
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void HandleCalibrationEvents(object sender, EventArgs e)
         {
-            threshold = ((SpeechRecognizedEventArgs)e).Result.Confidence;
+            threshold = (double)((SpeechRecognizedEventArgs)e).Result.Confidence;
             // Noise cancelling
             // Everything below 0.30 is basically nonsense or rando people yelling, so we don't even process it.
             if (threshold > 0.30)

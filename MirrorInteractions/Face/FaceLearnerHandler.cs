@@ -59,6 +59,7 @@ namespace MirrorInteractions.Face
         public FaceLearnerHandler()
         {
             this.faceLearner = new FaceLearner();
+            this.faceLoader = new FaceLoader();
         }
 
         /// <summary>
@@ -79,8 +80,9 @@ namespace MirrorInteractions.Face
             {
                 if (face != null)
                 {
-                    if (newLearnedFacesCount != 20)
+                    if (newLearnedFacesCount != 2)
                     {
+                        newLearnedFacesCount++;
                         faceLearner.LearnNewFaces(e, personName);
                     }
                     else
