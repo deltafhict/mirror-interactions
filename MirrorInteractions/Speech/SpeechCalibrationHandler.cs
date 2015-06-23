@@ -12,12 +12,15 @@
 // <summary></summary>
 // ***********************************************************************
 using Microsoft.Speech.Recognition;
+using MirrorInteractions.Models;
+using MirrorInteractions.Network;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 
 /// <summary>
 /// The Speech namespace.
@@ -44,7 +47,7 @@ namespace MirrorInteractions.Speech
         /// <summary>
         /// The word to calibrate
         /// </summary>
-        private string wordToCalibrate = "close mail";
+        private string wordToCalibrate = "start calibration";
         /// <summary>
         /// The threshold
         /// </summary>
@@ -60,8 +63,10 @@ namespace MirrorInteractions.Speech
         /// <param name="speechCalibratedDelegate">The speech calibrated delegate.</param>
         public SpeechCalibrationHandler(SpeechDelegate.SpeechCalibratedDelegate speechCalibratedDelegate)
         {
+            NetworkCommunicator.Instance.SendToServer(new WSMessage("voice calibration", InteractionType.Voice, "start", RecognizedPerson.recognizedPerson));
             kalibration = new double[9];
             this.speechCalibratedDelegate = speechCalibratedDelegate;
+            NetworkCommunicator.Instance.SendToServer(new WSMessage("voice calibration", InteractionType.Voice, wordToCalibrate, RecognizedPerson.recognizedPerson));
         }
 
         /// <summary>
@@ -81,7 +86,6 @@ namespace MirrorInteractions.Speech
         /// <param name="e">The <see cref="SpeechRecognitionRejectedEventArgs"/> instance containing the event data.</param>
         public void SpeechRejected(object sender, SpeechRecognitionRejectedEventArgs e)
         {
-            HandleCalibrationEvents(sender, e);
         }
 
         /// <summary>
@@ -98,26 +102,31 @@ namespace MirrorInteractions.Speech
             {
                 if (calibrationSpeechCount < 3)
                 {
+                    wordToCalibrate = "close mail";
                     Console.WriteLine(threshold + " " + calibrationSpeechCount);
                     Console.WriteLine("Say " + wordToCalibrate + " please.");
                     kalibration[calibrationSpeechCount] = threshold;
                     calibrationSpeechCount++;
+                    NetworkCommunicator.Instance.SendToServer(new WSMessage("voice calibration", InteractionType.Voice, wordToCalibrate, RecognizedPerson.recognizedPerson));
                 }
                 else if (calibrationSpeechCount < 6)
                 {
-                    Console.WriteLine(threshold + " " + calibrationSpeechCount);
                     wordToCalibrate = "thumbleweed";
+                    NetworkCommunicator.Instance.SendToServer(new WSMessage("voice calibration", InteractionType.Voice, wordToCalibrate, RecognizedPerson.recognizedPerson));
+                    Console.WriteLine(threshold + " " + calibrationSpeechCount);
                     Console.WriteLine("Say " + wordToCalibrate + " please.");
                     kalibration[calibrationSpeechCount] = threshold;
                     calibrationSpeechCount++;
+                    NetworkCommunicator.Instance.SendToServer(new WSMessage("voice calibration", InteractionType.Voice, wordToCalibrate, RecognizedPerson.recognizedPerson));
                 }
                 else if (calibrationSpeechCount < 9)
                 {
-                    Console.WriteLine(threshold + " " + calibrationSpeechCount);
                     wordToCalibrate = "colonel";
+                    Console.WriteLine(threshold + " " + calibrationSpeechCount);
                     Console.WriteLine("Say " + wordToCalibrate + " please.");
                     kalibration[calibrationSpeechCount] = threshold;
                     calibrationSpeechCount++;
+                    NetworkCommunicator.Instance.SendToServer(new WSMessage("voice calibration", InteractionType.Voice, wordToCalibrate, RecognizedPerson.recognizedPerson));
                 }
                 else
                 {
@@ -141,6 +150,7 @@ namespace MirrorInteractions.Speech
                     {
                         threshold = 0.80;
                     }
+                    NetworkCommunicator.Instance.SendToServer(new WSMessage("voice calibration", InteractionType.Voice, "finish", RecognizedPerson.recognizedPerson));
                     Console.WriteLine("===== Calibration end   ====== " + threshold);
                     speechCalibratedDelegate(threshold);
                 }
