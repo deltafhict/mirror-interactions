@@ -52,13 +52,15 @@ namespace MirrorInteractions.Face
         /// </summary>
         private EventHandler<RecognitionResult> faceLearnerEvent;
 
+        private FaceLearnerHandler faceLearnerHandler;
+
         /// <summary>
         /// The class constructor.
         /// </summary>
         private FaceRecognition()
         {
             this.activeProcessor = EigenObjectRecognitionProcessor.Instance;
-            FaceLearnerHandler faceLearnerHandler = new FaceLearnerHandler();
+            faceLearnerHandler = new FaceLearnerHandler();
             FaceRecognizedHandler faceRecognizedHandler = new FaceRecognizedHandler();
             this.faceRecognizedEvent = faceRecognizedHandler.FaceRecognized;
             this.faceLearnerEvent = faceLearnerHandler.FaceRecognized;
@@ -97,14 +99,15 @@ namespace MirrorInteractions.Face
 
         public void OpenFacialRecognitionEngine()
         {
-            this.facialRecognitionEngine.RecognitionComplete -= faceLearnerEvent;
+            this.facialRecognitionEngine.RecognitionComplete -= this.faceLearnerEvent;
             this.facialRecognitionEngine.RecognitionComplete += this.faceRecognizedEvent;
         }
 
         public void LearnNewFaces(string name)
         {
+            faceLearnerHandler.PersonName = name;
             this.facialRecognitionEngine.RecognitionComplete -= this.faceRecognizedEvent;
-            this.facialRecognitionEngine.RecognitionComplete += faceLearnerEvent;
+            this.facialRecognitionEngine.RecognitionComplete += this.faceLearnerEvent;
         }
 
         /// <summary>

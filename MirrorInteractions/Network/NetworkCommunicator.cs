@@ -31,7 +31,6 @@ namespace MirrorInteractions.Network {
         private NetworkCommunicator()
         {
             webSocket = new WebSocket(serverAdress);
-            webSocket.Connect();
             webSocket.OnMessage += webSocket_OnMessage;
         }
 
@@ -61,6 +60,7 @@ namespace MirrorInteractions.Network {
             String json = NetworkUtils.ConvertToJson(wsMessage);
             using (webSocket)
             {
+                webSocket.Connect();
                 webSocket.Send(json);
             }
         }
