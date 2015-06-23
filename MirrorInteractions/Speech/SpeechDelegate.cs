@@ -9,5 +9,6 @@ namespace MirrorInteractions.Speech
     public abstract class SpeechDelegate
     {
         public delegate void SpeechCalibratedDelegate(double threshold);
+        public delegate void SpeechCalibrateDelegate();
     }
 }

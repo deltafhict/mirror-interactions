@@ -48,6 +48,11 @@ namespace MirrorInteractions
         private FaceRecognition faceRecognition;
 
         /// <summary>
+        /// The default threshold for speech recognition
+        /// </summary>
+        private readonly static double defaultSpeechThreshold = 0.50;
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="MainWindow"/> class.
         /// </summary>
         public MainWindow()
@@ -69,7 +74,7 @@ namespace MirrorInteractions
             }
 
             InitializeComponent();
-            speechRecognition.InitializeSpeechCalibration();
+            speechRecognition.InitializeSpeechRecognition(defaultSpeechThreshold);
             faceRecognition.InitializeFacialRecognitionEngine(kinectSensor);
             // Hide the main window, we don't use the UI anyway
             this.Hide();

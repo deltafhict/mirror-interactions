@@ -71,7 +71,7 @@ namespace MirrorInteractions.Speech
         {
             // and make a new one with the new grammar
             var memoryStream = new MemoryStream(Encoding.ASCII.GetBytes(Properties.Resources.SpeechGrammar));
-            SpeechRecognizedHandler speechRecognizedHandler = new SpeechRecognizedHandler();
+            SpeechRecognizedHandler speechRecognizedHandler = new SpeechRecognizedHandler(new SpeechDelegate.SpeechCalibrateDelegate(InitializeSpeechCalibration));
             speechRecognizedHandler.ConfidenceThreshold = threshold;
             OpenSpeechRecognitionEngine(memoryStream, speechRecognizedHandler.SpeechRecognized, speechRecognizedHandler.SpeechRejected);
         }

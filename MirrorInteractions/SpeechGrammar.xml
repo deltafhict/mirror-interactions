@@ -15,6 +15,12 @@
         </item>
       </item>
       <item>
+        <tag>INITIALIZE SPEECH</tag>
+        <item>
+          initialize speech
+        </item>
+      </item>
+      <item>
         <tag>OPUS</tag>
         <item>
           Opus, <ruleref uri="#OpusCommands"/>

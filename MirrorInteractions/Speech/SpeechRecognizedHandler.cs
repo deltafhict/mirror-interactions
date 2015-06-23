@@ -25,6 +25,21 @@ namespace MirrorInteractions.Speech {
     class SpeechRecognizedHandler {
         public double ConfidenceThreshold = 0.5;
         /// <summary>
+        /// The speech calibrate delegate
+        /// </summary>
+        private SpeechDelegate.SpeechCalibrateDelegate speechCalibrateDelegate;
+
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SpeechCalibrationHandler"/> class.
+        /// </summary>
+        /// <param name="speechCalibratedDelegate">The speech calibrated delegate.</param>
+        public SpeechRecognizedHandler(SpeechDelegate.SpeechCalibrateDelegate speechCalibrateDelegate)
+        {
+            this.speechCalibrateDelegate = speechCalibrateDelegate;
+        }
+
+        /// <summary>
         /// Handler for recognized speech events.
         /// </summary>
         /// <param name="sender1">object sending the event.</param>
@@ -53,6 +68,10 @@ namespace MirrorInteractions.Speech {
                     case "initialize face":
                         String personName = "Daan";
                         FaceRecognition.Instance.LearnNewFaces(personName);
+                        break;
+
+                    case "initialize speech":
+                        speechCalibrateDelegate();
                         break;
 
                     case "joke":
