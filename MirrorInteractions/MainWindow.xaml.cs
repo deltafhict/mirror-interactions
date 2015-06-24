@@ -4,12 +4,12 @@
 // Created          : 05-27-2015
 //
 // Last Modified By : delta
-// Last Modified On : 06-09-2015
+// Last Modified On : 06-24-2015
 // ***********************************************************************
 // <copyright file="MainWindow.xaml.cs" company="Microsoft">
 //     Copyright (c) Microsoft Corporation.  All rights reserved.
 // </copyright>
-// <summary></summary>
+// <summary>Main class used to start the speech and face engine.</summary>
 // ***********************************************************************
 
 /// <summary>
@@ -28,7 +28,7 @@ namespace MirrorInteractions
     using Microsoft.Speech.Recognition;
 
     /// <summary>
-    /// Interaction logic for MainWindow
+    /// Main class used to start the speech and face engine.
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -53,7 +53,7 @@ namespace MirrorInteractions
         private readonly static double defaultSpeechThreshold = 0.50;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MainWindow"/> class.
+        /// Initializes a new instance of the <see cref="MainWindow" /> class.
         /// </summary>
         public MainWindow()
         {
@@ -84,7 +84,7 @@ namespace MirrorInteractions
         /// Windows the closing.
         /// </summary>
         /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="CancelEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="CancelEventArgs" /> instance containing the event data.</param>
         private void WindowClosing(object sender, CancelEventArgs e)
         {
             speechRecognition.CloseSpeechRecognitionEngine();

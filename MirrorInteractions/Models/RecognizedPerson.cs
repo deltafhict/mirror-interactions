@@ -4,18 +4,20 @@
 // Created          : 05-27-2015
 //
 // Last Modified By : delta
-// Last Modified On : 05-27-2015
+// Last Modified On : 06-24-2015
 // ***********************************************************************
 // <copyright file="RecognizedPerson.cs" company="">
 //     Copyright (c) . All rights reserved.
 // </copyright>
-// <summary></summary>
+// <summary>Class used to store a recognized person to use in other classes.</summary>
 // ***********************************************************************
-
+/// <summary>
+/// The Models namespace, all models are in this namespace.
+/// </summary>
 namespace MirrorInteractions.Models
 {
     /// <summary>
-    /// Class RecognizedPerson.
+    /// Class used to store a recognized person to use in other classes
     /// </summary>
     public static class RecognizedPerson
     {

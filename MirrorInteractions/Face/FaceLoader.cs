@@ -4,12 +4,12 @@
 // Created          : 05-27-2015
 //
 // Last Modified By : delta
-// Last Modified On : 05-27-2015
+// Last Modified On : 06-10-2015
 // ***********************************************************************
-// <copyright file="FaceLoader.cs" company="">
+// <copyright file="FaceLoader.cs" company="Delta">
 //     Copyright (c) . All rights reserved.
 // </copyright>
-// <summary></summary>
+// <summary>Class used to load all previous learned faces.</summary>
 // ***********************************************************************
 using Newtonsoft.Json;
 using Sacknet.KinectFacialRecognition;
@@ -19,12 +19,12 @@ using System.Drawing;
 using System.IO;
 
 /// <summary>
-/// The Face namespace.
+/// The Face namespace, all face related classes are in this namespace.
 /// </summary>
 namespace MirrorInteractions.Face
 {
     /// <summary>
-    /// Class FaceLoader.
+    /// Class used to load all previous learned faces.
     /// </summary>
     public class FaceLoader
     {
@@ -39,7 +39,7 @@ namespace MirrorInteractions.Face
         private IRecognitionProcessor activeProcessor;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="FaceLoader"/> class.
+        /// Initializes a new instance of the <see cref="FaceLoader" /> class.
         /// </summary>
         public FaceLoader()
         {

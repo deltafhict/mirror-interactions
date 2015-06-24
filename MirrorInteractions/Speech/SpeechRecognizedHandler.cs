@@ -4,12 +4,12 @@
 // Created          : 05-27-2015
 //
 // Last Modified By : delta
-// Last Modified On : 05-27-2015
+// Last Modified On : 06-24-2015
 // ***********************************************************************
-// <copyright file="SpeechRecognizedHandler.cs" company="">
+// <copyright file="SpeechRecognizedHandler.cs" company="Delta">
 //     Copyright (c) . All rights reserved.
 // </copyright>
-// <summary></summary>
+// <summary>Class used to handle speech recognized events.</summary>
 // ***********************************************************************
 using Microsoft.Speech.Recognition;
 using MirrorInteractions.Face;
@@ -18,11 +18,17 @@ using MirrorInteractions.Network;
 using System;
 using System.Windows;
 
+/// <summary>
+/// The Speech namespace, all Speech related classes are in this namespace.
+/// </summary>
 namespace MirrorInteractions.Speech {
     /// <summary>
-    /// Class SpeechRecognizedHandler.
+    /// Class used to handle speech recognized events.
     /// </summary>
     class SpeechRecognizedHandler {
+        /// <summary>
+        /// The confidence threshold
+        /// </summary>
         public double ConfidenceThreshold = 0.5;
         /// <summary>
         /// The speech calibrate delegate
@@ -31,9 +37,9 @@ namespace MirrorInteractions.Speech {
 
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SpeechCalibrationHandler"/> class.
+        /// Initializes a new instance of the <see cref="SpeechCalibrationHandler" /> class.
         /// </summary>
-        /// <param name="speechCalibratedDelegate">The speech calibrated delegate.</param>
+        /// <param name="speechCalibrateDelegate">The speech calibrate delegate.</param>
         public SpeechRecognizedHandler(SpeechDelegate.SpeechCalibrateDelegate speechCalibrateDelegate)
         {
             this.speechCalibrateDelegate = speechCalibrateDelegate;

@@ -4,13 +4,13 @@
 // Created          : 05-27-2015
 //
 // Last Modified By : delta
-// Last Modified On : 05-27-2015
+// Last Modified On : 06-10-2015
 // ***********************************************************************
-// <copyright file="FaceRecognizedHandler.cs" company="">
+// <copyright file="FaceRecognizedHandler.cs" company="Delta">
 //     Copyright (c) . All rights reserved.
 // </copyright>
-// <summary></summary>
-// ***********************************************************************
+// <summary>Class used to handle face found event's when the FaceRecognitionEngine is equipt with this handler.</summary>
+// ************************************************************************
 using MirrorInteractions.Models;
 using Sacknet.KinectFacialRecognition;
 using System;
@@ -19,12 +19,12 @@ using System.Linq;
 using System.Timers;
 
 /// <summary>
-/// The Face namespace.
+/// The Face namespace, all face related classes are in this namespace.
 /// </summary>
 namespace MirrorInteractions.Face
 {
     /// <summary>
-    /// Class FaceRecognizedHandler.
+    /// Class used to handle face found event's when the FaceRecognitionEngine is equipt with this handler.
     /// </summary>
     public class FaceRecognizedHandler
     {
@@ -43,7 +43,7 @@ namespace MirrorInteractions.Face
         private FaceLoader faceLoader;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="FaceRecognizedHandler"/> class.
+        /// Initializes a new instance of the <see cref="FaceRecognizedHandler" /> class.
         /// </summary>
         public FaceRecognizedHandler()
         {
@@ -97,7 +97,7 @@ namespace MirrorInteractions.Face
         /// Handles the <see cref="E:FaceRecognizedExpired" /> event.
         /// </summary>
         /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="ElapsedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="ElapsedEventArgs" /> instance containing the event data.</param>
         private void OnFaceRecognizedExpired(object sender, ElapsedEventArgs e)
         {
             faceRecognitionExpireTimer.Stop();

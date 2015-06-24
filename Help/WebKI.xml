@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpKI>
-  <HelpKINode Title="action field" Url="html/737470196.htm" />
   <HelpKINode Title="ACTION field" Url="html/2036777383.htm" />
+  <HelpKINode Title="action field" Url="html/737470196.htm" />
   <HelpKINode Title="ActionTests method" Url="html/614568737.htm" />
   <HelpKINode Title="ActionTypeTests method" Url="html/39188708.htm" />
   <HelpKINode Title="activeProcessor field">
@@ -65,12 +65,7 @@
   <HelpKINode Title="BitmapSourceTargetFace.Image property" Url="html/336972082.htm" />
   <HelpKINode Title="BitmapSourceTargetFace.Key property" Url="html/1217316988.htm" />
   <HelpKINode Title="BitmapSourceTargetFace.SkinColor property" Url="html/17027796.htm" />
-  <HelpKINode Title="bodies field">
-    <HelpKINode Title="bodies Field" Url="html/766039101.htm" />
-    <HelpKINode Title="bodies Field" Url="html/1795424956.htm" />
-    <HelpKINode Title="bodies Field" Url="html/1612830026.htm" />
-  </HelpKINode>
-  <HelpKINode Title="bodyReader field" Url="html/1936179250.htm" />
+  <HelpKINode Title="bodies field" Url="html/1795424956.htm" />
   <HelpKINode Title="BOUNDING_HIGH_DETAIL_FACE_POINTS field" Url="html/1365488016.htm" />
   <HelpKINode Title="BuilderStatus property" Url="html/1746872758.htm" />
   <HelpKINode Title="CalcCovarMatrixEx method" Url="html/925955267.htm" />
@@ -81,19 +76,21 @@
   </HelpKINode>
   <HelpKINode Title="CalculateBoundingHighDefinitionFacePoints method" Url="html/1166041153.htm" />
   <HelpKINode Title="CalculateNormalized3DFacePoints method" Url="html/755185139.htm" />
+  <HelpKINode Title="calibrationSpeechCount field" Url="html/548734489.htm" />
+  <HelpKINode Title="CalibrationSpeechGrammar property" Url="html/652249386.htm" />
   <HelpKINode Title="CanRead property" Url="html/475961111.htm" />
   <HelpKINode Title="CanSeek property" Url="html/286550248.htm" />
   <HelpKINode Title="CanWrite property" Url="html/1370820698.htm" />
   <HelpKINode Title="CloseFacialRecognitionEngine method" Url="html/1421381546.htm" />
-  <HelpKINode Title="CloseReaders method" Url="html/108914529.htm" />
   <HelpKINode Title="CloseSpeechRecognitionEngine method" Url="html/1615484820.htm" />
   <HelpKINode Title="colorImageBuffer field" Url="html/1802816248.htm" />
   <HelpKINode Title="ColorSpaceBitmap property" Url="html/1851466168.htm" />
   <HelpKINode Title="ColorSpaceFacePoints property" Url="html/1252681784.htm" />
+  <HelpKINode Title="ConfidenceThreshold field" Url="html/2087983650.htm" />
   <HelpKINode Title="constructedFaceModel field" Url="html/1024688383.htm" />
   <HelpKINode Title="ConstructedFaceModel property" Url="html/1668380711.htm" />
   <HelpKINode Title="constructionInProcess field" Url="html/1041354178.htm" />
-  <HelpKINode Title="ConvertToJson method" Url="html/684326696.htm" />
+  <HelpKINode Title="ConvertToJson method" Url="html/947263374.htm" />
   <HelpKINode Title="CopyBitmapToByteArray method" Url="html/1434966039.htm" />
   <HelpKINode Title="CopyGrayscaleBitmapToByteArray method" Url="html/791306247.htm" />
   <HelpKINode Title="Culture property" Url="html/922870140.htm" />
@@ -102,20 +99,21 @@
   <HelpKINode Title="datetime field" Url="html/692554109.htm" />
   <HelpKINode Title="Default property" Url="html/1067361747.htm" />
   <HelpKINode Title="defaultInstance field" Url="html/883353164.htm" />
+  <HelpKINode Title="defaultSpeechThreshold field" Url="html/185477656.htm" />
   <HelpKINode Title="Deformations property">
-    <HelpKINode Title="Deformations Property " Url="html/197634590.htm" />
+    <HelpKINode Title="Deformations Property " Url="html/1544518374.htm" />
     <HelpKINode Title="Deformations Property " Url="html/1015261077.htm" />
     <HelpKINode Title="Deformations Property " Url="html/230864964.htm" />
-    <HelpKINode Title="Deformations Property " Url="html/1544518374.htm" />
+    <HelpKINode Title="Deformations Property " Url="html/197634590.htm" />
   </HelpKINode>
   <HelpKINode Title="Degree property" Url="html/1434234833.htm" />
   <HelpKINode Title="desc field" Url="html/520915313.htm" />
   <HelpKINode Title="Dispose method">
-    <HelpKINode Title="Dispose Method " Url="html/392163999.htm" />
-    <HelpKINode Title="Dispose Method " Url="html/806252396.htm" />
-    <HelpKINode Title="Dispose Method " Url="html/2005943914.htm" />
-    <HelpKINode Title="Dispose Method " Url="html/1885987043.htm" />
     <HelpKINode Title="Dispose Method " Url="html/824231621.htm" />
+    <HelpKINode Title="Dispose Method " Url="html/2005943914.htm" />
+    <HelpKINode Title="Dispose Method " Url="html/806252396.htm" />
+    <HelpKINode Title="Dispose Method " Url="html/1885987043.htm" />
+    <HelpKINode Title="Dispose Method " Url="html/392163999.htm" />
   </HelpKINode>
   <HelpKINode Title="DisposeFaceModelBuilder method" Url="html/552000998.htm" />
   <HelpKINode Title="Distance property" Url="html/1310175174.htm" />
@@ -132,11 +130,9 @@
   <HelpKINode Title="DoubleImage.DoubleImage constructor" Url="html/2031296960.htm" />
   <HelpKINode Title="DoubleImage.Size property" Url="html/559787425.htm" />
   <HelpKINode Title="DoubleImage.Step property" Url="html/1866748530.htm" />
-  <HelpKINode Title="dragToLeftGesture field" Url="html/1832527908.htm" />
-  <HelpKINode Title="dragToRightGesture field" Url="html/534639819.htm" />
   <HelpKINode Title="EigenDecomposite method">
-    <HelpKINode Title="EigenDecomposite Method " Url="html/1910875872.htm" />
     <HelpKINode Title="EigenDecomposite Method " Url="html/1715340637.htm" />
+    <HelpKINode Title="EigenDecomposite Method " Url="html/1910875872.htm" />
   </HelpKINode>
   <HelpKINode Title="EigenDistanceThreshold property" Url="html/1245286250.htm" />
   <HelpKINode Title="EigenImages property" Url="html/502760421.htm" />
@@ -238,7 +234,10 @@
   <HelpKINode Title="Extensions.RotateY3D method" Url="html/1233307498.htm" />
   <HelpKINode Title="Extensions.RotateZ3D method" Url="html/891099463.htm" />
   <HelpKINode Title="ExtractFaceRotationInRadians method" Url="html/966844048.htm" />
-  <HelpKINode Title="face field" Url="html/1457949467.htm" />
+  <HelpKINode Title="face field">
+    <HelpKINode Title="face Field" Url="html/1457949467.htm" />
+    <HelpKINode Title="face Field" Url="html/1054492848.htm" />
+  </HelpKINode>
   <HelpKINode Title="faceAlignment field" Url="html/725451401.htm" />
   <HelpKINode Title="FaceAlignment property" Url="html/1474127804.htm" />
   <HelpKINode Title="FaceBoundaryPoints method" Url="html/751713367.htm" />
@@ -251,10 +250,31 @@
     <HelpKINode Title="fields" Url="html/382024182.htm" />
     <HelpKINode Title="methods" Url="html/1845775186.htm" />
   </HelpKINode>
-  <HelpKINode Title="faceLearner field" Url="html/1126885316.htm" />
+  <HelpKINode Title="faceLearner field" Url="html/2093127562.htm" />
   <HelpKINode Title="FaceLearner.faces field" Url="html/862875465.htm" />
   <HelpKINode Title="FaceLearner.LearnNewFaces method" Url="html/1317840347.htm" />
   <HelpKINode Title="FaceLearner.SerializeBitmapSourceTargetFace method" Url="html/1020240129.htm" />
+  <HelpKINode Title="faceLearnerEvent field" Url="html/1859935144.htm" />
+  <HelpKINode Title="FaceLearnerHandler class">
+    <HelpKINode Title="FaceLearnerHandler Class" Url="html/1856723764.htm" />
+    <HelpKINode Title="FaceLearnerHandler Members" Url="html/525256922.htm" />
+    <HelpKINode Title="about FaceLearnerHandler class" Url="html/1856723764.htm" />
+    <HelpKINode Title="all members" Url="html/525256922.htm" />
+    <HelpKINode Title="constructor" Url="html/1353141869.htm" />
+    <HelpKINode Title="fields" Url="html/943847849.htm" />
+    <HelpKINode Title="methods" Url="html/33096903.htm" />
+    <HelpKINode Title="properties" Url="html/1498422396.htm" />
+  </HelpKINode>
+  <HelpKINode Title="faceLearnerHandler field" Url="html/734152983.htm" />
+  <HelpKINode Title="FaceLearnerHandler.face field" Url="html/1054492848.htm" />
+  <HelpKINode Title="FaceLearnerHandler.faceLearner field" Url="html/2093127562.htm" />
+  <HelpKINode Title="FaceLearnerHandler.FaceLearnerHandler constructor" Url="html/1353141869.htm" />
+  <HelpKINode Title="FaceLearnerHandler.faceLoader field" Url="html/315868335.htm" />
+  <HelpKINode Title="FaceLearnerHandler.FaceRecognized method" Url="html/1190415345.htm" />
+  <HelpKINode Title="FaceLearnerHandler.newLearnedFacesCount field" Url="html/936147610.htm" />
+  <HelpKINode Title="FaceLearnerHandler.personName field" Url="html/1625234390.htm" />
+  <HelpKINode Title="FaceLearnerHandler.PersonName property" Url="html/1606286319.htm" />
+  <HelpKINode Title="FaceLearnerHandler.timer field" Url="html/990899592.htm" />
   <HelpKINode Title="FaceLoader class">
     <HelpKINode Title="FaceLoader Class" Url="html/756309363.htm" />
     <HelpKINode Title="FaceLoader Members" Url="html/1022357105.htm" />
@@ -264,7 +284,10 @@
     <HelpKINode Title="fields" Url="html/2014776917.htm" />
     <HelpKINode Title="methods" Url="html/1430899870.htm" />
   </HelpKINode>
-  <HelpKINode Title="faceLoader field" Url="html/1306416149.htm" />
+  <HelpKINode Title="faceLoader field">
+    <HelpKINode Title="faceLoader Field" Url="html/315868335.htm" />
+    <HelpKINode Title="faceLoader Field" Url="html/1306416149.htm" />
+  </HelpKINode>
   <HelpKINode Title="FaceLoader.activeProcessor field" Url="html/1967098304.htm" />
   <HelpKINode Title="FaceLoader.FaceLoader constructor" Url="html/1520415925.htm" />
   <HelpKINode Title="FaceLoader.faces field" Url="html/719842819.htm" />
@@ -325,22 +348,31 @@
     <HelpKINode Title="FaceRecognition Members" Url="html/63677600.htm" />
     <HelpKINode Title="about FaceRecognition class" Url="html/1614946985.htm" />
     <HelpKINode Title="all members" Url="html/63677600.htm" />
-    <HelpKINode Title="constructor" Url="html/1500701421.htm" />
+    <HelpKINode Title="constructor" Url="html/150875280.htm" />
     <HelpKINode Title="fields" Url="html/378726481.htm" />
     <HelpKINode Title="methods" Url="html/1988496873.htm" />
+    <HelpKINode Title="properties" Url="html/687720740.htm" />
   </HelpKINode>
   <HelpKINode Title="FaceRecognition enumeration member" Url="html/1482297050.htm" />
   <HelpKINode Title="FaceRecognition field" Url="html/1083071745.htm" />
   <HelpKINode Title="faceRecognition field" Url="html/560236821.htm" />
-  <HelpKINode Title="FaceRecognition method" Url="html/1960931180.htm" />
   <HelpKINode Title="FaceRecognition.activeProcessor field" Url="html/84138917.htm" />
   <HelpKINode Title="FaceRecognition.CloseFacialRecognitionEngine method" Url="html/1421381546.htm" />
-  <HelpKINode Title="FaceRecognition.FaceRecognition constructor" Url="html/1500701421.htm" />
+  <HelpKINode Title="FaceRecognition.faceLearnerEvent field" Url="html/1859935144.htm" />
+  <HelpKINode Title="FaceRecognition.faceLearnerHandler field" Url="html/734152983.htm" />
+  <HelpKINode Title="FaceRecognition.FaceRecognition constructor" Url="html/150875280.htm" />
   <HelpKINode Title="FaceRecognition.faceRecognizedEvent field" Url="html/543816195.htm" />
   <HelpKINode Title="FaceRecognition.facialRecognitionEngine field" Url="html/874870285.htm" />
-  <HelpKINode Title="FaceRecognition.kinectSensor field" Url="html/1253279720.htm" />
+  <HelpKINode Title="FaceRecognition.InitializeFacialRecognitionEngine method" Url="html/883605204.htm" />
+  <HelpKINode Title="FaceRecognition.instance field" Url="html/1260206389.htm" />
+  <HelpKINode Title="FaceRecognition.Instance property" Url="html/779907238.htm" />
+  <HelpKINode Title="FaceRecognition.LearnNewFaces method" Url="html/648874019.htm" />
   <HelpKINode Title="FaceRecognition.OpenFacialRecognitionEngine method" Url="html/1318982606.htm" />
   <HelpKINode Title="faceRecognitionExpireTimer field" Url="html/496894034.htm" />
+  <HelpKINode Title="FaceRecognized method">
+    <HelpKINode Title="FaceRecognized Method " Url="html/792939085.htm" />
+    <HelpKINode Title="FaceRecognized Method " Url="html/1190415345.htm" />
+  </HelpKINode>
   <HelpKINode Title="faceRecognizedEvent field" Url="html/543816195.htm" />
   <HelpKINode Title="FaceRecognizedHandler class">
     <HelpKINode Title="FaceRecognizedHandler Class" Url="html/338414439.htm" />
@@ -352,20 +384,15 @@
     <HelpKINode Title="methods" Url="html/398211134.htm" />
   </HelpKINode>
   <HelpKINode Title="FaceRecognizedHandler.face field" Url="html/1457949467.htm" />
-  <HelpKINode Title="FaceRecognizedHandler.faceLearner field" Url="html/1126885316.htm" />
   <HelpKINode Title="FaceRecognizedHandler.faceLoader field" Url="html/1306416149.htm" />
-  <HelpKINode Title="FaceRecognizedHandler.FaceRecognition method" Url="html/1960931180.htm" />
   <HelpKINode Title="FaceRecognizedHandler.faceRecognitionExpireTimer field" Url="html/496894034.htm" />
+  <HelpKINode Title="FaceRecognizedHandler.FaceRecognized method" Url="html/792939085.htm" />
   <HelpKINode Title="FaceRecognizedHandler.FaceRecognizedHandler constructor" Url="html/547082540.htm" />
-  <HelpKINode Title="FaceRecognizedHandler.learnNewFaces field" Url="html/450373037.htm" />
-  <HelpKINode Title="FaceRecognizedHandler.newLearnedFacesCount field" Url="html/207024200.htm" />
   <HelpKINode Title="FaceRecognizedHandler.OnFaceRecognizedExpired method" Url="html/103176398.htm" />
-  <HelpKINode Title="FaceRecognizedHandler.personName field" Url="html/1224371508.htm" />
-  <HelpKINode Title="FaceRecognizedHandler.SetLearnNewFaces method" Url="html/1633544164.htm" />
   <HelpKINode Title="FaceRect property" Url="html/818920807.htm" />
   <HelpKINode Title="faces field">
-    <HelpKINode Title="faces Field" Url="html/862875465.htm" />
     <HelpKINode Title="faces Field" Url="html/1899291564.htm" />
+    <HelpKINode Title="faces Field" Url="html/862875465.htm" />
     <HelpKINode Title="faces Field" Url="html/719842819.htm" />
   </HelpKINode>
   <HelpKINode Title="Faces property" Url="html/2027168474.htm" />
@@ -378,81 +405,20 @@
   <HelpKINode Title="G enumeration member" Url="html/918178761.htm" />
   <HelpKINode Title="G field" Url="html/5070480.htm" />
   <HelpKINode Title="Gesture enumeration member" Url="html/1482297050.htm" />
-  <HelpKINode Title="Gesture field" Url="html/2029680148.htm" />
   <HelpKINode Title="GESTURE field" Url="html/614586536.htm" />
-  <HelpKINode Title="gestureComplete field" Url="html/1948352656.htm" />
-  <HelpKINode Title="GestureDatabase class">
-    <HelpKINode Title="GestureDatabase Class" Url="html/259044065.htm" />
-    <HelpKINode Title="GestureDatabase Members" Url="html/1899823908.htm" />
-    <HelpKINode Title="about GestureDatabase class" Url="html/259044065.htm" />
-    <HelpKINode Title="all members" Url="html/1899823908.htm" />
-    <HelpKINode Title="constructor" Url="html/1696446461.htm" />
-    <HelpKINode Title="fields" Url="html/51798094.htm" />
-    <HelpKINode Title="methods" Url="html/1885532538.htm" />
-  </HelpKINode>
-  <HelpKINode Title="gestureDatabase field" Url="html/1480635475.htm" />
-  <HelpKINode Title="GestureDatabase.dragToLeftGesture field" Url="html/1832527908.htm" />
-  <HelpKINode Title="GestureDatabase.dragToRightGesture field" Url="html/534639819.htm" />
-  <HelpKINode Title="GestureDatabase.GestureDatabase constructor" Url="html/1696446461.htm" />
-  <HelpKINode Title="GestureDatabase.LoadGestures method" Url="html/715195593.htm" />
-  <HelpKINode Title="gestureReader field">
-    <HelpKINode Title="gestureReader Field" Url="html/858351047.htm" />
-    <HelpKINode Title="gestureReader Field" Url="html/282667850.htm" />
-  </HelpKINode>
-  <HelpKINode Title="GestureRecognition class">
-    <HelpKINode Title="GestureRecognition Class" Url="html/1101536277.htm" />
-    <HelpKINode Title="GestureRecognition Members" Url="html/1898594934.htm" />
-    <HelpKINode Title="about GestureRecognition class" Url="html/1101536277.htm" />
-    <HelpKINode Title="all members" Url="html/1898594934.htm" />
-    <HelpKINode Title="constructor" Url="html/1426749890.htm" />
-    <HelpKINode Title="fields" Url="html/1375083488.htm" />
-    <HelpKINode Title="methods" Url="html/426008848.htm" />
-  </HelpKINode>
-  <HelpKINode Title="gestureRecognition field" Url="html/246650397.htm" />
-  <HelpKINode Title="GestureRecognition.bodies field" Url="html/1612830026.htm" />
-  <HelpKINode Title="GestureRecognition.bodyReader field" Url="html/1936179250.htm" />
-  <HelpKINode Title="GestureRecognition.CloseReaders method" Url="html/108914529.htm" />
-  <HelpKINode Title="GestureRecognition.gestureReader field" Url="html/282667850.htm" />
-  <HelpKINode Title="GestureRecognition.GestureRecognition constructor" Url="html/1426749890.htm" />
-  <HelpKINode Title="GestureRecognition.gestureRecognizedHandler field" Url="html/1657441397.htm" />
-  <HelpKINode Title="GestureRecognition.gestureSource field" Url="html/1655771147.htm" />
-  <HelpKINode Title="GestureRecognition.InitializeReaders method" Url="html/543573981.htm" />
-  <HelpKINode Title="GestureRecognition.OpenBodyReader method" Url="html/1899149143.htm" />
-  <HelpKINode Title="GestureRecognition.OpenGestureReader method" Url="html/39116548.htm" />
-  <HelpKINode Title="GestureRecognition.sensor field" Url="html/2074645651.htm" />
-  <HelpKINode Title="GestureRecognizedHandler class">
-    <HelpKINode Title="GestureRecognizedHandler Class" Url="html/1074625685.htm" />
-    <HelpKINode Title="GestureRecognizedHandler Members" Url="html/2025354478.htm" />
-    <HelpKINode Title="about GestureRecognizedHandler class" Url="html/1074625685.htm" />
-    <HelpKINode Title="all members" Url="html/2025354478.htm" />
-    <HelpKINode Title="constructor" Url="html/1613899802.htm" />
-    <HelpKINode Title="fields" Url="html/1873823474.htm" />
-    <HelpKINode Title="methods" Url="html/537151155.htm" />
-  </HelpKINode>
-  <HelpKINode Title="gestureRecognizedHandler field" Url="html/1657441397.htm" />
-  <HelpKINode Title="GestureRecognizedHandler.bodies field" Url="html/766039101.htm" />
-  <HelpKINode Title="GestureRecognizedHandler.gestureComplete field" Url="html/1948352656.htm" />
-  <HelpKINode Title="GestureRecognizedHandler.gestureDatabase field" Url="html/1480635475.htm" />
-  <HelpKINode Title="GestureRecognizedHandler.gestureReader field" Url="html/858351047.htm" />
-  <HelpKINode Title="GestureRecognizedHandler.GestureRecognizedHandler constructor" Url="html/1613899802.htm" />
-  <HelpKINode Title="GestureRecognizedHandler.gestureSource field" Url="html/861607692.htm" />
-  <HelpKINode Title="GestureRecognizedHandler.OnBodyFrameArrived method" Url="html/417537944.htm" />
-  <HelpKINode Title="GestureRecognizedHandler.OnGestureFrameArrived method" Url="html/215885294.htm" />
-  <HelpKINode Title="GestureRecognizedHandler.OnTrackingIdLost method" Url="html/772819756.htm" />
-  <HelpKINode Title="gestureSource field">
-    <HelpKINode Title="gestureSource Field" Url="html/861607692.htm" />
-    <HelpKINode Title="gestureSource Field" Url="html/1655771147.htm" />
-  </HelpKINode>
+  <HelpKINode Title="Gesture field" Url="html/2029680148.htm" />
+  <HelpKINode Title="GestureTest method" Url="html/836920488.htm" />
   <HelpKINode Title="GetCroppedFace method" Url="html/1662158888.htm" />
   <HelpKINode Title="GetEigenDistances method" Url="html/207888692.htm" />
   <HelpKINode Title="GetFacePath method" Url="html/239369568.htm" />
   <HelpKINode Title="getInteractionType method" Url="html/1609798393.htm" />
   <HelpKINode Title="HairColor property">
-    <HelpKINode Title="HairColor Property " Url="html/740182405.htm" />
-    <HelpKINode Title="HairColor Property " Url="html/986290654.htm" />
     <HelpKINode Title="HairColor Property " Url="html/2133810544.htm" />
+    <HelpKINode Title="HairColor Property " Url="html/740182405.htm" />
     <HelpKINode Title="HairColor Property " Url="html/168606318.htm" />
+    <HelpKINode Title="HairColor Property " Url="html/986290654.htm" />
   </HelpKINode>
+  <HelpKINode Title="HandleCalibrationEvents method" Url="html/293809376.htm" />
   <HelpKINode Title="HistogramEqualizationLut method" Url="html/304989085.htm" />
   <HelpKINode Title="HistogramEqualize method" Url="html/817956339.htm" />
   <HelpKINode Title="IEigenObjectTargetFace interface">
@@ -488,19 +454,29 @@
   <HelpKINode Title="IKinectFacialRecognitionEngine.Processors property" Url="html/39391579.htm" />
   <HelpKINode Title="IKinectFacialRecognitionEngine.RecognitionComplete event" Url="html/74667365.htm" />
   <HelpKINode Title="Image property">
-    <HelpKINode Title="Image Property " Url="html/1074979518.htm" />
     <HelpKINode Title="Image Property " Url="html/537757075.htm" />
-    <HelpKINode Title="Image Property " Url="html/623563527.htm" />
     <HelpKINode Title="Image Property " Url="html/336972082.htm" />
+    <HelpKINode Title="Image Property " Url="html/623563527.htm" />
+    <HelpKINode Title="Image Property " Url="html/1074979518.htm" />
   </HelpKINode>
   <HelpKINode Title="imageHeight field" Url="html/899956014.htm" />
   <HelpKINode Title="ImageHistogram method" Url="html/967971535.htm" />
   <HelpKINode Title="ImageToBitmap method" Url="html/97141357.htm" />
   <HelpKINode Title="imageWidth field" Url="html/2017495358.htm" />
   <HelpKINode Title="Index property" Url="html/1474980507.htm" />
-  <HelpKINode Title="InitializeReaders method" Url="html/543573981.htm" />
-  <HelpKINode Title="instance field" Url="html/380945845.htm" />
-  <HelpKINode Title="Instance property" Url="html/1573698846.htm" />
+  <HelpKINode Title="InitializeFacialRecognitionEngine method" Url="html/883605204.htm" />
+  <HelpKINode Title="InitializeSpeechCalibration method" Url="html/2124119595.htm" />
+  <HelpKINode Title="InitializeSpeechRecognition method" Url="html/1242608578.htm" />
+  <HelpKINode Title="instance field">
+    <HelpKINode Title="instance Field" Url="html/191914876.htm" />
+    <HelpKINode Title="instance Field" Url="html/380945845.htm" />
+    <HelpKINode Title="instance Field" Url="html/1260206389.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Instance property">
+    <HelpKINode Title="Instance Property " Url="html/1573698846.htm" />
+    <HelpKINode Title="Instance Property " Url="html/779907238.htm" />
+    <HelpKINode Title="Instance Property " Url="html/1910754583.htm" />
+  </HelpKINode>
   <HelpKINode Title="InteractionType enumeration" Url="html/1482297050.htm" />
   <HelpKINode Title="interactionType field" Url="html/1685429992.htm" />
   <HelpKINode Title="InteractionType.FaceRecognition field" Url="html/1083071745.htm" />
@@ -539,15 +515,16 @@
   <HelpKINode Title="ITargetFace.Key property" Url="html/2015156274.htm" />
   <HelpKINode Title="JacobiEigens method" Url="html/1075947006.htm" />
   <HelpKINode Title="JSONTests method" Url="html/924214016.htm" />
+  <HelpKINode Title="kalibration field" Url="html/1372494417.htm" />
   <HelpKINode Title="Key property">
-    <HelpKINode Title="Key Property " Url="html/2044966656.htm" />
-    <HelpKINode Title="Key Property " Url="html/1217316988.htm" />
-    <HelpKINode Title="Key Property " Url="html/850403627.htm" />
     <HelpKINode Title="Key Property " Url="html/252705202.htm" />
     <HelpKINode Title="Key Property " Url="html/232163453.htm" />
     <HelpKINode Title="Key Property " Url="html/2015156274.htm" />
-    <HelpKINode Title="Key Property " Url="html/379079931.htm" />
     <HelpKINode Title="Key Property " Url="html/1926658416.htm" />
+    <HelpKINode Title="Key Property " Url="html/379079931.htm" />
+    <HelpKINode Title="Key Property " Url="html/1217316988.htm" />
+    <HelpKINode Title="Key Property " Url="html/2044966656.htm" />
+    <HelpKINode Title="Key Property " Url="html/850403627.htm" />
   </HelpKINode>
   <HelpKINode Title="Kinect property" Url="html/1428614311.htm" />
   <HelpKINode Title="kinect32BitStream field" Url="html/1322239641.htm" />
@@ -571,8 +548,8 @@
   <HelpKINode Title="KinectAudioStream.Length property" Url="html/80670946.htm" />
   <HelpKINode Title="KinectAudioStream.Position property" Url="html/1696744399.htm" />
   <HelpKINode Title="KinectAudioStream.Read method">
-    <HelpKINode Title="Read Method " Url="html/568759260.htm" />
     <HelpKINode Title="Read Method " Url="html/2110690696.htm" />
+    <HelpKINode Title="Read Method " Url="html/568759260.htm" />
   </HelpKINode>
   <HelpKINode Title="KinectAudioStream.Seek method">
     <HelpKINode Title="Seek Method " Url="html/1335595983.htm" />
@@ -655,16 +632,15 @@
   <HelpKINode Title="KinectFacialRecognitionEngine.RecognizerWorker_DoWork method" Url="html/310735071.htm" />
   <HelpKINode Title="KinectFacialRecognitionEngine.RecognizerWorker_RunWorkerCompleted method" Url="html/478302907.htm" />
   <HelpKINode Title="KinectFacialRecognitionEngine.StartWorkerIfReady method" Url="html/154469693.htm" />
-  <HelpKINode Title="kinectSensor field">
-    <HelpKINode Title="kinectSensor Field" Url="html/783483408.htm" />
-    <HelpKINode Title="kinectSensor Field" Url="html/1253279720.htm" />
-  </HelpKINode>
+  <HelpKINode Title="kinectSensor field" Url="html/783483408.htm" />
   <HelpKINode Title="Labels property" Url="html/1447389214.htm" />
-  <HelpKINode Title="learnNewFaces field" Url="html/450373037.htm" />
-  <HelpKINode Title="LearnNewFaces method" Url="html/1317840347.htm" />
+  <HelpKINode Title="lastSpeechRecognized field" Url="html/1101960298.htm" />
+  <HelpKINode Title="LearnNewFaces method">
+    <HelpKINode Title="LearnNewFaces Method " Url="html/1317840347.htm" />
+    <HelpKINode Title="LearnNewFaces Method " Url="html/648874019.htm" />
+  </HelpKINode>
   <HelpKINode Title="Length property" Url="html/80670946.htm" />
   <HelpKINode Title="LoadAllTargetFaces method" Url="html/2114650676.htm" />
-  <HelpKINode Title="LoadGestures method" Url="html/715195593.htm" />
   <HelpKINode Title="MainWindow class">
     <HelpKINode Title="MainWindow Class" Url="html/1573125004.htm" />
     <HelpKINode Title="MainWindow Members" Url="html/1508702850.htm" />
@@ -676,8 +652,8 @@
     <HelpKINode Title="methods" Url="html/225650700.htm" />
     <HelpKINode Title="properties" Url="html/1294035195.htm" />
   </HelpKINode>
+  <HelpKINode Title="MainWindow.defaultSpeechThreshold field" Url="html/185477656.htm" />
   <HelpKINode Title="MainWindow.faceRecognition field" Url="html/560236821.htm" />
-  <HelpKINode Title="MainWindow.gestureRecognition field" Url="html/246650397.htm" />
   <HelpKINode Title="MainWindow.kinectSensor field" Url="html/783483408.htm" />
   <HelpKINode Title="MainWindow.MainWindow constructor" Url="html/562778343.htm" />
   <HelpKINode Title="MainWindow.speechRecognition field" Url="html/1130774390.htm" />
@@ -697,6 +673,10 @@
     <HelpKINode Title="FaceLearner Class" Url="html/1406052625.htm" />
     <HelpKINode Title="FaceLearner Members" Url="html/1493537304.htm" />
   </HelpKINode>
+  <HelpKINode Title="MirrorInteractions.Face.FaceLearnerHandler class">
+    <HelpKINode Title="FaceLearnerHandler Class" Url="html/1856723764.htm" />
+    <HelpKINode Title="FaceLearnerHandler Members" Url="html/525256922.htm" />
+  </HelpKINode>
   <HelpKINode Title="MirrorInteractions.Face.FaceLoader class">
     <HelpKINode Title="FaceLoader Class" Url="html/756309363.htm" />
     <HelpKINode Title="FaceLoader Members" Url="html/1022357105.htm" />
@@ -708,19 +688,6 @@
   <HelpKINode Title="MirrorInteractions.Face.FaceRecognizedHandler class">
     <HelpKINode Title="FaceRecognizedHandler Class" Url="html/338414439.htm" />
     <HelpKINode Title="FaceRecognizedHandler Members" Url="html/1690070467.htm" />
-  </HelpKINode>
-  <HelpKINode Title="MirrorInteractions.Gestures namespace" Url="html/1175355816.htm" />
-  <HelpKINode Title="MirrorInteractions.Gestures.GestureDatabase class">
-    <HelpKINode Title="GestureDatabase Class" Url="html/259044065.htm" />
-    <HelpKINode Title="GestureDatabase Members" Url="html/1899823908.htm" />
-  </HelpKINode>
-  <HelpKINode Title="MirrorInteractions.Gestures.GestureRecognition class">
-    <HelpKINode Title="GestureRecognition Class" Url="html/1101536277.htm" />
-    <HelpKINode Title="GestureRecognition Members" Url="html/1898594934.htm" />
-  </HelpKINode>
-  <HelpKINode Title="MirrorInteractions.Gestures.GestureRecognizedHandler class">
-    <HelpKINode Title="GestureRecognizedHandler Class" Url="html/1074625685.htm" />
-    <HelpKINode Title="GestureRecognizedHandler Members" Url="html/2025354478.htm" />
   </HelpKINode>
   <HelpKINode Title="MirrorInteractions.MainWindow class">
     <HelpKINode Title="MainWindow Class" Url="html/1573125004.htm" />
@@ -745,6 +712,10 @@
     <HelpKINode Title="NetworkCommunicator Class" Url="html/884072948.htm" />
     <HelpKINode Title="NetworkCommunicator Members" Url="html/693549746.htm" />
   </HelpKINode>
+  <HelpKINode Title="MirrorInteractions.Network.NetworkUtils class">
+    <HelpKINode Title="NetworkUtils Class" Url="html/479092269.htm" />
+    <HelpKINode Title="NetworkUtils Members" Url="html/133827721.htm" />
+  </HelpKINode>
   <HelpKINode Title="MirrorInteractions.Properties namespace" Url="html/1776324201.htm" />
   <HelpKINode Title="MirrorInteractions.Properties.Resources class">
     <HelpKINode Title="Resources Class" Url="html/244575850.htm" />
@@ -759,6 +730,16 @@
     <HelpKINode Title="KinectAudioStream Class" Url="html/1326543053.htm" />
     <HelpKINode Title="KinectAudioStream Members" Url="html/965698447.htm" />
   </HelpKINode>
+  <HelpKINode Title="MirrorInteractions.Speech.SpeechCalibrationHandler class">
+    <HelpKINode Title="SpeechCalibrationHandler Class" Url="html/45531556.htm" />
+    <HelpKINode Title="SpeechCalibrationHandler Members" Url="html/1978681700.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MirrorInteractions.Speech.SpeechDelegate class">
+    <HelpKINode Title="SpeechDelegate Class" Url="html/1799402985.htm" />
+    <HelpKINode Title="SpeechDelegate Members" Url="html/52489551.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MirrorInteractions.Speech.SpeechDelegate.SpeechCalibratedDelegate delegate" Url="html/745978422.htm" />
+  <HelpKINode Title="MirrorInteractions.Speech.SpeechDelegate.SpeechCalibrateDelegate delegate" Url="html/2139257230.htm" />
   <HelpKINode Title="MirrorInteractions.Speech.SpeechRecognition class">
     <HelpKINode Title="SpeechRecognition Class" Url="html/1697606066.htm" />
     <HelpKINode Title="SpeechRecognition Members" Url="html/1167331018.htm" />
@@ -775,29 +756,39 @@
     <HelpKINode Title="NetworkCommunicator Members" Url="html/693549746.htm" />
     <HelpKINode Title="about NetworkCommunicator class" Url="html/884072948.htm" />
     <HelpKINode Title="all members" Url="html/693549746.htm" />
+    <HelpKINode Title="constructor" Url="html/919225409.htm" />
     <HelpKINode Title="fields" Url="html/1750363621.htm" />
     <HelpKINode Title="methods" Url="html/2031135383.htm" />
+    <HelpKINode Title="properties" Url="html/973211454.htm" />
   </HelpKINode>
-  <HelpKINode Title="NetworkCommunicator.ConvertToJson method" Url="html/684326696.htm" />
+  <HelpKINode Title="NetworkCommunicator.instance field" Url="html/191914876.htm" />
+  <HelpKINode Title="NetworkCommunicator.Instance property" Url="html/1910754583.htm" />
+  <HelpKINode Title="NetworkCommunicator.NetworkCommunicator constructor" Url="html/919225409.htm" />
   <HelpKINode Title="NetworkCommunicator.SendToServer method" Url="html/2039433073.htm" />
   <HelpKINode Title="NetworkCommunicator.serverAdress field" Url="html/189072631.htm" />
-  <HelpKINode Title="newLearnedFacesCount field" Url="html/207024200.htm" />
+  <HelpKINode Title="NetworkCommunicator.webSocket field" Url="html/561317783.htm" />
+  <HelpKINode Title="NetworkCommunicator.webSocket_OnMessage method" Url="html/769261064.htm" />
+  <HelpKINode Title="NetworkUtils class">
+    <HelpKINode Title="NetworkUtils Class" Url="html/479092269.htm" />
+    <HelpKINode Title="NetworkUtils Members" Url="html/133827721.htm" />
+    <HelpKINode Title="about NetworkUtils class" Url="html/479092269.htm" />
+    <HelpKINode Title="all members" Url="html/133827721.htm" />
+    <HelpKINode Title="methods" Url="html/354566568.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NetworkUtils.ConvertToJson method" Url="html/947263374.htm" />
+  <HelpKINode Title="newLearnedFacesCount field" Url="html/936147610.htm" />
   <HelpKINode Title="NoKinectReady property" Url="html/641641519.htm" />
   <HelpKINode Title="NoSpeechRecognizer property" Url="html/1996724364.htm" />
   <HelpKINode Title="NO_DESC field" Url="html/1475605639.htm" />
   <HelpKINode Title="NO_TITLE field" Url="html/1593700818.htm" />
   <HelpKINode Title="NULL_APPOINTMENT field" Url="html/1336514085.htm" />
-  <HelpKINode Title="OnBodyFrameArrived method" Url="html/417537944.htm" />
   <HelpKINode Title="OnFaceRecognizedExpired method" Url="html/103176398.htm" />
-  <HelpKINode Title="OnGestureFrameArrived method" Url="html/215885294.htm" />
-  <HelpKINode Title="OnTrackingIdLost method" Url="html/772819756.htm" />
-  <HelpKINode Title="OpenBodyReader method" Url="html/1899149143.htm" />
   <HelpKINode Title="OpenFacialRecognitionEngine method" Url="html/1318982606.htm" />
-  <HelpKINode Title="OpenGestureReader method" Url="html/39116548.htm" />
-  <HelpKINode Title="OpenSpeechRecognitionEngine method" Url="html/1131719108.htm" />
+  <HelpKINode Title="OpenSpeechRecognitionEngine method" Url="html/1920701411.htm" />
   <HelpKINode Title="PERSON field" Url="html/745369784.htm" />
   <HelpKINode Title="person field" Url="html/58600387.htm" />
-  <HelpKINode Title="personName field" Url="html/1224371508.htm" />
+  <HelpKINode Title="personName field" Url="html/1625234390.htm" />
+  <HelpKINode Title="PersonName property" Url="html/1606286319.htm" />
   <HelpKINode Title="Point3D class">
     <HelpKINode Title="Point3D Class" Url="html/1133892266.htm" />
     <HelpKINode Title="Point3D Members" Url="html/1965280368.htm" />
@@ -812,13 +803,13 @@
   <HelpKINode Title="Position property" Url="html/1696744399.htm" />
   <HelpKINode Title="Process method">
     <HelpKINode Title="Process Method " Url="html/23540096.htm" />
-    <HelpKINode Title="Process Method " Url="html/974028873.htm" />
     <HelpKINode Title="Process Method " Url="html/1296979035.htm" />
+    <HelpKINode Title="Process Method " Url="html/974028873.htm" />
   </HelpKINode>
   <HelpKINode Title="processFaceModelMutex field" Url="html/122008166.htm" />
   <HelpKINode Title="ProcessingEnabled property">
-    <HelpKINode Title="ProcessingEnabled Property " Url="html/1257826936.htm" />
     <HelpKINode Title="ProcessingEnabled Property " Url="html/1148310743.htm" />
+    <HelpKINode Title="ProcessingEnabled Property " Url="html/1257826936.htm" />
   </HelpKINode>
   <HelpKINode Title="processingMutex field">
     <HelpKINode Title="processingMutex Field" Url="html/1019705123.htm" />
@@ -833,8 +824,8 @@
   <HelpKINode Title="R enumeration member" Url="html/918178761.htm" />
   <HelpKINode Title="R field" Url="html/1479647600.htm" />
   <HelpKINode Title="Read method">
-    <HelpKINode Title="Read Method " Url="html/568759260.htm" />
     <HelpKINode Title="Read Method " Url="html/2110690696.htm" />
+    <HelpKINode Title="Read Method " Url="html/568759260.htm" />
   </HelpKINode>
   <HelpKINode Title="RecognitionComplete event">
     <HelpKINode Title="RecognitionComplete Event" Url="html/74667365.htm" />
@@ -869,8 +860,8 @@
   <HelpKINode Title="RecognizerWorker_DoWork method" Url="html/310735071.htm" />
   <HelpKINode Title="RecognizerWorker_RunWorkerCompleted method" Url="html/478302907.htm" />
   <HelpKINode Title="RequiresFaceModelBuilder property">
-    <HelpKINode Title="RequiresFaceModelBuilder Property " Url="html/425206030.htm" />
     <HelpKINode Title="RequiresFaceModelBuilder Property " Url="html/1676971186.htm" />
+    <HelpKINode Title="RequiresFaceModelBuilder Property " Url="html/425206030.htm" />
     <HelpKINode Title="RequiresFaceModelBuilder Property " Url="html/1832299957.htm" />
   </HelpKINode>
   <HelpKINode Title="resourceCulture field" Url="html/764923390.htm" />
@@ -886,6 +877,7 @@
     <HelpKINode Title="methods" Url="html/970019206.htm" />
     <HelpKINode Title="properties" Url="html/790709294.htm" />
   </HelpKINode>
+  <HelpKINode Title="Resources.CalibrationSpeechGrammar property" Url="html/652249386.htm" />
   <HelpKINode Title="Resources.Culture property" Url="html/922870140.htm" />
   <HelpKINode Title="Resources.NoKinectReady property" Url="html/641641519.htm" />
   <HelpKINode Title="Resources.NoSpeechRecognizer property" Url="html/1996724364.htm" />
@@ -1001,25 +993,23 @@
     <HelpKINode Title="TrackedFace Members" Url="html/180327669.htm" />
   </HelpKINode>
   <HelpKINode Title="Score property">
-    <HelpKINode Title="Score Property " Url="html/1885944639.htm" />
     <HelpKINode Title="Score Property " Url="html/169614943.htm" />
+    <HelpKINode Title="Score Property " Url="html/1885944639.htm" />
     <HelpKINode Title="Score Property " Url="html/542405272.htm" />
   </HelpKINode>
   <HelpKINode Title="ScoreFaceDifferences method" Url="html/1411652483.htm" />
   <HelpKINode Title="Seek method">
-    <HelpKINode Title="Seek Method " Url="html/591738161.htm" />
     <HelpKINode Title="Seek Method " Url="html/1335595983.htm" />
+    <HelpKINode Title="Seek Method " Url="html/591738161.htm" />
   </HelpKINode>
   <HelpKINode Title="SendToServer method" Url="html/2039433073.htm" />
-  <HelpKINode Title="sensor field" Url="html/2074645651.htm" />
   <HelpKINode Title="SerializeBitmapSourceTargetFace method" Url="html/1020240129.htm" />
   <HelpKINode Title="serverAdress field" Url="html/189072631.htm" />
-  <HelpKINode Title="SetLearnNewFaces method" Url="html/1633544164.htm" />
   <HelpKINode Title="SetLength method" Url="html/1309412772.htm" />
   <HelpKINode Title="SetTargetFaces method">
+    <HelpKINode Title="SetTargetFaces Method " Url="html/1190641737.htm" />
     <HelpKINode Title="SetTargetFaces Method " Url="html/294210375.htm" />
     <HelpKINode Title="SetTargetFaces Method " Url="html/205838758.htm" />
-    <HelpKINode Title="SetTargetFaces Method " Url="html/1190641737.htm" />
   </HelpKINode>
   <HelpKINode Title="Settings class">
     <HelpKINode Title="Settings Class" Url="html/1403620784.htm" />
@@ -1037,10 +1027,40 @@
   <HelpKINode Title="SkinColor property">
     <HelpKINode Title="SkinColor Property " Url="html/546582283.htm" />
     <HelpKINode Title="SkinColor Property " Url="html/214088917.htm" />
-    <HelpKINode Title="SkinColor Property " Url="html/17027796.htm" />
     <HelpKINode Title="SkinColor Property " Url="html/148640417.htm" />
+    <HelpKINode Title="SkinColor Property " Url="html/17027796.htm" />
   </HelpKINode>
   <HelpKINode Title="SpeechActive property" Url="html/822021141.htm" />
+  <HelpKINode Title="speechCalibratedDelegate field" Url="html/1032575603.htm" />
+  <HelpKINode Title="speechCalibrateDelegate field" Url="html/955806448.htm" />
+  <HelpKINode Title="SpeechCalibrationHandler class">
+    <HelpKINode Title="SpeechCalibrationHandler Class" Url="html/45531556.htm" />
+    <HelpKINode Title="SpeechCalibrationHandler Members" Url="html/1978681700.htm" />
+    <HelpKINode Title="about SpeechCalibrationHandler class" Url="html/45531556.htm" />
+    <HelpKINode Title="all members" Url="html/1978681700.htm" />
+    <HelpKINode Title="constructor" Url="html/1503453483.htm" />
+    <HelpKINode Title="fields" Url="html/711347600.htm" />
+    <HelpKINode Title="methods" Url="html/1514756702.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SpeechCalibrationHandler.calibrationSpeechCount field" Url="html/548734489.htm" />
+  <HelpKINode Title="SpeechCalibrationHandler.HandleCalibrationEvents method" Url="html/293809376.htm" />
+  <HelpKINode Title="SpeechCalibrationHandler.kalibration field" Url="html/1372494417.htm" />
+  <HelpKINode Title="SpeechCalibrationHandler.lastSpeechRecognized field" Url="html/1101960298.htm" />
+  <HelpKINode Title="SpeechCalibrationHandler.speechCalibratedDelegate field" Url="html/1032575603.htm" />
+  <HelpKINode Title="SpeechCalibrationHandler.SpeechCalibrationHandler constructor" Url="html/1503453483.htm" />
+  <HelpKINode Title="SpeechCalibrationHandler.SpeechRecognized method" Url="html/1417036331.htm" />
+  <HelpKINode Title="SpeechCalibrationHandler.SpeechRejected method" Url="html/1312218708.htm" />
+  <HelpKINode Title="SpeechCalibrationHandler.threshold field" Url="html/212588156.htm" />
+  <HelpKINode Title="SpeechCalibrationHandler.wordToCalibrate field" Url="html/1725314196.htm" />
+  <HelpKINode Title="SpeechDelegate class">
+    <HelpKINode Title="SpeechDelegate Class" Url="html/1799402985.htm" />
+    <HelpKINode Title="SpeechDelegate Members" Url="html/52489551.htm" />
+    <HelpKINode Title="about SpeechDelegate class" Url="html/1799402985.htm" />
+    <HelpKINode Title="all members" Url="html/52489551.htm" />
+    <HelpKINode Title="methods" Url="html/2025353661.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SpeechDelegate.SpeechCalibratedDelegate delegate" Url="html/745978422.htm" />
+  <HelpKINode Title="SpeechDelegate.SpeechCalibrateDelegate delegate" Url="html/2139257230.htm" />
   <HelpKINode Title="speechEngine field" Url="html/634977272.htm" />
   <HelpKINode Title="SpeechGrammar property" Url="html/84846169.htm" />
   <HelpKINode Title="SpeechRecognition class">
@@ -1054,32 +1074,47 @@
   </HelpKINode>
   <HelpKINode Title="speechRecognition field" Url="html/1130774390.htm" />
   <HelpKINode Title="SpeechRecognition.CloseSpeechRecognitionEngine method" Url="html/1615484820.htm" />
+  <HelpKINode Title="SpeechRecognition.InitializeSpeechCalibration method" Url="html/2124119595.htm" />
+  <HelpKINode Title="SpeechRecognition.InitializeSpeechRecognition method" Url="html/1242608578.htm" />
   <HelpKINode Title="SpeechRecognition.kinectAudioStream field" Url="html/553795955.htm" />
-  <HelpKINode Title="SpeechRecognition.OpenSpeechRecognitionEngine method" Url="html/1131719108.htm" />
+  <HelpKINode Title="SpeechRecognition.OpenSpeechRecognitionEngine method" Url="html/1920701411.htm" />
   <HelpKINode Title="SpeechRecognition.speechEngine field" Url="html/634977272.htm" />
   <HelpKINode Title="SpeechRecognition.SpeechRecognition constructor" Url="html/868993030.htm" />
   <HelpKINode Title="SpeechRecognition.speechRecognizedEvent field" Url="html/1298815343.htm" />
   <HelpKINode Title="SpeechRecognition.speechRejectedEvent field" Url="html/1808941787.htm" />
   <HelpKINode Title="SpeechRecognition.TryGetKinectRecognizer method" Url="html/771070700.htm" />
-  <HelpKINode Title="SpeechRecognized method" Url="html/426016252.htm" />
+  <HelpKINode Title="SpeechRecognized method">
+    <HelpKINode Title="SpeechRecognized Method " Url="html/1417036331.htm" />
+    <HelpKINode Title="SpeechRecognized Method " Url="html/426016252.htm" />
+  </HelpKINode>
   <HelpKINode Title="speechRecognizedEvent field" Url="html/1298815343.htm" />
   <HelpKINode Title="SpeechRecognizedHandler class">
     <HelpKINode Title="SpeechRecognizedHandler Class" Url="html/1760519762.htm" />
     <HelpKINode Title="SpeechRecognizedHandler Members" Url="html/1194898707.htm" />
     <HelpKINode Title="about SpeechRecognizedHandler class" Url="html/1760519762.htm" />
     <HelpKINode Title="all members" Url="html/1194898707.htm" />
+    <HelpKINode Title="constructor" Url="html/1895166256.htm" />
+    <HelpKINode Title="fields" Url="html/525871659.htm" />
     <HelpKINode Title="methods" Url="html/2043456749.htm" />
   </HelpKINode>
+  <HelpKINode Title="SpeechRecognizedHandler.ConfidenceThreshold field" Url="html/2087983650.htm" />
+  <HelpKINode Title="SpeechRecognizedHandler.speechCalibrateDelegate field" Url="html/955806448.htm" />
   <HelpKINode Title="SpeechRecognizedHandler.SpeechRecognized method" Url="html/426016252.htm" />
+  <HelpKINode Title="SpeechRecognizedHandler.SpeechRecognizedHandler constructor" Url="html/1895166256.htm" />
   <HelpKINode Title="SpeechRecognizedHandler.SpeechRejected method" Url="html/1338276362.htm" />
-  <HelpKINode Title="SpeechRejected method" Url="html/1338276362.htm" />
+  <HelpKINode Title="SpeechRejected method">
+    <HelpKINode Title="SpeechRejected Method " Url="html/1312218708.htm" />
+    <HelpKINode Title="SpeechRejected Method " Url="html/1338276362.htm" />
+  </HelpKINode>
   <HelpKINode Title="speechRejectedEvent field" Url="html/1808941787.htm" />
   <HelpKINode Title="StartWorkerIfReady method" Url="html/154469693.htm" />
   <HelpKINode Title="Step property" Url="html/1866748530.htm" />
+  <HelpKINode Title="threshold field" Url="html/212588156.htm" />
   <HelpKINode Title="Threshold property">
     <HelpKINode Title="Threshold Property " Url="html/664599959.htm" />
     <HelpKINode Title="Threshold Property " Url="html/1379677080.htm" />
   </HelpKINode>
+  <HelpKINode Title="timer field" Url="html/990899592.htm" />
   <HelpKINode Title="title field" Url="html/1975330396.htm" />
   <HelpKINode Title="TrackedFace class">
     <HelpKINode Title="TrackedFace Class" Url="html/725581592.htm" />
@@ -1112,6 +1147,7 @@
   <HelpKINode Title="UnitTest1.APP field" Url="html/1842768406.htm" />
   <HelpKINode Title="UnitTest1.FACE_RECOGNITION field" Url="html/921046174.htm" />
   <HelpKINode Title="UnitTest1.GESTURE field" Url="html/614586536.htm" />
+  <HelpKINode Title="UnitTest1.GestureTest method" Url="html/836920488.htm" />
   <HelpKINode Title="UnitTest1.IsInteractionType method" Url="html/118659176.htm" />
   <HelpKINode Title="UnitTest1.JSONTests method" Url="html/924214016.htm" />
   <HelpKINode Title="UnitTest1.NULL_APPOINTMENT field" Url="html/1336514085.htm" />
@@ -1129,9 +1165,12 @@
   <HelpKINode Title="VertexMap.Index property" Url="html/1474980507.htm" />
   <HelpKINode Title="VertexMap.Vertex property" Url="html/474809308.htm" />
   <HelpKINode Title="Voice enumeration member" Url="html/1482297050.htm" />
-  <HelpKINode Title="Voice field" Url="html/185904946.htm" />
   <HelpKINode Title="VOICE field" Url="html/640526425.htm" />
+  <HelpKINode Title="Voice field" Url="html/185904946.htm" />
+  <HelpKINode Title="webSocket field" Url="html/561317783.htm" />
+  <HelpKINode Title="webSocket_OnMessage method" Url="html/769261064.htm" />
   <HelpKINode Title="WindowClosing method" Url="html/1523639607.htm" />
+  <HelpKINode Title="wordToCalibrate field" Url="html/1725314196.htm" />
   <HelpKINode Title="Write method" Url="html/1755324575.htm" />
   <HelpKINode Title="WSMessage class">
     <HelpKINode Title="WSMessage Class" Url="html/1056120421.htm" />

@@ -4,12 +4,12 @@
 // Created          : 05-27-2015
 //
 // Last Modified By : delta
-// Last Modified On : 06-10-2015
+// Last Modified On : 06-24-2015
 // ***********************************************************************
-// <copyright file="FaceRecognition.cs" company="">
+// <copyright file="FaceRecognition.cs" company="Delta">
 //     Copyright (c) . All rights reserved.
 // </copyright>
-// <summary></summary>
+// <summary>Class used to recognize the detected new face.</summary>
 // ***********************************************************************
 using Microsoft.Kinect;
 using Sacknet.KinectFacialRecognition;
@@ -18,12 +18,12 @@ using System;
 using System.Collections.Generic;
 
 /// <summary>
-/// The Face namespace.
+/// The Face namespace, all face related classes are in this namespace.
 /// </summary>
 namespace MirrorInteractions.Face
 {
     /// <summary>
-    /// Class FaceRecognition.
+    /// Class used to recognize the detected new face.
     /// </summary>
     public class FaceRecognition
     {
@@ -52,6 +52,9 @@ namespace MirrorInteractions.Face
         /// </summary>
         private EventHandler<RecognitionResult> faceLearnerEvent;
 
+        /// <summary>
+        /// The face learner handler
+        /// </summary>
         private FaceLearnerHandler faceLearnerHandler;
 
         /// <summary>
@@ -97,12 +100,19 @@ namespace MirrorInteractions.Face
             this.facialRecognitionEngine.Processors = new List<IRecognitionProcessor> { this.activeProcessor };
         }
 
+        /// <summary>
+        /// Opens the facial recognition engine.
+        /// </summary>
         public void OpenFacialRecognitionEngine()
         {
             this.facialRecognitionEngine.RecognitionComplete -= this.faceLearnerEvent;
             this.facialRecognitionEngine.RecognitionComplete += this.faceRecognizedEvent;
         }
 
+        /// <summary>
+        /// Learns the new faces.
+        /// </summary>
+        /// <param name="name">The name.</param>
         public void LearnNewFaces(string name)
         {
             faceLearnerHandler.PersonName = name;

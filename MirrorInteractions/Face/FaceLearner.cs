@@ -4,12 +4,12 @@
 // Created          : 05-27-2015
 //
 // Last Modified By : delta
-// Last Modified On : 05-27-2015
+// Last Modified On : 06-10-2015
 // ***********************************************************************
-// <copyright file="FaceLearner.cs" company="">
+// <copyright file="FaceLearner.cs" company="Delta">
 //     Copyright (c) . All rights reserved.
 // </copyright>
-// <summary></summary>
+// <summary>Class used to learn the detected new face.</summary>
 // ***********************************************************************
 using Newtonsoft.Json;
 using Sacknet.KinectFacialRecognition;
@@ -20,10 +20,13 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 
+/// <summary>
+/// The Face namespace, all face related classes are in this namespace.
+/// </summary>
 namespace MirrorInteractions.Face
 {
     /// <summary>
-    /// Class FaceLearner.
+    /// Class used to learn the detected new face.
     /// </summary>
     public class FaceLearner
     {

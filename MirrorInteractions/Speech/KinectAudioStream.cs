@@ -4,20 +4,23 @@
 // Created          : 05-27-2015
 //
 // Last Modified By : delta
-// Last Modified On : 05-27-2015
+// Last Modified On : 06-02-2015
 // ***********************************************************************
-// <copyright file="KinectAudioStream.cs" company="">
+// <copyright file="KinectAudioStream.cs" company="Delta">
 //     Copyright (c) . All rights reserved.
 // </copyright>
-// <summary></summary>
+// <summary>Class used as model to store KinectAudioStream</summary>
 // ***********************************************************************
+/// <summary>
+/// The Speech namespace, all Speech related classes are in this namespace.
+/// </summary>
 namespace MirrorInteractions.Speech
 {
     using System;
     using System.IO;
- 
+
     /// <summary>
-    /// Wrapper Stream Class to Support 32->16bit conversion and support Speech call to Seek
+    /// Class used as model to store KinectAudioStream
     /// </summary>
     public class KinectAudioStream : Stream
     {
@@ -38,11 +41,13 @@ namespace MirrorInteractions.Speech
         /// <summary>
         /// Gets or sets a value indicating whether speech recognition is active
         /// </summary>
+        /// <value><c>true</c> if [speech active]; otherwise, <c>false</c>.</value>
         public bool SpeechActive { get; set; }
 
         /// <summary>
         /// CanRead property
         /// </summary>
+        /// <value><c>true</c> if this instance can read; otherwise, <c>false</c>.</value>
         public override bool CanRead
         {
             get { return true; }
@@ -51,6 +56,7 @@ namespace MirrorInteractions.Speech
         /// <summary>
         /// CanWrite property
         /// </summary>
+        /// <value><c>true</c> if this instance can write; otherwise, <c>false</c>.</value>
         public override bool CanWrite
         {
             get { return false; }
@@ -59,6 +65,7 @@ namespace MirrorInteractions.Speech
         /// <summary>
         /// CanSeek property
         /// </summary>
+        /// <value><c>true</c> if this instance can seek; otherwise, <c>false</c>.</value>
         public override bool CanSeek
         {
             // Speech does not call - but set value correctly
@@ -68,6 +75,8 @@ namespace MirrorInteractions.Speech
         /// <summary>
         /// Position Property
         /// </summary>
+        /// <value>The position.</value>
+        /// <exception cref="System.NotImplementedException"></exception>
         public override long Position
         {
             // Speech gets the position
@@ -78,6 +87,8 @@ namespace MirrorInteractions.Speech
         /// <summary>
         /// Gets the length of the stream. Not implemented.
         /// </summary>
+        /// <value>The length.</value>
+        /// <exception cref="System.NotImplementedException"></exception>
         public override long Length
         {
             get { throw new NotImplementedException(); }
@@ -86,6 +97,7 @@ namespace MirrorInteractions.Speech
         /// <summary>
         /// Flush the stream. Not implemented.
         /// </summary>
+        /// <exception cref="System.NotImplementedException"></exception>
         public override void Flush()
         {
             throw new NotImplementedException();
@@ -107,6 +119,7 @@ namespace MirrorInteractions.Speech
         /// Set the length of the stream. Not implemented.
         /// </summary>
         /// <param name="value">Length of the stream</param>
+        /// <exception cref="System.NotImplementedException"></exception>
         public override void SetLength(long value)
         {
             throw new NotImplementedException();
@@ -118,6 +131,7 @@ namespace MirrorInteractions.Speech
         /// <param name="buffer">Buffer to write</param>
         /// <param name="offset">Offset into the buffer</param>
         /// <param name="count">Number of bytes to write</param>
+        /// <exception cref="System.NotImplementedException"></exception>
         public override void Write(byte[] buffer, int offset, int count)
         {
             throw new NotImplementedException();

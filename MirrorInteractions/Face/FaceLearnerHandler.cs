@@ -4,12 +4,12 @@
 // Created          : 05-27-2015
 //
 // Last Modified By : delta
-// Last Modified On : 05-27-2015
+// Last Modified On : 06-24-2015
 // ***********************************************************************
-// <copyright file="FaceRecognizedHandler.cs" company="">
+// <copyright file="FaceRecognizedHandler.cs" company="Delta">
 //     Copyright (c) . All rights reserved.
 // </copyright>
-// <summary></summary>
+// <summary>Class used to handle face found event's when the FaceRecognitionEngine is equipt with this handler.</summary>
 // ***********************************************************************
 using MirrorInteractions.Models;
 using MirrorInteractions.Network;
@@ -20,12 +20,12 @@ using System.Linq;
 using System.Timers;
 
 /// <summary>
-/// The Face namespace.
+/// The Face namespace, all face related classes are in this namespace.
 /// </summary>
 namespace MirrorInteractions.Face
 {
     /// <summary>
-    /// Class FaceRecognizedHandler.
+    /// Class used to handle face found event's when the FaceRecognitionEngine is equipt with this handler.
     /// </summary>
     public class FaceLearnerHandler
     {
@@ -50,10 +50,13 @@ namespace MirrorInteractions.Face
         /// </summary>
         private FaceLoader faceLoader;
 
+        /// <summary>
+        /// The timer
+        /// </summary>
         private Timer timer;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="FaceRecognizedHandler"/> class.
+        /// Initializes a new instance of the <see cref="FaceRecognizedHandler" /> class.
         /// </summary>
         public FaceLearnerHandler()
         {
@@ -67,6 +70,10 @@ namespace MirrorInteractions.Face
             };
         }
 
+        /// <summary>
+        /// Sets the name of the person.
+        /// </summary>
+        /// <value>The name of the person.</value>
         public string PersonName
         {
             set
@@ -79,7 +86,7 @@ namespace MirrorInteractions.Face
         /// Faces the recognition.
         /// </summary>
         /// <param name="sender">The sender.</param>
-        /// <param name="e">The e.</param>
+        /// <param name="e">The RecognitionResult.</param>
         public void FaceRecognized(object sender, Sacknet.KinectFacialRecognition.RecognitionResult e)
         {
             if (personName == null)

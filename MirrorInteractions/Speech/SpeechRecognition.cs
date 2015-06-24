@@ -4,13 +4,13 @@
 // Created          : 05-27-2015
 //
 // Last Modified By : delta
-// Last Modified On : 06-09-2015
+// Last Modified On : 06-24-2015
 // ***********************************************************************
-// <copyright file="SpeechRecognition.cs" company="">
+// <copyright file="SpeechRecognition.cs" company="Delta">
 //     Copyright (c) . All rights reserved.
 // </copyright>
-// <summary></summary>
-// ***********************************************************************
+// <summary>Class used for speech recognition.</summary>
+// ************************************************************************
 using Microsoft.Kinect;
 using Microsoft.Speech.AudioFormat;
 using Microsoft.Speech.Recognition;
@@ -21,12 +21,12 @@ using System.Runtime.InteropServices;
 using System.Text;
 
 /// <summary>
-/// The Speech namespace.
+/// The Speech namespace, all Speech related classes are in this namespace.
 /// </summary>
 namespace MirrorInteractions.Speech
 {
     /// <summary>
-    /// Class SpeechRecognition.
+    /// Class used for speech recognition.
     /// </summary>
     public class SpeechRecognition
     {

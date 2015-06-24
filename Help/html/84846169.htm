@@ -28,7 +28,7 @@
       <MSHelp:Attr Name="Locale" Value="en-us" />
       <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
       <MSHelp:Attr Name="TopicType" Value="apiref" />
-      <MSHelp:Attr Name="Abstract" Value="Looks up a localized string similar to &lt;grammar version=&quot;1.0&quot; xml:lang=&quot;en-US&quot; root=&quot;rootRule&quot; tag-format=&quot;semantics/1.0-literals&quot; xmlns=&quot;http://www.w3.org/2001/06/grammar&quot;&gt; &lt;rule id=&quot;rootRule&quot;&gt; &lt;item&gt; &lt;tag&gt;AGENDA&lt;/tag&gt; ..." />
+      <MSHelp:Attr Name="Abstract" Value="Looks up a localized string similar to &lt;grammar version=&quot;1.0&quot; xml:lang=&quot;en-US&quot; root=&quot;rootRule&quot; tag-format=&quot;semantics/1.0-literals&quot; xmlns=&quot;http://www.w3.org/2001/06/grammar&quot;&gt; &lt;rule id=&quot;rootRule&quot;&gt; &lt;one-of&gt; &lt;item&gt; ..." />
       <MSHelp:Attr Name="AssemblyVersion" Value="" />
     </xml>
   </head>
@@ -44,24 +44,23 @@
                 <div class="summary">
      Looks up a localized string similar to &lt;grammar version="1.0" xml:lang="en-US" root="rootRule" tag-format="semantics/1.0-literals" xmlns="http://www.w3.org/2001/06/grammar"&gt;
     &lt;rule id="rootRule"&gt;
-      &lt;item&gt;
-        &lt;tag&gt;AGENDA&lt;/tag&gt;
-        &lt;item&gt;Opus, &lt;ruleref uri="#Commands"/&gt; agenda&lt;/item&gt;
-      &lt;/item&gt;
-    &lt;/rule&gt;
-  
-    &lt;rule id="Commands"&gt;
-      &lt;item&gt;
-        &lt;one-of&gt;
-          &lt;item&gt;Open&lt;/item&gt;
-          &lt;item&gt;Close&lt;/item&gt;
-        &lt;/one-of&gt;
-      &lt;/item&gt;
-    &lt;/rule&gt;
-    &lt;!--&lt;rule id="rootRule"&gt;
       &lt;one-of&gt;
         &lt;item&gt;
-          &lt;tag&gt;FORWARD&lt;/tag [rest of string was truncated]";.
+          &lt;tag&gt;AGENDA&lt;/tag&gt;
+          &lt;item&gt;
+            &lt;ruleref uri="#AgendaCommands"/&gt;
+            &lt;ruleref uri="#AgendaKeys"/&gt;
+          &lt;/item&gt;
+        &lt;/item&gt;
+        &lt;item&gt;
+          &lt;tag&gt;INITIALIZE FACE&lt;/tag&gt;
+          &lt;item&gt;
+            initialize face
+          &lt;/item&gt;
+        &lt;/item&gt;
+        &lt;item&gt;
+          &lt;tag&gt;OPUS&lt;/tag&gt;
+   [rest of string was truncated]";.
    </div>
                 <p />
     <b>Namespace:</b> 

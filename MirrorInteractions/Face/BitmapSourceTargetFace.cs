@@ -1,14 +1,30 @@
-﻿using Microsoft.Kinect.Face;
+﻿// ***********************************************************************
+// Assembly         : MirrorInteractions
+// Author           : daan
+// Created          : 06-02-2015
+//
+// Last Modified By : daan
+// Last Modified On : 06-02-2015
+// ***********************************************************************
+// <copyright file="BitmapSourceTargetFace.cs" company="Delta">
+//     Copyright (c) . All rights reserved.
+// </copyright>
+// <summary>Class used as model for the BitmapSourceTargetFace</summary>
+// ***********************************************************************
+using Microsoft.Kinect.Face;
 using Newtonsoft.Json;
 using Sacknet.KinectFacialRecognition.KinectFaceModel;
 using Sacknet.KinectFacialRecognition.ManagedEigenObject;
 using System.Collections.Generic;
 using System.Drawing;
 
+/// <summary>
+/// The Face namespace, all face related classes are in this namespace.
+/// </summary>
 namespace MirrorInteractions.Face
 {
     /// <summary>
-    /// Target face with a BitmapSource accessor for the face.
+    /// Class used as model for the BitmapSourceTargetFace
     /// </summary>
     [JsonObject(MemberSerialization.OptIn)]
     class BitmapSourceTargetFace : IEigenObjectTargetFace, IFaceModelTargetFace

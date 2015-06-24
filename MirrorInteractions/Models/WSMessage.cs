@@ -4,15 +4,18 @@
 // Created          : 05-27-2015
 //
 // Last Modified By : delta
-// Last Modified On : 05-27-2015
+// Last Modified On : 06-10-2015
 // ***********************************************************************
-// <copyright file="WSMessage.cs" company="">
+// <copyright file="WSMessage.cs" company="Delta">
 //     Copyright (c) . All rights reserved.
 // </copyright>
-// <summary></summary>
-// ***********************************************************************
+// <summary>Class used as model for messages send to the server.</summary>
+// ************************************************************************
 using System;
 
+/// <summary>
+/// The Models namespace, all models are in this namespace.
+/// </summary>
 namespace MirrorInteractions.Models
 {
     /// <summary>
@@ -35,7 +38,7 @@ namespace MirrorInteractions.Models
     }
 
     /// <summary>
-    /// Class containing a message for the Websocket.
+    /// Class used as model for messages send to the server.
     /// </summary>
     public class WSMessage
     {

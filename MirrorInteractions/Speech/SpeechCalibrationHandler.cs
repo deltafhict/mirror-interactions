@@ -4,13 +4,13 @@
 // Created          : 06-09-2015
 //
 // Last Modified By : delta
-// Last Modified On : 06-09-2015
+// Last Modified On : 06-24-2015
 // ***********************************************************************
-// <copyright file="SpeechCalibrationHandler.cs" company="">
+// <copyright file="SpeechCalibrationHandler.cs" company="Delta">
 //     Copyright (c) . All rights reserved.
 // </copyright>
-// <summary></summary>
-// ***********************************************************************
+// <summary>Class used to handle speech calibration events.</summary>
+// ************************************************************************
 using Microsoft.Speech.Recognition;
 using MirrorInteractions.Models;
 using MirrorInteractions.Network;
@@ -23,12 +23,12 @@ using System.Threading.Tasks;
 using System.Timers;
 
 /// <summary>
-/// The Speech namespace.
+/// The Speech namespace, all Speech related classes are in this namespace.
 /// </summary>
 namespace MirrorInteractions.Speech
 {
     /// <summary>
-    /// Class SpeechCalibrationHandler.
+    /// Class used to handle speech calibration events.
     /// </summary>
     class SpeechCalibrationHandler
     {
@@ -58,7 +58,7 @@ namespace MirrorInteractions.Speech
         private SpeechDelegate.SpeechCalibratedDelegate speechCalibratedDelegate;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SpeechCalibrationHandler"/> class.
+        /// Initializes a new instance of the <see cref="SpeechCalibrationHandler" /> class.
         /// </summary>
         /// <param name="speechCalibratedDelegate">The speech calibrated delegate.</param>
         public SpeechCalibrationHandler(SpeechDelegate.SpeechCalibratedDelegate speechCalibratedDelegate)
@@ -73,7 +73,7 @@ namespace MirrorInteractions.Speech
         /// Speeches the recognized.
         /// </summary>
         /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="SpeechRecognizedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="SpeechRecognizedEventArgs" /> instance containing the event data.</param>
         public void SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             HandleCalibrationEvents(sender, e);
@@ -83,7 +83,7 @@ namespace MirrorInteractions.Speech
         /// Speeches the rejected.
         /// </summary>
         /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="SpeechRecognitionRejectedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="SpeechRecognitionRejectedEventArgs" /> instance containing the event data.</param>
         public void SpeechRejected(object sender, SpeechRecognitionRejectedEventArgs e)
         {
         }
@@ -92,7 +92,7 @@ namespace MirrorInteractions.Speech
         /// Handles the calibration events.
         /// </summary>
         /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
         private void HandleCalibrationEvents(object sender, EventArgs e)
         {
             threshold = (double)((SpeechRecognizedEventArgs)e).Result.Confidence;
