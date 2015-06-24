@@ -52,17 +52,16 @@ namespace MirrorInteractions.Speech {
                 Console.WriteLine("Speech recognized: " + e1.Result.Text.ToLower());
                 String app = e1.Result.Semantics.Value.ToString().ToLower();
                 String resultText = e1.Result.Text.ToLower();
+                String action = "";
 
                 switch (app) {
                     case "agenda":
-                        String action = "";
                         if (resultText.Contains("open")) {
                             action = "open";
                         } else if (resultText.Contains("close")) {
                             action = "close";
                         }
-                        WSMessage messageToSend = new WSMessage(app, InteractionType.Voice, action, RecognizedPerson.recognizedPerson);
-                        NetworkCommunicator.Instance.SendToServer(messageToSend);
+                        NetworkCommunicator.Instance.SendToServer(new WSMessage(app, InteractionType.Voice, action, RecognizedPerson.recognizedPerson));
                         break;
 
                     case "initialize face":
@@ -75,6 +74,20 @@ namespace MirrorInteractions.Speech {
                         break;
 
                     case "opus":
+                        if (resultText.Contains("on"))
+                        {
+                            action = "on";
+                        }
+                        else if (resultText.Contains("off"))
+                        {
+                            action = "off";
+                        }
+                        else
+                        {
+                            return;
+                        }
+                        NetworkCommunicator.Instance.SendToServer(new WSMessage(app, InteractionType.Voice, action, RecognizedPerson.recognizedPerson));
+                        break;
                     case "weather":
                     case "mail":
                         MessageBox.Show(resultText);
