@@ -89,6 +89,16 @@ namespace MirrorInteractions.Speech {
                         NetworkCommunicator.Instance.SendToServer(new WSMessage(app, InteractionType.Voice, action, RecognizedPerson.recognizedPerson));
                         break;
                     case "weather":
+                        if (resultText.Contains("open"))
+                        {
+                            action = "open";
+                        }
+                        else if (resultText.Contains("close"))
+                        {
+                            action = "close";
+                        }
+                        NetworkCommunicator.Instance.SendToServer(new WSMessage(app, InteractionType.Voice, action, RecognizedPerson.recognizedPerson));
+                        break;
                     case "mail":
                         MessageBox.Show(resultText);
                         break;
