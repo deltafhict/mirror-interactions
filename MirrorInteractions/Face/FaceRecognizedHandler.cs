@@ -43,6 +43,8 @@ namespace MirrorInteractions.Face
         /// </summary>
         private FaceLoader faceLoader;
 
+        private bool seen = false;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="FaceRecognizedHandler" /> class.
         /// </summary>
@@ -77,16 +79,21 @@ namespace MirrorInteractions.Face
                         if (!string.IsNullOrEmpty(face.Key))
                         {
                             var score = Math.Round(face.ProcessorResults.First().Score, 2);
-                            if (score > 1000)
-                            {
-                                Console.WriteLine("face recognized " + face.Key);
-                                faceRecognitionExpireTimer = new Timer(60000);
-                                faceRecognitionExpireTimer.Elapsed += new ElapsedEventHandler(OnFaceRecognizedExpired);
-                                faceRecognitionExpireTimer.AutoReset = false;
-                                faceRecognitionExpireTimer.Enabled = true;
-                                RecognizedPerson.recognizedPerson = face.Key;
 
-                                NetworkCommunicator.Instance.SendToServer(new WSMessage(InteractionType.FaceRecognition, RecognizedPerson.recognizedPerson));
+                            if (!seen)
+                            {
+                                if (score > 1000)
+                                {
+                                    Console.WriteLine("face recognized " + face.Key);
+                                    faceRecognitionExpireTimer = new Timer(300000);
+                                    faceRecognitionExpireTimer.Elapsed += new ElapsedEventHandler(OnFaceRecognizedExpired);
+                                    faceRecognitionExpireTimer.AutoReset = false;
+                                    faceRecognitionExpireTimer.Enabled = true;
+                                    RecognizedPerson.recognizedPerson = face.Key;
+                                    seen = true;
+
+                                    NetworkCommunicator.Instance.SendToServer(new WSMessage(InteractionType.FaceRecognition, RecognizedPerson.recognizedPerson));
+                                }
                             }
                         }
                     }
@@ -105,6 +112,8 @@ namespace MirrorInteractions.Face
         {
             faceRecognitionExpireTimer.Stop();
             RecognizedPerson.recognizedPerson = "unknown";
+            seen = false;
+            Console.WriteLine("Reset face recog timer");
         }
 
     }
