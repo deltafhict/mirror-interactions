@@ -1,5 +1,4 @@
-﻿using MirrorInteractions.Models;
-// ***********************************************************************
+﻿// ***********************************************************************
 // Assembly         : MirrorInteractions
 // Author           : daan
 // Created          : 06-24-2015
@@ -14,6 +13,7 @@
 // ***********************************************************************
 using System;
 using System.Web.Script.Serialization;
+using MirrorInteractions.Models;
 using WebSocketSharp;
 
 /// <summary>

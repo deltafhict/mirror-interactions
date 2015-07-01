@@ -106,7 +106,7 @@ namespace MirrorInteractions.Speech {
                         NetworkCommunicator.Instance.SendToServer(new WSMessage(app, InteractionType.Voice, action, RecognizedPerson.recognizedPerson));
                         break;
                     case "mail":
-                        MessageBox.Show(resultText);
+                        Console.WriteLine(resultText);
                         break;
                 }
             }

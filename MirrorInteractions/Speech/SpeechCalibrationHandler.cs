@@ -63,10 +63,9 @@ namespace MirrorInteractions.Speech
         /// <param name="speechCalibratedDelegate">The speech calibrated delegate.</param>
         public SpeechCalibrationHandler(SpeechDelegate.SpeechCalibratedDelegate speechCalibratedDelegate)
         {
-            NetworkCommunicator.Instance.SendToServer(new WSMessage("voice calibration", InteractionType.Voice, "start", RecognizedPerson.recognizedPerson));
+            NetworkCommunicator.Instance.SendToServer(new WSMessage("voice calibration", InteractionType.Voice, "open voice calibration", RecognizedPerson.recognizedPerson));
             kalibration = new double[9];
             this.speechCalibratedDelegate = speechCalibratedDelegate;
-            NetworkCommunicator.Instance.SendToServer(new WSMessage("voice calibration", InteractionType.Voice, wordToCalibrate, RecognizedPerson.recognizedPerson));
         }
 
         /// <summary>
@@ -111,8 +110,7 @@ namespace MirrorInteractions.Speech
                 }
                 else if (calibrationSpeechCount < 6)
                 {
-                    wordToCalibrate = "thumbleweed";
-                    NetworkCommunicator.Instance.SendToServer(new WSMessage("voice calibration", InteractionType.Voice, wordToCalibrate, RecognizedPerson.recognizedPerson));
+                    wordToCalibrate = "tumbleweed";
                     Console.WriteLine(threshold + " " + calibrationSpeechCount);
                     Console.WriteLine("Say " + wordToCalibrate + " please.");
                     kalibration[calibrationSpeechCount] = threshold;
