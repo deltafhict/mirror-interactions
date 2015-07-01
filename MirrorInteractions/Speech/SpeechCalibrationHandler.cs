@@ -96,7 +96,7 @@ namespace MirrorInteractions.Speech
         {
             threshold = (double)((SpeechRecognizedEventArgs)e).Result.Confidence;
             // Noise cancelling
-            // Everything below 0.30 is basically nonsense or rando people yelling, so we don't even process it.
+            // Everything below 0.30 is basically nonsense or random people yelling, so we don't even process it.
             if (threshold > 0.30)
             {
                 if (calibrationSpeechCount < 3)

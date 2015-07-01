@@ -89,6 +89,13 @@ namespace MirrorInteractions.Face
         /// <param name="e">The RecognitionResult.</param>
         public void FaceRecognized(object sender, Sacknet.KinectFacialRecognition.RecognitionResult e)
         {
+            if (newLearnedFacesCount == 0)
+            {
+                Console.WriteLine("Starting face learning");
+                NetworkCommunicator.Instance.SendToServer(new WSMessage("face learning", InteractionType.FaceRecognition, "start", personName));
+                newLearnedFacesCount++;
+                return;
+            }
             if (personName == null)
             {
                 NetworkCommunicator.Instance.SendToServer(new WSMessage("face learning", InteractionType.FaceRecognition, "fail", personName));
@@ -108,20 +115,16 @@ namespace MirrorInteractions.Face
                 {
                     if (!timer.Enabled)
                     {
-                        if (newLearnedFacesCount < 1)
+                        String action = "forward";
+                        if (newLearnedFacesCount == 1)
                         {
-                            Console.WriteLine("Starting face learning");
-                            NetworkCommunicator.Instance.SendToServer(new WSMessage("face learning", InteractionType.FaceRecognition, "start", personName));
+                            NetworkCommunicator.Instance.SendToServer(new WSMessage("face learning", InteractionType.FaceRecognition, action, personName));
                             timer.Start();
                             newLearnedFacesCount++;
                             return;
                         }
-                        String action = "forward";
                         switch (newLearnedFacesCount)
                         {
-                            case 1: 
-                                action = "forward";
-                                break;
                             case 2:
                                 action = "left";
                                 break;
@@ -135,9 +138,11 @@ namespace MirrorInteractions.Face
                                 action = "forward";
                                 break;
                             case 6:
+                                NetworkCommunicator.Instance.SendToServer(new WSMessage("face learning", InteractionType.FaceRecognition, "finish", personName));
                                 FaceRecognition.Instance.OpenFacialRecognitionEngine();
                                 faceLoader.LoadAllTargetFaces();
                                 Console.WriteLine("Finished learning");
+                                newLearnedFacesCount = 0;
                                 return;
                             default:
                                 break;
