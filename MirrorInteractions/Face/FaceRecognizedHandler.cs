@@ -12,6 +12,7 @@
 // <summary>Class used to handle face found event's when the FaceRecognitionEngine is equipt with this handler.</summary>
 // ************************************************************************
 using MirrorInteractions.Models;
+using MirrorInteractions.Network;
 using Sacknet.KinectFacialRecognition;
 using System;
 using System.Drawing;
@@ -84,6 +85,8 @@ namespace MirrorInteractions.Face
                                 faceRecognitionExpireTimer.AutoReset = false;
                                 faceRecognitionExpireTimer.Enabled = true;
                                 RecognizedPerson.recognizedPerson = face.Key;
+
+                                NetworkCommunicator.Instance.SendToServer(new WSMessage(InteractionType.FaceRecognition, RecognizedPerson.recognizedPerson));
                             }
                         }
                     }
