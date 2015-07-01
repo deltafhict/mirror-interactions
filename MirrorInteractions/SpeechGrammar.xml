@@ -32,7 +32,13 @@
           <ruleref uri="#AgendaCommands"/> weather
         </item>
       </item>
-      <item>
+        <item>
+          <tag>TRAFFIC</tag>
+          <item>
+            <ruleref uri="#AgendaCommands"/> traffic
+          </item>
+        </item>
+        <item>
         <tag>MAIL</tag>
         <item>
           <ruleref uri="#AgendaCommands"/> mail
